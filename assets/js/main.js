@@ -21,17 +21,12 @@ siteNav.querySelectorAll("a").forEach((link) => {
 });
 
 const shopIntroBg = document.getElementById("shopIntroBg");
-const shopIntroWrap = document.getElementById("shopIntroWrap");
-if (shopIntroBg && shopIntroWrap) {
-  const section = shopIntroBg.parentElement;
+if (shopIntroBg) {
   const updateParallax = () => {
-    const headerH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 96;
-    const wrapRect = shopIntroWrap.getBoundingClientRect();
-    const sectionHeight = section.offsetHeight;
-    const extra = shopIntroWrap.offsetHeight - sectionHeight;
-    const scrolledIntoWrap = headerH - wrapRect.top;
-    const progress = extra > 0 ? Math.min(1, Math.max(0, scrolledIntoWrap / extra)) : 0;
-    const maxShift = sectionHeight * 0.24;
+    const section = shopIntroBg.parentElement;
+    const rect = section.getBoundingClientRect();
+    const progress = Math.min(1, Math.max(0, -rect.top / rect.height));
+    const maxShift = rect.height * 0.24;
     shopIntroBg.style.transform = `translateY(${(-progress * maxShift).toFixed(1)}px)`;
   };
   updateParallax();
