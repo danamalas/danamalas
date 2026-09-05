@@ -125,11 +125,11 @@
 
 /* ===== Dark theme (Collection page) ===== */
 body.shop-page {
-  background: var(--color-ink);
+  background: #262626 url("../img/shop-bg-grain.jpg") repeat;
   color: #ffffff;
 }
 body.shop-page .site-header {
-  background: rgba(22, 22, 22, 0.88);
+  background: rgba(38, 38, 38, 0.88);
 }
 body.shop-page .site-header.is-scrolled {
   border-bottom-color: rgba(255, 255, 255, 0.14);
@@ -146,7 +146,7 @@ body.shop-page .site-nav a::after {
 }
 @media (max-width: 720px) {
   body.shop-page .site-nav {
-    background: var(--color-ink);
+    background: #262626;
     border-bottom-color: rgba(255, 255, 255, 0.14);
   }
   body.shop-page .site-nav a {
