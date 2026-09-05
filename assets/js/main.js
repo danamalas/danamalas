@@ -20,6 +20,20 @@ siteNav.querySelectorAll("a").forEach((link) => {
   });
 });
 
+const shopIntroBg = document.getElementById("shopIntroBg");
+if (shopIntroBg) {
+  const maxShift = 60;
+  const updateParallax = () => {
+    const section = shopIntroBg.parentElement;
+    const rect = section.getBoundingClientRect();
+    const progress = Math.min(1, Math.max(0, -rect.top / rect.height));
+    shopIntroBg.style.transform = `translateY(${(-progress * maxShift).toFixed(1)}px)`;
+  };
+  updateParallax();
+  window.addEventListener("scroll", updateParallax, { passive: true });
+  window.addEventListener("resize", updateParallax);
+}
+
 const revealTargets = document.querySelectorAll(".story, .contact-section");
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
