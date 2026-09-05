@@ -247,11 +247,13 @@ a {
 }
 
 .story h2 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
-  line-height: 1.2;
   margin: 0 0 24px;
+}
+.story h2 img {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
 }
 
 .story .lede {
@@ -311,10 +313,12 @@ a {
   letter-spacing: 0.05em;
 }
 .value h3 {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 1.25rem;
   margin: 10px 0 10px;
+}
+.value h3 img {
+  display: block;
+  height: clamp(1.4rem, 2.2vw, 1.8rem);
+  width: auto;
 }
 .value p {
   color: var(--color-ink-soft);
