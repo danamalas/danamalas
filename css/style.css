@@ -130,7 +130,7 @@ html[dir="rtl"] .btn { font-family: var(--font-arabic-body); }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 14px 24px;
+  padding: 8px 24px;
 }
 
 .logo-lockup {
@@ -139,7 +139,7 @@ html[dir="rtl"] .btn { font-family: var(--font-arabic-body); }
   gap: 2px;
   flex-shrink: 0;
 }
-.logo-img { height: 60px; width: auto; }
+.logo-img { height: 80px; width: auto; }
 
 .main-nav {
   display: flex;
@@ -413,8 +413,8 @@ html[dir="rtl"] .btn { font-family: var(--font-arabic-body); }
 }
 
 @media (max-width: 520px) {
-  .header-inner { padding: 12px 16px; }
-  .logo-img { height: 44px; }
+  .header-inner { padding: 8px 16px; }
+  .logo-img { height: 56px; }
   .logo-lockup--footer .logo-img { height: 48px; }
   .lang-toggle { font-size: 0; padding: 8px 10px; }
   .lang-toggle::after { content: '\1F310'; font-size: 1rem; }
