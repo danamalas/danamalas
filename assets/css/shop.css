@@ -55,11 +55,10 @@
 
 /* ===== Product detail ===== */
 .back-link {
-  display: inline-block;
+  display: block;
   max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 128px 32px 0;
-  width: 100%;
+  margin: 128px auto 0;
+  padding: 0 32px;
   box-sizing: border-box;
   font-size: 0.85rem;
   letter-spacing: 0.04em;
@@ -133,5 +132,5 @@
 @media (max-width: 560px) {
   .shop-grid { grid-template-columns: 1fr; gap: 48px; }
   .shop-intro { padding-top: 140px; }
-  .back-link { padding-top: 108px; }
+  .back-link { margin-top: 108px; }
 }
