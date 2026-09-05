@@ -328,6 +328,24 @@ a {
 .contact-address p {
   margin: 0 0 2px;
 }
+.contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.contact-social .social-link {
+  display: inline-flex;
+  color: var(--color-ink);
+  border-bottom: none;
+}
+.contact-social svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.contact-social .social-link:hover {
+  color: var(--color-ink-soft);
+}
 
 /* ===== Footer ===== */
 .site-footer {
