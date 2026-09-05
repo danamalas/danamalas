@@ -223,11 +223,10 @@ html[dir="rtl"] .btn { font-family: var(--font-arabic-body); }
 }
 .hero-wrap-graphic {
   width: 100%;
-  max-width: 320px;
+  max-width: 380px;
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: 28px;
   overflow: hidden;
-  border: 8px solid var(--yellow);
   box-shadow: 0 16px 40px rgba(0,0,0,.28);
 }
 .hero-wrap-graphic img {
