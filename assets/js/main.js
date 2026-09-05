@@ -22,11 +22,11 @@ siteNav.querySelectorAll("a").forEach((link) => {
 
 const shopIntroBg = document.getElementById("shopIntroBg");
 if (shopIntroBg) {
-  const maxShift = 60;
   const updateParallax = () => {
     const section = shopIntroBg.parentElement;
     const rect = section.getBoundingClientRect();
     const progress = Math.min(1, Math.max(0, -rect.top / rect.height));
+    const maxShift = rect.height * 0.24;
     shopIntroBg.style.transform = `translateY(${(-progress * maxShift).toFixed(1)}px)`;
   };
   updateParallax();

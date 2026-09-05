@@ -12,10 +12,10 @@
 }
 .shop-intro-bg {
   position: absolute;
-  top: -12%;
+  top: -28%;
   left: 0;
   right: 0;
-  height: 124%;
+  height: 156%;
   background: #0a0908 url("../img/story-tile.jpg") center / cover no-repeat;
   will-change: transform;
 }
