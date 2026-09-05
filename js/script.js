@@ -40,31 +40,4 @@
 
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  var heroVideo = document.getElementById('heroVideo');
-  var heroSection = document.querySelector('.hero');
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (heroVideo && heroSection) {
-    if (reduceMotion) {
-      heroVideo.pause();
-      heroVideo.removeAttribute('autoplay');
-      var fallback = document.querySelector('.hero-video-fallback');
-      if (fallback) fallback.hidden = false;
-    } else {
-      var ticking = false;
-      var updateParallax = function () {
-        var offset = heroSection.getBoundingClientRect().top * -0.15;
-        heroVideo.style.transform = 'translate(-50%, calc(-50% + ' + offset + 'px))';
-        ticking = false;
-      };
-      window.addEventListener('scroll', function () {
-        if (!ticking) {
-          window.requestAnimationFrame(updateParallax);
-          ticking = true;
-        }
-      }, { passive: true });
-      updateParallax();
-    }
-  }
 })();
