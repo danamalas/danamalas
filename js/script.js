@@ -40,4 +40,29 @@
 
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  var storyVideo = document.getElementById('storyVideo');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (storyVideo && !reduceMotion && 'IntersectionObserver' in window) {
+    var inView = false;
+    var stopTimer = null;
+
+    var observer = new IntersectionObserver(function (entries) {
+      inView = entries[0].isIntersecting;
+      if (!inView) storyVideo.pause();
+    }, { threshold: 0.2 });
+    observer.observe(storyVideo);
+
+    window.addEventListener('scroll', function () {
+      if (!inView) return;
+      if (storyVideo.paused) {
+        storyVideo.play().catch(function () {});
+      }
+      clearTimeout(stopTimer);
+      stopTimer = setTimeout(function () {
+        storyVideo.pause();
+      }, 200);
+    }, { passive: true });
+  }
 })();
