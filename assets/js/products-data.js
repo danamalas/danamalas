@@ -3,14 +3,14 @@
 // matching product exists in your Shopify store (see shopify-config.js).
 const PRODUCTS = [
   {
-    id: "signet-ring",
-    name: "Signet Ring",
-    price: 780,
+    id: "fracture-bar-gold",
+    name: "Fracture Bar Studs — Gold",
+    price: 440,
     currency: "USD",
-    material: "Solid 14k recycled gold",
-    image: "assets/img/products/signet-ring.jpg",
+    material: "14k recycled gold",
+    image: "assets/img/products/fracture-bar-gold.jpg",
     description:
-      "A weighted, close-set signet cast in solid recycled gold. Left plain by design — a piece meant to pick up its own history in scratches and wear rather than arrive pre-aged.",
+      "A pair of solid gold bar studs with a single fracture cut into the face, shown here with their post and butterfly back.",
     shopifyProductId: null,
   },
   {
@@ -58,14 +58,14 @@ const PRODUCTS = [
     shopifyProductId: null,
   },
   {
-    id: "recovery-band",
-    name: "Recovery Band",
-    price: 1050,
+    id: "fracture-bar-silver",
+    name: "Fracture Bar Studs — Silver",
+    price: 360,
     currency: "USD",
-    material: "Platinum",
-    image: "assets/img/products/recovery-band.jpg",
+    material: "Recycled sterling silver",
+    image: "assets/img/products/fracture-bar-silver.jpg",
     description:
-      "A heavy, single-cast platinum band, left entirely unadorned. Built to be the one piece that outlasts every other.",
+      "The silver version of the fracture bar stud, shown here with their post and butterfly back.",
     shopifyProductId: null,
   },
 ];
