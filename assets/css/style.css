@@ -8,8 +8,8 @@
   --color-accent: #a9895f;
   --color-cream: #ffffff;
 
-  --font-display: "Bodoni Moda", "Didot", "Iowan Old Style", serif;
-  --font-body: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Didot", "Bodoni Moda", "Bodoni MT", "Didot LT STD", serif;
+  --font-body: "Didot", "Bodoni Moda", "Bodoni MT", "Didot LT STD", serif;
 
   --max-width: 1240px;
   --header-h: 96px;
