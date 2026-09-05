@@ -55,7 +55,7 @@ a {
   right: 0;
   height: var(--header-h);
   z-index: 100;
-  background: rgba(247, 245, 242, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease, background 0.3s ease;
