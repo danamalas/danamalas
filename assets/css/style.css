@@ -307,17 +307,26 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: clamp(2rem, 3.6vw, 2.8rem);
-  margin: 0 0 20px;
+  margin: 0 0 44px;
 }
-.contact-text {
-  max-width: 480px;
-  margin: 0 auto;
+.contact-block {
+  max-width: 420px;
+  margin: 0 auto 32px;
   color: var(--color-ink-soft);
   font-size: 1rem;
 }
-.contact-text a {
+.contact-block:last-child {
+  margin-bottom: 0;
+}
+.contact-block p {
+  margin: 0 0 6px;
+}
+.contact-block a {
   color: var(--color-ink);
-  border-bottom: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-ink);
+}
+.contact-address p {
+  margin: 0 0 2px;
 }
 
 /* ===== Footer ===== */

@@ -40,7 +40,7 @@ function renderBuyButton(node, product) {
 function renderEnquireFallback(node, product) {
   const a = document.createElement("a");
   a.className = "btn-enquire";
-  a.href = `mailto:atelier@abo-jewellery.com?subject=${encodeURIComponent("Enquiry: " + product.name)}`;
+  a.href = `mailto:hello@aboatelier.com?subject=${encodeURIComponent("Enquiry: " + product.name)}`;
   a.textContent = "Enquire about this piece";
   node.appendChild(a);
 }
