@@ -179,11 +179,10 @@ a {
 }
 
 .hero-tile-title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-style: italic;
-  font-size: clamp(2rem, 3.6vw, 3.1rem);
-  margin-bottom: 12px;
+  display: block;
+  height: clamp(2.6rem, 4.6vw, 4rem);
+  width: auto;
+  margin-bottom: 14px;
 }
 
 .hero-tile-text {
