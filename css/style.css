@@ -301,27 +301,23 @@ html[dir="rtl"] .btn { font-family: var(--font-arabic-body); }
 .gallery { padding: 90px 0 100px; }
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 .gallery-tile {
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30%;
+  overflow: hidden;
+  margin: 0;
+  background: var(--cream);
 }
-.gallery-tile svg { width: 100%; height: 100%; }
-.gallery-tile--red { background: var(--red); }
-.gallery-tile--yellow { background: var(--yellow); }
-.gallery-tile--cream { background: var(--white); border: 2px solid #f0e2c8; }
-.gallery-note {
-  text-align: center;
-  margin-top: 28px;
-  opacity: .6;
-  font-size: .9rem;
+.gallery-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
 }
+.gallery-tile:hover img { transform: scale(1.05); }
 
 /* Contact */
 .contact { padding: 90px 0 110px; background: var(--white); }
