@@ -123,6 +123,41 @@
   text-align: center;
 }
 
+/* ===== Dark theme (Collection page) ===== */
+body.shop-page {
+  background: var(--color-ink);
+  color: #ffffff;
+}
+body.shop-page .site-header {
+  background: rgba(22, 22, 22, 0.88);
+}
+body.shop-page .site-header.is-scrolled {
+  border-bottom-color: rgba(255, 255, 255, 0.14);
+}
+body.shop-page .brand,
+body.shop-page .cart-link {
+  color: #ffffff;
+}
+body.shop-page .nav-toggle span {
+  background: #ffffff;
+}
+body.shop-page .site-nav a::after {
+  background: #ffffff;
+}
+@media (max-width: 720px) {
+  body.shop-page .site-nav {
+    background: var(--color-ink);
+    border-bottom-color: rgba(255, 255, 255, 0.14);
+  }
+  body.shop-page .site-nav a {
+    border-top-color: rgba(255, 255, 255, 0.14);
+  }
+}
+body.shop-page .shop-intro-text,
+body.shop-page .product-card-price {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .shop-grid { grid-template-columns: repeat(2, 1fr); }
