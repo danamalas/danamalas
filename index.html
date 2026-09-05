@@ -43,7 +43,13 @@
 
 <!-- Hero -->
 <section class="hero">
-  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="hero-media" aria-hidden="true">
+    <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+      <source src="videos/hero-loop.mp4" type="video/mp4">
+    </video>
+    <img class="hero-video-fallback" src="images/hero-poster.jpg" alt="" hidden>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="container hero-inner">
     <div class="hero-text">
       <p class="eyebrow" data-en="Tripoli, Lebanon" data-ar="طرابلس، لبنان">Tripoli, Lebanon</p>
@@ -52,19 +58,6 @@
       <div class="hero-actions">
         <a href="#menu" class="btn btn--primary" data-en="View Our Menu" data-ar="شاهد المنيو">View Our Menu</a>
         <a href="tel:+9616433720" class="btn btn--outline"><span data-en="Call:" data-ar="اتصل:">Call:</span> <span dir="ltr">+961 6 433 720</span></a>
-      </div>
-    </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="hero-wrap-graphic">
-        <svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="130" cy="130" r="120" fill="#FBC94C"/>
-          <path d="M70 60 L190 60 L175 210 L85 210 Z" fill="#fff8ec" stroke="#241109" stroke-width="4"/>
-          <path d="M85 95 L175 95" stroke="#241109" stroke-width="3"/>
-          <path d="M90 125 L170 125" stroke="#241109" stroke-width="3"/>
-          <path d="M92 155 L168 155" stroke="#241109" stroke-width="3"/>
-          <path d="M96 185 L164 185" stroke="#241109" stroke-width="3"/>
-          <path d="M70 60 C 100 40, 160 40, 190 60" fill="none" stroke="#241109" stroke-width="4"/>
-        </svg>
       </div>
     </div>
   </div>
