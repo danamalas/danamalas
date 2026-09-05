@@ -39,55 +39,22 @@
 <main id="top">
 
   <section class="hero" id="hero">
-    <div class="hero-panel hero-panel--left" aria-hidden="true">
-      <svg class="hero-art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <filter id="grain1">
-            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
-            <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.035 0"/>
-          </filter>
-        </defs>
-        <rect width="400" height="500" fill="#ffffff"/>
-        <ellipse cx="200" cy="260" rx="120" ry="150" fill="none" stroke="#161616" stroke-width="0.6" opacity="0.5"/>
-        <circle cx="200" cy="180" r="46" fill="none" stroke="#161616" stroke-width="1"/>
-        <path d="M154 210 C154 320, 246 320, 246 210" fill="none" stroke="#161616" stroke-width="1"/>
-        <line x1="120" y1="410" x2="280" y2="410" stroke="#161616" stroke-width="0.5" opacity="0.4"/>
-        <rect width="400" height="500" filter="url(#grain1)"/>
-      </svg>
-    </div>
+    <a href="#story" class="hero-tile">
+      <img src="assets/img/story-tile.jpg" alt="" class="hero-tile-img">
+      <span class="hero-tile-copy">
+        <span class="hero-tile-title">Our Story</span>
+        <span class="hero-tile-text">A house built on the bench, not the boardroom — how ABÔ Atelier came to be.</span>
+        <span class="hero-tile-link">Read the story</span>
+      </span>
+    </a>
 
-    <div class="hero-panel hero-panel--right" aria-hidden="true">
-      <svg class="hero-art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <filter id="grain2">
-            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
-            <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.035 0"/>
-          </filter>
-        </defs>
-        <rect width="400" height="500" fill="#161616"/>
-        <g stroke="#f5f5f5" stroke-width="0.8" fill="none" opacity="0.85">
-          <circle cx="150" cy="150" r="10"/>
-          <circle cx="150" cy="180" r="10"/>
-          <circle cx="150" cy="210" r="10"/>
-          <circle cx="150" cy="240" r="10"/>
-          <circle cx="150" cy="270" r="10"/>
-          <circle cx="150" cy="300" r="10"/>
-        </g>
-        <path d="M250 330 L285 260 L320 330 Z" fill="none" stroke="#c8a97e" stroke-width="1"/>
-        <line x1="285" y1="260" x2="285" y2="220" stroke="#c8a97e" stroke-width="0.8"/>
-        <rect width="400" height="500" filter="url(#grain2)"/>
-      </svg>
-    </div>
-
-    <div class="hero-copy">
-      <p class="eyebrow">Fine Jewellery, Handcrafted</p>
-      <h1>Adornment,<br>considered.</h1>
-      <p class="hero-sub">Each ABÔ piece is shaped by hand in our atelier — cast in solid gold and silver, set with responsibly sourced stones, and made to be worn for the whole of a life.</p>
-      <a href="#story" class="btn">Discover the Atelier</a>
-    </div>
-
-    <a href="#story" class="scroll-cue" aria-label="Scroll to Our Story">
-      <span></span>
+    <a href="#contact" class="hero-tile">
+      <img src="assets/img/shop-tile.jpg" alt="" class="hero-tile-img">
+      <span class="hero-tile-copy">
+        <span class="hero-tile-title">Shop</span>
+        <span class="hero-tile-text">Rings, chains, and earrings cast to order in solid gold and silver.</span>
+        <span class="hero-tile-link">Enquire about a piece</span>
+      </span>
     </a>
   </section>
 

@@ -142,121 +142,76 @@ a {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* ===== Hero ===== */
+/* ===== Hero — two full-bleed editorial tiles ===== */
 .hero {
-  position: relative;
-  min-height: 100vh;
+  margin-top: var(--header-h);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: var(--header-h);
+  gap: 2px;
+  background: var(--color-line);
+  height: clamp(480px, 78vh, 780px);
 }
 
-.hero-panel {
+.hero-tile {
   position: relative;
+  display: block;
   overflow: hidden;
+  color: #ffffff;
 }
-.hero-art {
+.hero-tile-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
+  transform: scale(1.001);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
+.hero-tile:hover .hero-tile-img { transform: scale(1.045); }
 
-.hero-copy {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 64px 24px;
-  pointer-events: none;
-}
-.hero-copy > * {
-  pointer-events: auto;
-  position: relative;
-  z-index: 1;
-}
-.hero-copy::before {
+.hero-tile::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(720px, 92%);
-  height: min(620px, 84%);
-  background: radial-gradient(
-    closest-side,
-    rgba(15, 13, 11, 0.66) 55%,
-    rgba(15, 13, 11, 0.3) 78%,
-    rgba(15, 13, 11, 0) 100%
-  );
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 9, 8, 0.72) 0%, rgba(10, 9, 8, 0.12) 45%, rgba(10, 9, 8, 0) 65%);
 }
 
-.eyebrow {
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin: 0 0 18px;
-  font-weight: 500;
+.hero-tile-copy {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px 32px 40px;
 }
 
-.hero h1 {
+.hero-tile-title {
   font-family: var(--font-display);
-  font-weight: 300;
-  font-size: clamp(2.6rem, 6vw, 5rem);
-  line-height: 1.05;
-  margin: 0 0 22px;
-  color: var(--color-bg);
-  text-shadow: 0 2px 30px rgba(0,0,0,0.25);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(2rem, 3.6vw, 3.1rem);
+  margin-bottom: 12px;
 }
 
-.hero-sub {
-  max-width: 480px;
-  margin: 0 auto 32px;
-  color: var(--color-bg);
-  font-size: 1rem;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+.hero-tile-text {
+  max-width: 320px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 18px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 15px 34px;
-  border: 1px solid var(--color-bg);
-  color: var(--color-bg);
-  font-size: 0.82rem;
+.hero-tile-link {
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: background 0.25s ease, color 0.25s ease;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  transition: border-color 0.25s ease, opacity 0.25s ease;
 }
-.btn:hover {
-  background: var(--color-bg);
-  color: var(--color-ink);
-}
-
-.scroll-cue {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 46px;
-}
-.scroll-cue span {
-  display: block;
-  width: 1px;
-  height: 100%;
-  background: var(--color-bg);
-  opacity: 0.8;
-  animation: scrollcue 2s ease-in-out infinite;
-  transform-origin: top;
-}
-@keyframes scrollcue {
-  0% { transform: scaleY(0); opacity: 0; }
-  40% { transform: scaleY(1); opacity: 1; }
-  100% { transform: scaleY(1); opacity: 0; }
-}
+.hero-tile:hover .hero-tile-link { border-color: #ffffff; }
 
 /* ===== Story ===== */
 .story {
@@ -436,9 +391,10 @@ a {
     border-top: 1px solid var(--color-line);
   }
 
-  .hero { grid-template-columns: 1fr 1fr; min-height: 100svh; }
-  .hero h1 { font-size: clamp(2.2rem, 9vw, 3rem); }
-  .hero-sub { font-size: 0.92rem; }
+  .hero { grid-template-columns: 1fr; height: auto; }
+  .hero-tile { aspect-ratio: 4 / 5; }
+  .hero-tile-copy { padding: 24px 22px 28px; }
+  .hero-tile-text { max-width: 100%; }
 
   .story { padding-top: 88px; }
   .values { margin-top: 88px; }
