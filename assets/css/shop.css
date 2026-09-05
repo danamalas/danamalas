@@ -1,9 +1,27 @@
 /* ===== Shop intro ===== */
 .shop-intro {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 168px 32px 40px;
+  position: relative;
+  margin-top: var(--header-h);
+  height: clamp(360px, 52vh, 540px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0a0908 url("../img/story-tile.jpg") center / cover no-repeat;
   text-align: center;
+  color: #ffffff;
+}
+.shop-intro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 9, 8, 0.62) 0%, rgba(10, 9, 8, 0.32) 55%, rgba(10, 9, 8, 0.2) 100%);
+}
+.shop-intro-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  padding: 0 32px;
 }
 .shop-intro h1 {
   font-family: var(--font-display);
@@ -15,7 +33,7 @@
 .shop-intro-text {
   max-width: 520px;
   margin: 0 auto;
-  color: var(--color-ink-soft);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* ===== Shop grid ===== */
@@ -131,6 +149,6 @@
 
 @media (max-width: 560px) {
   .shop-grid { grid-template-columns: 1fr; gap: 48px; }
-  .shop-intro { padding-top: 140px; }
+  .shop-intro { height: clamp(320px, 46vh, 420px); }
   .back-link { margin-top: 108px; }
 }
