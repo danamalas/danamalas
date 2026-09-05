@@ -111,6 +111,24 @@ a {
 }
 .site-nav a:hover::after { width: 100%; }
 
+.cart-link {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  color: var(--color-ink);
+}
+.cart-link svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.cart-link:hover { color: var(--color-ink-soft); }
+
 .nav-toggle {
   grid-column: 1;
   justify-self: start;
