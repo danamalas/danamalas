@@ -87,8 +87,8 @@ a {
 }
 
 .site-nav {
-  grid-column: 3;
-  justify-self: end;
+  grid-column: 1;
+  justify-self: start;
   display: flex;
   gap: 32px;
 }
