@@ -1,8 +1,14 @@
 /* ===== Shop intro ===== */
-.shop-intro {
+.shop-intro-wrap {
+  --shop-banner-h: clamp(360px, 52vh, 540px);
   position: relative;
   margin-top: var(--header-h);
-  height: clamp(360px, 52vh, 540px);
+  height: calc(var(--shop-banner-h) * 1.6);
+}
+.shop-intro {
+  position: sticky;
+  top: var(--header-h);
+  height: var(--shop-banner-h);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,6 +164,6 @@
 
 @media (max-width: 560px) {
   .shop-grid { grid-template-columns: 1fr; gap: 48px; }
-  .shop-intro { height: clamp(320px, 46vh, 420px); }
+  .shop-intro-wrap { --shop-banner-h: clamp(320px, 46vh, 420px); }
   .back-link { margin-top: 108px; }
 }
