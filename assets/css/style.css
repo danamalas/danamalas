@@ -287,43 +287,37 @@ a {
   color: var(--color-ink-soft);
 }
 
-/* ===== Values ===== */
-.values {
-  margin-top: 120px;
-  padding: 72px 0;
+/* ===== Contact ===== */
+.contact-section {
+  max-width: var(--max-width);
+  margin: 120px auto 0;
+  padding: 100px 32px 140px;
   border-top: 1px solid var(--color-line);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
-}
-
-.value {
+  text-align: center;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-.values.is-visible .value { opacity: 1; transform: translateY(0); }
-.values.is-visible .value:nth-child(2) { transition-delay: 0.12s; }
-.values.is-visible .value:nth-child(3) { transition-delay: 0.24s; }
-
-.value-index {
+.contact-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contact-section h2 {
   font-family: var(--font-display);
-  font-size: 0.9rem;
-  color: var(--color-accent);
-  letter-spacing: 0.05em;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(2rem, 3.6vw, 2.8rem);
+  margin: 0 0 20px;
 }
-.value h3 {
-  margin: 10px 0 10px;
-}
-.value h3 img {
-  display: block;
-  height: clamp(1.4rem, 2.2vw, 1.8rem);
-  width: auto;
-}
-.value p {
+.contact-text {
+  max-width: 480px;
+  margin: 0 auto;
   color: var(--color-ink-soft);
-  margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
+}
+.contact-text a {
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-accent);
 }
 
 /* ===== Footer ===== */
@@ -346,16 +340,6 @@ a {
   height: 68px;
 }
 
-.footer-note {
-  max-width: 460px;
-  margin: 0 auto 28px;
-  color: rgba(255,255,255,0.75);
-  font-size: 0.95rem;
-}
-.footer-note a {
-  border-bottom: 1px solid var(--color-accent);
-}
-
 .footer-copy {
   font-size: 0.78rem;
   letter-spacing: 0.04em;
@@ -367,7 +351,6 @@ a {
 @media (max-width: 900px) {
   .story-inner { grid-template-columns: 1fr; gap: 40px; }
   .story-media { max-width: 360px; margin: 0 auto; }
-  .values { grid-template-columns: 1fr; gap: 36px; }
 }
 
 @media (max-width: 720px) {
@@ -400,7 +383,7 @@ a {
   .hero-tile-text { max-width: 100%; }
 
   .story { padding-top: 88px; }
-  .values { margin-top: 88px; }
+  .contact-section { margin-top: 88px; padding: 72px 24px 100px; }
   .site-footer { margin-top: 96px; }
 }
 

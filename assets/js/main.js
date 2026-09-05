@@ -20,7 +20,7 @@ siteNav.querySelectorAll("a").forEach((link) => {
   });
 });
 
-const revealTargets = document.querySelectorAll(".story, .values");
+const revealTargets = document.querySelectorAll(".story, .contact-section");
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {
