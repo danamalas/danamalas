@@ -1,10 +1,10 @@
 /* ===== ABÔ Atelier — design tokens ===== */
 :root {
-  --color-bg: #ffffff;
-  --color-bg-alt: #f4f4f4;
+  --color-bg: #d0d0d0;
+  --color-bg-alt: #c4c4c4;
   --color-ink: #161616;
   --color-ink-soft: #5c5c5c;
-  --color-line: rgba(0, 0, 0, 0.12);
+  --color-line: rgba(0, 0, 0, 0.14);
   --color-accent: #a9895f;
   --color-cream: #ffffff;
 
@@ -12,7 +12,7 @@
   --font-body: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --max-width: 1240px;
-  --header-h: 84px;
+  --header-h: 96px;
 }
 
 * { box-sizing: border-box; }
@@ -55,7 +55,7 @@ a {
   right: 0;
   height: var(--header-h);
   z-index: 100;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(208, 208, 208, 0.88);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease, background 0.3s ease;
@@ -82,7 +82,7 @@ a {
   color: var(--color-ink);
 }
 .brand-logo {
-  height: 30px;
+  height: 52px;
   width: auto;
 }
 
