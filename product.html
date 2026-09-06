@@ -56,10 +56,25 @@
   </div>
 </footer>
 
+<div class="newsletter-widget" id="newsletterWidget" hidden>
+  <button type="button" class="newsletter-badge" id="newsletterBadge" aria-label="Sign up for our newsletter">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 6l9 7 9-7"></path></svg>
+  </button>
+  <div class="newsletter-popup" id="newsletterPopup" hidden>
+    <button type="button" class="newsletter-close" id="newsletterClose" aria-label="Dismiss newsletter signup">&times;</button>
+    <p class="newsletter-title">Sign up for our newsletter and get 10% off your first order.</p>
+    <form class="newsletter-form">
+      <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
 <script src="assets/js/products-data.js"></script>
 <script src="assets/js/shopify-config.js"></script>
 <script src="assets/js/shopify-buy-button.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/product.js"></script>
+<script src="assets/js/newsletter.js"></script>
 </body>
 </html>

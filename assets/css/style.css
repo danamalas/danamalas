@@ -364,6 +364,105 @@ a {
 .contact-social .social-link:hover {
   color: var(--color-ink-soft);
 }
+.contact-newsletter {
+  max-width: 360px;
+}
+
+/* ===== Newsletter form (shared by contact section + floating widget) ===== */
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--color-line);
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+.newsletter-form button {
+  padding: 10px 16px;
+  border: 1px solid var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.newsletter-form button:hover {
+  background: transparent;
+  color: var(--color-ink);
+}
+
+/* ===== Newsletter floating widget ===== */
+.newsletter-widget {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 150;
+}
+.newsletter-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-ink);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+.newsletter-badge svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.newsletter-popup {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  width: 280px;
+  max-width: calc(100vw - 48px);
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  padding: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+.newsletter-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-ink-soft);
+}
+.newsletter-title {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  margin: 0 0 14px;
+  padding-right: 14px;
+}
+.newsletter-popup .newsletter-form {
+  flex-direction: column;
+}
 
 /* ===== Footer ===== */
 .site-footer {
