@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Return Policy — ABÔ Atelier</title>
+<meta name="description" content="Return and exchange policy for ABÔ Atelier.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="assets/img/abo-logo-scarred-mark.png" type="image/png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/shop.css">
+<style>
+  .policy-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 168px 32px 140px;
+  }
+  .policy-section h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin: 0 0 32px;
+  }
+  .policy-section h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 36px 0 12px;
+  }
+  .policy-section p {
+    color: var(--color-ink-soft);
+    margin: 0 0 16px;
+  }
+  .policy-section a {
+    color: var(--color-ink);
+    border-bottom: 1px solid var(--color-ink);
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#policy-main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="index.html#top" class="brand" aria-label="ABÔ Atelier — Home">
+      <img src="assets/img/abo-logo-scarred-full.png" alt="ABÔ Atelier" class="brand-logo">
+    </a>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="shop.html">Shop</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="index.html#contact">Contact Us</a>
+    </nav>
+
+    <a href="shop.html" class="cart-link" aria-label="View cart">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="policy-main">
+  <section class="policy-section">
+    <h1>Return Policy</h1>
+
+    <p>Placeholder policy — replace this page with ABÔ Atelier's actual return and exchange terms.</p>
+
+    <h2>Returns</h2>
+    <p>Each piece is cast to order by hand, so please contact us before purchasing if you have questions about fit, sizing, or materials. [Add your actual return window and conditions here.]</p>
+
+    <h2>Exchanges</h2>
+    <p>[Add your exchange terms here — e.g. resizing, engraving corrections, store credit.]</p>
+
+    <h2>Contact</h2>
+    <p>For questions regarding returns, email us at <a href="mailto:hello@aboatelier.com">hello@aboatelier.com</a>.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="index.html#top" class="brand brand--footer">
+      <img src="assets/img/abo-logo-scarred-white-full.png" alt="ABÔ Atelier" class="brand-logo brand-logo--footer">
+    </a>
+    <p class="footer-copy">&copy; <span id="year"></span> ABÔ Atelier. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="newsletter-widget" id="newsletterWidget">
+  <div class="newsletter-tooltip" id="newsletterTooltip">
+    <button type="button" class="newsletter-tooltip-close" id="newsletterTooltipClose" aria-label="Dismiss">&times;</button>
+    <span>Sign up for our newsletter and get 10% off your first order</span>
+  </div>
+  <div class="newsletter-anchor">
+    <button type="button" class="newsletter-badge" id="newsletterBadge" aria-label="Sign up for our newsletter">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 6l9 7 9-7"></path></svg>
+    </button>
+    <div class="newsletter-popup" id="newsletterPopup" hidden>
+      <button type="button" class="newsletter-close" id="newsletterClose" aria-label="Close">&times;</button>
+      <p class="newsletter-title">Sign up for our newsletter and get 10% off your first order.</p>
+      <form class="newsletter-form">
+        <input type="text" name="name" placeholder="Name" required aria-label="Name">
+        <input type="email" name="email" placeholder="Email" required aria-label="Email address">
+        <div class="newsletter-phone-row">
+          <select name="phoneCountry" class="newsletter-phone-code" aria-label="Country code">
+            <option value="+46">SE +46</option>
+            <option value="+1">US +1</option>
+            <option value="+44">UK +44</option>
+            <option value="+49">DE +49</option>
+            <option value="+33">FR +33</option>
+            <option value="+34">ES +34</option>
+            <option value="+39">IT +39</option>
+            <option value="+30">GR +30</option>
+            <option value="+45">DK +45</option>
+            <option value="+47">NO +47</option>
+            <option value="+358">FI +358</option>
+          </select>
+          <input type="tel" name="phone" placeholder="Phone number" required aria-label="Phone number">
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/newsletter.js"></script>
+</body>
+</html>
