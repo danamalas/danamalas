@@ -75,6 +75,35 @@ const PRODUCTS = [
     ],
   },
   {
+    id: "fracture-ring",
+    name: "Fracture Ring",
+    currency: "USD",
+    variants: [
+      {
+        id: "gold",
+        label: "Gold",
+        swatch: "#c9a227",
+        price: 620,
+        material: "14k recycled gold",
+        image: "assets/img/products/fracture-ring-gold.jpg",
+        description:
+          "A solid gold band with a single fracture cut into its face, the wound left open and polished rather than smoothed away.",
+        shopifyProductId: null,
+      },
+      {
+        id: "silver",
+        label: "Silver",
+        swatch: "#c7c9cc",
+        price: 480,
+        material: "Recycled sterling silver",
+        image: "assets/img/products/fracture-ring-silver.jpg",
+        description:
+          "The same band in sterling silver, its surface split by one hand-finished fracture line running across the face.",
+        shopifyProductId: null,
+      },
+    ],
+  },
+  {
     id: "wound-gold-pendant",
     name: "Wound & Gold Pendant",
     price: 890,
