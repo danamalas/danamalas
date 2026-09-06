@@ -8,8 +8,8 @@
   --color-accent: #161616;
   --color-cream: #ffffff;
 
-  --font-display: "Didot", "Bodoni Moda", "Bodoni MT", "Didot LT STD", serif;
-  --font-body: "Didot", "Bodoni Moda", "Bodoni MT", "Didot LT STD", serif;
+  --font-display: "Bodoni Moda", "Didot", "Bodoni MT", "Didot LT STD", serif;
+  --font-body: "Bodoni Moda", "Didot", "Bodoni MT", "Didot LT STD", serif;
 
   --max-width: 1240px;
   --header-h: 96px;
