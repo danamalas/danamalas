@@ -37,13 +37,60 @@ const PRODUCTS = [
   {
     id: "fracture-necklace",
     name: "Fracture Necklace",
-    price: 560,
     currency: "USD",
-    material: "Recycled sterling silver",
-    image: "assets/img/products/fracture-necklace.jpg",
-    description:
-      "A fine chain carrying a single hand-finished pendant, its surface deliberately left with the faint tool marks of the bench it was cast on.",
-    shopifyProductId: null,
+    variants: [
+      {
+        id: "gold",
+        label: "Gold",
+        swatch: "#c9a227",
+        price: 640,
+        material: "14k recycled gold",
+        image: "assets/img/products/fracture-necklace-gold.jpg",
+        description:
+          "A fine chain carrying a single fractured gold bar, its surface split by one hand-finished line running the length of the piece.",
+        shopifyProductId: null,
+      },
+      {
+        id: "silver",
+        label: "Silver",
+        swatch: "#c7c9cc",
+        price: 560,
+        material: "Recycled sterling silver",
+        image: "assets/img/products/fracture-necklace-silver.jpg",
+        description:
+          "The same fractured bar pendant in sterling silver, carried on a fine chain and finished by hand.",
+        shopifyProductId: null,
+      },
+    ],
+  },
+  {
+    id: "fracture-cuff",
+    name: "Fracture Cuff",
+    currency: "USD",
+    variants: [
+      {
+        id: "gold",
+        label: "Gold",
+        swatch: "#c9a227",
+        price: 780,
+        material: "14k recycled gold",
+        image: "assets/img/products/fracture-cuff-gold.jpg",
+        description:
+          "An open gold cuff with a single fracture cut into its face, the scar left polished and open rather than smoothed away.",
+        shopifyProductId: null,
+      },
+      {
+        id: "silver",
+        label: "Silver",
+        swatch: "#c7c9cc",
+        price: 620,
+        material: "Recycled sterling silver",
+        image: "assets/img/products/fracture-cuff-silver.jpg",
+        description:
+          "The same open cuff in sterling silver, its surface split by one hand-finished fracture line running across the face.",
+        shopifyProductId: null,
+      },
+    ],
   },
   {
     id: "fracture-stud-earrings",
