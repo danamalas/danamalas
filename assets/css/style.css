@@ -308,8 +308,8 @@ a {
 /* ===== Contact ===== */
 .contact-section {
   max-width: var(--max-width);
-  margin: 120px auto 0;
-  padding: 100px 32px 140px;
+  margin: 100px auto 0;
+  padding: 80px 32px 100px;
   border-top: 1px solid var(--color-line);
   text-align: center;
   opacity: 0;
@@ -325,16 +325,28 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: clamp(2rem, 3.6vw, 2.8rem);
-  margin: 0 0 44px;
+  margin: 0 0 40px;
+}
+.contact-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .contact-block {
   max-width: 420px;
-  margin: 0 auto 32px;
   color: var(--color-ink-soft);
   font-size: 1rem;
 }
-.contact-block:last-child {
-  margin-bottom: 0;
+.contact-info .contact-block {
+  margin: 0;
 }
 .contact-block p {
   margin: 0 0 6px;
@@ -348,7 +360,7 @@ a {
 }
 .contact-social {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 24px;
 }
 .contact-social .social-link {
@@ -365,7 +377,8 @@ a {
   color: var(--color-ink-soft);
 }
 .contact-newsletter {
-  max-width: 360px;
+  max-width: 320px;
+  margin: 0;
 }
 
 /* ===== Newsletter form (shared by contact section + floating widget) ===== */
@@ -420,8 +433,6 @@ a {
 }
 .contact-newsletter .newsletter-form {
   max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ===== Newsletter floating widget ===== */
@@ -581,6 +592,11 @@ a {
 
   .story { padding-top: 88px; }
   .contact-section { margin-top: 88px; padding: 72px 24px 100px; }
+  .contact-columns { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .contact-info { align-items: center; }
+  .contact-social { justify-content: center; }
+  .contact-block { margin: 0 auto; }
+  .contact-newsletter { margin: 0 auto; }
   .site-footer { margin-top: 96px; }
 }
 
