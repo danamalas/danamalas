@@ -247,15 +247,9 @@ a {
 .story-media {
   border-radius: 2px;
   overflow: hidden;
-  aspect-ratio: 360 / 440;
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.story-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .story-copy {
