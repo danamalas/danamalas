@@ -17,10 +17,7 @@ function cardHtml(product) {
 
   return `
     <a class="product-card" href="${href}" data-product="${product.id}" data-variant="${variantId || ""}">
-      <span class="media-wrap">
-        <img src="${view.image}" alt="" class="product-card-img">
-        <span class="coming-soon">Coming Soon</span>
-      </span>
+      <img src="${view.image}" alt="" class="product-card-img">
       <span class="product-card-name">${product.name}</span>
       <span class="product-card-price">${formatPrice(view.price, view.currency)}</span>
       ${swatches}

@@ -33,7 +33,6 @@ if (!product) {
     container.innerHTML = `
       <div class="product-media">
         <img src="${view.image}" alt="${product.name}">
-        <span class="coming-soon">Coming Soon</span>
       </div>
       <div class="product-info">
         <h1>${product.name}</h1>
