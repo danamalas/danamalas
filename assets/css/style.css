@@ -371,11 +371,11 @@ a {
 /* ===== Newsletter form (shared by contact section + floating widget) ===== */
 .newsletter-form {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   margin-top: 4px;
 }
 .newsletter-form input {
-  flex: 1;
   min-width: 0;
   padding: 10px 12px;
   border: 1px solid var(--color-line);
@@ -401,6 +401,11 @@ a {
   background: transparent;
   color: var(--color-ink);
 }
+.contact-newsletter .newsletter-form {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ===== Newsletter floating widget ===== */
 .newsletter-widget {
@@ -408,6 +413,40 @@ a {
   left: 24px;
   bottom: 24px;
   z-index: 150;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.newsletter-tooltip {
+  position: relative;
+  max-width: 220px;
+  background: var(--color-ink);
+  color: #ffffff;
+  padding: 12px 30px 12px 14px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.newsletter-tooltip-close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.75;
+  padding: 4px;
+}
+.newsletter-tooltip-close:hover {
+  opacity: 1;
+}
+.newsletter-anchor {
+  position: relative;
 }
 .newsletter-badge {
   width: 48px;
@@ -459,9 +498,6 @@ a {
   line-height: 1.4;
   margin: 0 0 14px;
   padding-right: 14px;
-}
-.newsletter-popup .newsletter-form {
-  flex-direction: column;
 }
 
 /* ===== Footer ===== */
