@@ -65,7 +65,7 @@ a {
 }
 
 .header-inner {
-  max-width: var(--max-width);
+  max-width: none;
   height: 100%;
   margin: 0 auto;
   padding: 0 32px;
