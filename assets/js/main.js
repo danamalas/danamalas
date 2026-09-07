@@ -9,16 +9,25 @@ window.addEventListener("scroll", onScroll, { passive: true });
 
 const navToggle = document.getElementById("navToggle");
 const siteNav = document.getElementById("siteNav");
+const navBackdrop = document.getElementById("navBackdrop");
+
+function closeNav() {
+  siteNav.classList.remove("is-open");
+  navToggle.setAttribute("aria-expanded", "false");
+  if (navBackdrop) navBackdrop.classList.remove("is-visible");
+}
+
 navToggle.addEventListener("click", () => {
   const isOpen = siteNav.classList.toggle("is-open");
   navToggle.setAttribute("aria-expanded", String(isOpen));
+  if (navBackdrop) navBackdrop.classList.toggle("is-visible", isOpen);
 });
 siteNav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    siteNav.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-  });
+  link.addEventListener("click", closeNav);
 });
+if (navBackdrop) {
+  navBackdrop.addEventListener("click", closeNav);
+}
 
 const shopIntroBg = document.getElementById("shopIntroBg");
 if (shopIntroBg) {
