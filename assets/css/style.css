@@ -230,24 +230,6 @@ a {
 }
 .hero-tile:hover .hero-tile-link { border-color: #ffffff; }
 
-.hero-tile-placeholder-bg {
-  position: absolute;
-  inset: 0;
-  background: #161616;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-tile-placeholder-bg svg {
-  width: 34%;
-  height: 34%;
-  opacity: 0.32;
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 1.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 .hero-tile-title-text {
   display: block;
   font-family: var(--font-display);
