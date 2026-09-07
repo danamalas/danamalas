@@ -241,26 +241,15 @@ a {
   color: #ffffff;
 }
 
-/* ===== Story ===== */
+/* ===== Story (fixed dark band — a deliberate contrast, not theme-driven) ===== */
 .story {
-  padding: 120px 32px 0;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  background: #262626;
+  padding: 120px 32px;
 }
 
 .story-inner {
-  display: grid;
-  grid-template-columns: 0.85fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.story-media {
-  border-radius: 2px;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .story-copy {
@@ -269,7 +258,6 @@ a {
   transition: opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s;
 }
 
-.story.is-visible .story-media,
 .story.is-visible .story-copy {
   opacity: 1;
   transform: translateY(0);
@@ -278,40 +266,45 @@ a {
 .story-copy .eyebrow {
   display: inline-block;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--color-ink);
+  color: #f2f0ec;
+  border-bottom: 1px solid #f2f0ec;
 }
 
 .story h2 {
   margin: 0 0 24px;
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   font-size: clamp(1.7rem, 2.6vw, 2.4rem);
   line-height: 1.25;
-  color: var(--color-ink);
+  color: #f2f0ec;
   max-width: 560px;
 }
 
 .story .lede {
   font-size: 0.95rem;
-  color: var(--color-ink);
+  color: #f2f0ec;
   margin-bottom: 20px;
 }
 
 .story p {
   font-size: 0.95rem;
-  color: var(--color-ink);
+  color: #f2f0ec;
   margin: 0 0 18px;
+}
+
+.story p em {
+  font-style: normal;
 }
 
 .story blockquote {
   margin: 36px 0 0;
   padding-left: 24px;
-  border-left: 1px solid var(--color-ink);
+  border-left: 1px solid #f2f0ec;
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-size: 0.95rem;
-  color: var(--color-ink);
+  color: #f2f0ec;
 }
 .story blockquote cite {
   display: block;
@@ -321,7 +314,7 @@ a {
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-ink-soft);
+  color: #b0aca4;
 }
 
 /* ===== Contact ===== */
@@ -575,11 +568,6 @@ a {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .story-inner { grid-template-columns: 1fr; gap: 40px; }
-  .story-media { max-width: 360px; margin: 0 auto; }
-}
-
 @media (max-width: 720px) {
   .header-inner { padding: 0 20px; }
   .nav-toggle { display: flex; }
