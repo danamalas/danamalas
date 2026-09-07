@@ -12,7 +12,7 @@
   --font-body: "Bodoni Moda", "Didot", "Bodoni MT", "Didot LT STD", serif;
 
   --max-width: 1240px;
-  --header-h: 96px;
+  --header-h: 160px;
 }
 
 * { box-sizing: border-box; }
@@ -82,7 +82,7 @@ a {
   color: var(--color-ink);
 }
 .brand-logo {
-  height: 52px;
+  height: 120px;
   width: auto;
 }
 
@@ -556,7 +556,7 @@ a {
   margin-bottom: 28px;
 }
 .brand-logo--footer {
-  height: 68px;
+  height: 150px;
 }
 
 .footer-copy {
