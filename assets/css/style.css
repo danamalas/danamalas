@@ -275,6 +275,12 @@ a {
   transform: translateY(0);
 }
 
+.story-copy .eyebrow {
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-ink);
+}
+
 .story h2 {
   margin: 0 0 24px;
 }
@@ -292,7 +298,8 @@ a {
 }
 
 .story p {
-  color: var(--color-ink-soft);
+  font-size: 1.1rem;
+  color: var(--color-ink);
   margin: 0 0 18px;
 }
 
@@ -302,7 +309,7 @@ a {
   border-left: 1px solid var(--color-ink);
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--color-ink);
 }
 .story blockquote cite {
