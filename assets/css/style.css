@@ -150,6 +150,9 @@ a {
   background: var(--color-ink);
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* ===== Hero — two full-bleed editorial tiles ===== */
 .hero {
@@ -241,15 +244,17 @@ a {
   color: #ffffff;
 }
 
-/* ===== Story (fixed dark band — a deliberate contrast, not theme-driven) ===== */
+/* ===== Story (fixed dark card — a deliberate contrast, not theme-driven) ===== */
 .story {
-  background: #262626;
   padding: 120px 32px;
 }
 
 .story-inner {
   max-width: 760px;
   margin: 0 auto;
+  background: #262626;
+  padding: 64px clamp(28px, 6vw, 64px);
+  border-radius: 2px;
 }
 
 .story-copy {
@@ -574,7 +579,7 @@ a {
 
   .site-nav {
     position: fixed;
-    top: 0;
+    top: var(--header-h);
     left: 0;
     right: 0;
     grid-column: unset;
@@ -584,13 +589,16 @@ a {
     background: var(--color-bg);
     border-bottom: 1px solid var(--color-line);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0);
-    transform: translateY(-100%);
+    transform: translateY(-8px);
     opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease, box-shadow 0.4s ease;
+    pointer-events: none;
+    z-index: 96;
+    transition: transform 0.3s ease, opacity 0.25s ease, box-shadow 0.4s ease;
   }
   .site-nav.is-open {
-    transform: translateY(var(--header-h));
+    transform: translateY(0);
     opacity: 1;
+    pointer-events: auto;
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
   }
   .site-nav a {
