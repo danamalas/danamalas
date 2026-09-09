@@ -87,14 +87,16 @@
 }
 .product-card-coming-soon {
   position: absolute;
-  left: 16px;
-  bottom: 16px;
-  background: var(--color-ink);
-  color: var(--color-bg);
-  padding: 7px 14px;
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
 }
 .product-card-name {
   font-family: var(--font-display);
