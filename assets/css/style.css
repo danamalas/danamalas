@@ -648,8 +648,8 @@ body:not(.i18n-ready) { visibility: hidden; }
   position: relative;
 }
 .newsletter-badge {
-  width: 48px;
-  height: 48px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: var(--color-ink);
   color: #ffffff;
@@ -661,8 +661,8 @@ body:not(.i18n-ready) { visibility: hidden; }
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 .newsletter-badge svg {
-  width: 20px;
-  height: 20px;
+  width: 13px;
+  height: 13px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.4;
