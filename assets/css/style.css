@@ -252,7 +252,7 @@ a {
 .story-inner {
   max-width: 760px;
   margin: 0 auto;
-  background: #262626;
+  background: #6e6f6f;
   padding: 64px clamp(28px, 6vw, 64px);
   border-radius: 2px;
 }
