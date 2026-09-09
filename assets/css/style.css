@@ -777,7 +777,7 @@ body:not(.i18n-ready) { visibility: hidden; }
 .footer-address {
   grid-column: 3;
   justify-self: end;
-  text-align: end;
+  text-align: center;
 }
 .footer-address p {
   margin: 0 0 2px;
@@ -865,7 +865,8 @@ body:not(.i18n-ready) { visibility: hidden; }
   .contact-social { justify-content: center; }
   .contact-block { margin: 0 auto; }
   .contact-newsletter { margin: 0 auto; }
-  .contact-form textarea { min-height: 140px; }
+  .contact-form-block { align-self: stretch; width: 100%; }
+  .contact-form { width: 100%; }
   .site-footer { margin-top: 32px; }
   .footer-inner { grid-template-columns: 1fr; justify-items: center; gap: 16px; text-align: center; }
   .footer-brand { grid-column: 1; }
