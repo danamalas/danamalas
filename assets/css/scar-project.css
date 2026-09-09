@@ -393,3 +393,11 @@
   .wizard-btn { text-align: center; }
   .wizard-review-item { flex-direction: column; gap: 10px; }
 }
+
+/* ===== Arabic: display font has no italic style for this script ===== */
+html[lang="ar"] .scar-intro h1,
+html[lang="ar"] .wizard-title,
+html[lang="ar"] .wizard-question,
+html[lang="ar"] .wizard-done-title {
+  font-style: normal;
+}

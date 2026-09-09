@@ -323,7 +323,7 @@ body:not(.i18n-ready) { visibility: hidden; }
   margin: 0 auto;
   background: #BEBEBE url("../img/grain-texture.png") repeat;
   padding: 64px clamp(28px, 6vw, 64px);
-  border-radius: 14px;
+  border-radius: 20px;
 }
 
 .story-copy {
@@ -837,4 +837,9 @@ body:not(.i18n-ready) { visibility: hidden; }
 
 @media (max-width: 480px) {
   .brand-word { font-size: 1.05rem; }
+}
+
+/* ===== Arabic: display font has no italic style for this script ===== */
+html[lang="ar"] .contact-section h2 {
+  font-style: normal;
 }

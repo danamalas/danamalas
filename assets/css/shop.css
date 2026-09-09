@@ -265,3 +265,10 @@
   .shop-intro { height: clamp(320px, 46vh, 420px); }
   .back-link { margin-top: 108px; }
 }
+
+/* ===== Arabic: display font has no italic style for this script ===== */
+html[lang="ar"] .shop-intro h1,
+html[lang="ar"] .product-card-coming-soon,
+html[lang="ar"] .product-info h1 {
+  font-style: normal;
+}
