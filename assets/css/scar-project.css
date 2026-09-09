@@ -348,18 +348,19 @@
 .wizard-review-edit:hover { color: var(--color-ink); border-color: var(--color-ink); }
 
 /* ===== Done screen ===== */
-.wizard-done { position: relative; text-align: center; padding-top: 24px; }
+.wizard-done { text-align: center; padding-top: 24px; }
 .wizard-heart-icon {
-  position: absolute;
-  top: -8px;
-  right: -60px;
-  width: 56px;
-  height: 51px;
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+  margin-left: 4px;
+  vertical-align: middle;
+  transform: translateY(-2px);
 }
 .wizard-heart-icon path {
   fill: none;
   stroke: var(--color-ink);
-  stroke-width: 1.6;
+  stroke-width: 2.2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -391,5 +392,4 @@
   .wizard-actions { flex-direction: column-reverse; align-items: stretch; gap: 14px; }
   .wizard-btn { text-align: center; }
   .wizard-review-item { flex-direction: column; gap: 10px; }
-  .wizard-heart-icon { right: -14px; width: 44px; height: 40px; }
 }
