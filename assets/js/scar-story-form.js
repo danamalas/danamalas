@@ -85,7 +85,7 @@
 
     if (name === "today") {
       if (!fieldValue("today")) {
-        showError(step, "Please share what your scar represents to you today.");
+        showError(step, "Please share what strength you've found through your scar.");
         return false;
       }
     }
@@ -138,7 +138,7 @@
       { label: "City / Country", value: fieldValue("location") || "—", goto: "about" },
       { label: "Email", value: fieldValue("email"), goto: "about" },
       { label: "Your story", value: fieldValue("story"), goto: "story" },
-      { label: "What it represents today", value: fieldValue("today"), goto: "today" },
+      { label: "Strength found through your scar", value: fieldValue("today"), goto: "today" },
       { label: "How you'd like to share", value: checkedRadioLabel("participation"), goto: "participation" },
       { label: "Consent", value: "Reviewing submission: Yes", goto: "consent" },
     ];
@@ -174,7 +174,7 @@
         "Their story:",
         fieldValue("story"),
         "",
-        "What it represents today:",
+        "Strength found through their scar:",
         fieldValue("today"),
         "",
         "How they'd like to share: " + checkedRadioLabel("participation"),
