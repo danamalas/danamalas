@@ -72,27 +72,29 @@
 }
 .product-card-blank {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   background: var(--color-bg-alt);
   overflow: hidden;
 }
-.product-card-blank::after {
-  content: "";
+.product-card-scar {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, transparent calc(50% - 0.5px), var(--color-line) 50%, transparent calc(50% + 0.5px));
+  top: 50%;
+  left: 50%;
+  height: 62%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
 }
 .product-card-coming-soon {
-  position: relative;
-  z-index: 1;
-  background: var(--color-bg-alt);
-  padding: 6px 16px;
-  font-size: 0.78rem;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  padding: 7px 14px;
+  font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-ink-soft);
 }
 .product-card-name {
   font-family: var(--font-display);

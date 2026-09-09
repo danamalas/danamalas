@@ -4,6 +4,7 @@ function cardHtml(product) {
   return `
     <div class="product-card">
       <span class="product-card-img product-card-blank" aria-hidden="true">
+        <img src="assets/img/scar-mark.png" alt="" class="product-card-scar">
         <span class="product-card-coming-soon">Coming Soon</span>
       </span>
       <span class="product-card-name">${product.name}</span>
