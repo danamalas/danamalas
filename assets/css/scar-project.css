@@ -356,11 +356,17 @@
   font-size: clamp(1.7rem, 3vw, 2.2rem);
   margin: 0 0 20px;
 }
-.wizard-heart {
+.wizard-word-been {
+  position: relative;
   display: inline-block;
+}
+.wizard-heart {
+  position: absolute;
+  top: -0.45em;
+  right: -0.5em;
   font-style: normal;
-  font-size: 0.6em;
-  vertical-align: middle;
+  font-size: 0.55em;
+  line-height: 1;
   color: var(--color-ink);
 }
 .wizard-done p {
