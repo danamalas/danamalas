@@ -165,13 +165,12 @@
   }
 
   var submitBtn = document.getElementById("wizardSubmit");
+  var submitError = document.getElementById("wizardSubmitError");
   if (submitBtn) {
     submitBtn.addEventListener("click", function () {
-      var subject = encodeURIComponent("The Scar Project — story submission");
-      var bodyLines = [
+      var message = [
         "First name: " + (fieldValue("firstName") || "—"),
         "City / Country: " + (fieldValue("location") || "—"),
-        "Email: " + fieldValue("email"),
         "",
         "Their story:",
         fieldValue("story"),
@@ -180,11 +179,28 @@
         fieldValue("today"),
         "",
         "How they'd like to share: " + checkedRadioLabel("participation"),
-      ];
-      var body = encodeURIComponent(bodyLines.join("\n"));
-      window.location.href = "mailto:support@aboatelier.com?subject=" + subject + "&body=" + body;
+      ].join("\n");
 
-      goToStepName("done");
+      submitBtn.disabled = true;
+      var originalLabel = submitBtn.textContent;
+      submitBtn.textContent = t("wizard.submitting");
+      if (submitError) submitError.hidden = true;
+
+      submitToWeb3Forms({
+        subject: "The Scar Project — story submission",
+        from_name: "ABÔ Atelier Website",
+        email: fieldValue("email"),
+        message: message,
+      }).then(function (result) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+        if (result.ok) {
+          goToStepName("done");
+        } else if (submitError) {
+          submitError.textContent = t("wizard.submitError");
+          submitError.hidden = false;
+        }
+      });
     });
   }
 

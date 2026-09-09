@@ -1,18 +1,42 @@
 (function () {
   function bindForm(form) {
+    var status = form.querySelector(".newsletter-status");
+    var submitBtn = form.querySelector('button[type="submit"]');
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var name = form.querySelector('input[name="name"]').value.trim();
       var email = form.querySelector('input[name="email"]').value.trim();
-      var phoneCountry = form.querySelector('select[name="phoneCountry"]');
+      var phoneCountry = form.querySelector('[name="phoneCountry"]');
       var phone = form.querySelector('input[name="phone"]').value.trim();
       var fullPhone = (phoneCountry ? phoneCountry.value + " " : "") + phone;
       if (!email) return;
-      var subject = encodeURIComponent("Newsletter signup");
-      var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + fullPhone);
-      window.location.href = "mailto:support@aboatelier.com?subject=" + subject + "&body=" + body;
-      var popup = form.closest(".newsletter-popup");
-      if (popup) popup.hidden = true;
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (status) {
+        status.hidden = false;
+        status.className = "newsletter-status";
+        status.textContent = t("newsletter.sending");
+      }
+
+      submitToWeb3Forms({
+        subject: "Newsletter signup — ABÔ Atelier",
+        from_name: "ABÔ Atelier Website",
+        name: name,
+        email: email,
+        phone: fullPhone,
+      }).then(function (result) {
+        if (submitBtn) submitBtn.disabled = false;
+        if (!status) return;
+        if (result.ok) {
+          status.className = "newsletter-status is-success";
+          status.textContent = t("newsletter.success");
+          form.reset();
+        } else {
+          status.className = "newsletter-status is-error";
+          status.textContent = t("newsletter.error");
+        }
+      });
     });
   }
 
