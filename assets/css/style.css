@@ -628,8 +628,22 @@ body:not(.i18n-ready) { visibility: hidden; }
   font-size: 0.8rem;
   color: var(--color-ink-soft);
 }
-.contact-newsletter .newsletter-form {
-  max-width: 320px;
+.newsletter-open-btn {
+  margin-top: 4px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.newsletter-open-btn:hover {
+  background: transparent;
+  color: var(--color-ink);
 }
 
 /* ===== Newsletter floating widget ===== */

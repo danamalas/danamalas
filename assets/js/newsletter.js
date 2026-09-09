@@ -58,4 +58,11 @@
       popup.hidden = true;
     });
   }
+
+  var openBtn = document.getElementById("newsletterOpenBtn");
+  if (openBtn && popup) {
+    openBtn.addEventListener("click", function () {
+      popup.hidden = false;
+    });
+  }
 })();
