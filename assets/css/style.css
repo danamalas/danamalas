@@ -13,6 +13,7 @@
 
   --max-width: 1240px;
   --header-h: 160px;
+  --header-h-scrolled: 88px;
 }
 
 * { box-sizing: border-box; }
@@ -58,9 +59,10 @@ a {
   background: rgba(237, 237, 237, 0.88);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease, background 0.3s ease;
+  transition: height 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 .site-header.is-scrolled {
+  height: var(--header-h-scrolled);
   border-bottom-color: var(--color-line);
 }
 
@@ -84,6 +86,10 @@ a {
 .brand-logo {
   height: 120px;
   width: auto;
+  transition: height 0.3s ease;
+}
+.site-header.is-scrolled .brand-logo {
+  height: 60px;
 }
 
 .site-nav {
@@ -315,7 +321,7 @@ body:not(.i18n-ready) { visibility: hidden; }
 .story-inner {
   max-width: 760px;
   margin: 0 auto;
-  background: #BEBEBE;
+  background: #BEBEBE url("../img/grain-texture.png") repeat;
   padding: 64px clamp(28px, 6vw, 64px);
   border-radius: 14px;
 }
@@ -769,7 +775,10 @@ body:not(.i18n-ready) { visibility: hidden; }
     opacity: 0;
     pointer-events: none;
     z-index: 96;
-    transition: transform 0.3s ease, opacity 0.25s ease, box-shadow 0.4s ease;
+    transition: top 0.3s ease, transform 0.3s ease, opacity 0.25s ease, box-shadow 0.4s ease;
+  }
+  .site-header.is-scrolled .site-nav {
+    top: var(--header-h-scrolled);
   }
   .site-nav.is-open {
     transform: translateY(0);
@@ -800,8 +809,11 @@ body:not(.i18n-ready) { visibility: hidden; }
     background: rgba(10, 9, 8, 0.4);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.35s ease;
+    transition: inset 0.3s ease, opacity 0.35s ease;
     z-index: 95;
+  }
+  .site-header.is-scrolled ~ .nav-backdrop {
+    inset: var(--header-h-scrolled) 0 0 0;
   }
   .nav-backdrop.is-visible {
     opacity: 1;
