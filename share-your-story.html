@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share Your Story — The Scar Project — ABÔ Atelier</title>
+<meta name="description" content="Share your story with The Scar Project by ABÔ Atelier.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="assets/img/abo-logo-scarred-mark.png" type="image/png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/shop.css">
+<link rel="stylesheet" href="assets/css/scar-project.css">
+</head>
+<body>
+
+<a class="skip-link" href="#storyWizard">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="index.html#top" class="brand" aria-label="ABÔ Atelier — Home">
+      <img src="assets/img/abo-logo-scarred-full.png" alt="ABÔ Atelier" class="brand-logo">
+    </a>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="the-scar-project.html" aria-current="page">The Scar Project</a>
+      <a href="index.html#contact">Contact Us</a>
+    </nav>
+
+    <a href="shop.html" class="cart-link" aria-label="View cart">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+    </a>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main id="storyWizard">
+  <div class="wizard">
+    <div class="wizard-progress"><div class="wizard-progress-fill" id="wizardProgressFill"></div></div>
+
+    <!-- Intro -->
+    <section class="wizard-step" data-step="intro">
+      <p class="wizard-intro-eyebrow">Share Your Scar</p>
+      <h1 class="wizard-title">Every scar carries a story.</h1>
+      <p class="wizard-hint">Tell us what yours represents today.</p>
+      <p class="wizard-hint">Your story is yours. How you share it is your choice.</p>
+      <div class="wizard-actions">
+        <button type="button" class="wizard-btn" data-next>Begin →</button>
+      </div>
+    </section>
+
+    <!-- 01 — About you -->
+    <section class="wizard-step" data-step="about" hidden>
+      <button type="button" class="wizard-back" data-back>← Back</button>
+      <p class="wizard-number">01 — About You</p>
+
+      <div class="wizard-field">
+        <label for="fieldFirstName">First name (optional)</label>
+        <input type="text" id="fieldFirstName" name="firstName" autocomplete="given-name">
+      </div>
+      <div class="wizard-field">
+        <label for="fieldLocation">City / Country (optional)</label>
+        <input type="text" id="fieldLocation" name="location" autocomplete="address-level2">
+      </div>
+      <div class="wizard-field">
+        <label for="fieldEmail">Email (kept private)</label>
+        <input type="email" id="fieldEmail" name="email" required autocomplete="email">
+      </div>
+
+      <p class="wizard-error" hidden></p>
+      <div class="wizard-actions">
+        <button type="button" class="wizard-btn" data-next>Continue →</button>
+      </div>
+    </section>
+
+    <!-- 02 — Your story -->
+    <section class="wizard-step" data-step="story" hidden>
+      <button type="button" class="wizard-back" data-back>← Back</button>
+      <p class="wizard-number">02 — Your Story</p>
+      <p class="wizard-question">Tell us about your scar.</p>
+      <p class="wizard-hint">Share as much or as little as you feel comfortable sharing.</p>
+
+      <div class="wizard-field">
+        <textarea name="story" rows="8" aria-label="Tell us about your scar"></textarea>
+      </div>
+
+      <p class="wizard-error" hidden></p>
+      <div class="wizard-actions">
+        <button type="button" class="wizard-btn" data-next>Continue →</button>
+      </div>
+    </section>
+
+    <!-- 03 — Today -->
+    <section class="wizard-step" data-step="today" hidden>
+      <button type="button" class="wizard-back" data-back>← Back</button>
+      <p class="wizard-number">03 — Today</p>
+      <p class="wizard-question">What does your scar represent to you today?</p>
+
+      <div class="wizard-field wizard-field--today">
+        <textarea name="today" rows="6" aria-label="What does your scar represent to you today"></textarea>
+      </div>
+
+      <p class="wizard-error" hidden></p>
+      <div class="wizard-actions">
+        <button type="button" class="wizard-btn" data-next>Continue →</button>
+      </div>
+    </section>
+
+    <!-- Participation -->
+    <section class="wizard-step" data-step="participation" hidden>
+      <button type="button" class="wizard-back" data-back>← Back</button>
+      <p class="wizard-question">How would you like to share your story?</p>
+
+      <ul class="wizard-options">
+        <li class="wizard-option">
+          <label>
+            <input type="radio" name="participation" value="Written story">
+            <span class="wizard-option-mark"></span>
+            Written story
+          </label>
+        </li>
+        <li class="wizard-option">
+          <label>
+            <input type="radio" name="participation" value="Open to being photographed or filmed">
+            <span class="wizard-option-mark"></span>
+            I'd be open to being photographed / filmed
+          </label>
+        </li>
+        <li class="wizard-option">
+          <label>
+            <input type="radio" name="participation" value="Prefer to remain anonymous">
+            <span class="wizard-option-mark"></span>
+            I'd prefer to remain anonymous
+          </label>
+        </li>
+      </ul>
+
+      <p class="wizard-error" hidden></p>
+      <div class="wizard-actions">
+        <button type="button" class="wizard-btn" data-next>Continue →</button>
+      </div>
+    </section>
+
+    <!-- Consent -->
+    <section class="wizard-step" data-step="consent" hidden>
+      <button type="button" class="wizard-back" data-back>← Back</button>
+      <p class="wizard-question">Before you submit</p>
+
+      <label class="wizard-checkbox">
+        <input type="checkbox" name="consentReview">
+        <span class="wizard-checkbox-mark"></span>
+        <span class="wizard-checkbox-text">I agree to ABÔ Atelier reviewing my submission.</span>
+      </label>
+
+      <label class="wizard-checkbox">
+        <input type="checkbox" name="consentContact">
+        <span class="wizard-checkbox-mark"></span>
+        <span class="wizard-checkbox-text">If selected, I'm open to being contacted about potentially featuring my story in The Scar Project.</span>
+      </label>
+
+      <p class="wizard-fine-print">Submitting your story does not automatically give ABÔ Atelier permission to publish it. If your story is selected, we will contact you before publication.</p>
+
+      <p class="wizard-error" hidden></p>
+      <div class="wizard-actions">
+        <button type="button" class="wizard-btn" data-next>Continue →</button>
+      </div>
+    </section>
+
+    <!-- Review -->
+    <section class="wizard-step" data-step="review" hidden>
+      <button type="button" class="wizard-back" data-back>← Back</button>
+      <p class="wizard-question">Your story</p>
+      <p class="wizard-hint">Take a moment to review what you've shared. You can edit anything before sending.</p>
+
+      <ul class="wizard-review-list" id="wizardReviewList"></ul>
+
+      <div class="wizard-actions">
+        <button type="button" class="wizard-btn" id="wizardSubmit">Submit My Story</button>
+      </div>
+    </section>
+
+    <!-- Done -->
+    <section class="wizard-step wizard-done" data-step="done" hidden>
+      <p class="wizard-done-title">Your story has been received.</p>
+      <p>Thank you for trusting us with a part of your journey.</p>
+      <p>Every story submitted to The Scar Project is reviewed with care. If we feel your story could become part of the project, the ABÔ Atelier team will contact you.</p>
+      <p class="wizard-done-line">Scars create brighter tomorrows.</p>
+      <a href="the-scar-project.html" class="wizard-discover">Discover the stories →</a>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="index.html#top" class="brand brand--footer">
+      <img src="assets/img/abo-logo-scarred-white-full.png" alt="ABÔ Atelier" class="brand-logo brand-logo--footer">
+    </a>
+    <p class="footer-copy">&copy; <span id="year"></span> ABÔ Atelier. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="newsletter-widget" id="newsletterWidget">
+  <div class="newsletter-tooltip" id="newsletterTooltip">
+    <button type="button" class="newsletter-tooltip-close" id="newsletterTooltipClose" aria-label="Dismiss">&times;</button>
+    <span>Sign up for our newsletter and get 10% off your first order</span>
+  </div>
+  <div class="newsletter-anchor">
+    <button type="button" class="newsletter-badge" id="newsletterBadge" aria-label="Sign up for our newsletter">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 6l9 7 9-7"></path></svg>
+    </button>
+    <div class="newsletter-popup" id="newsletterPopup" hidden>
+      <button type="button" class="newsletter-close" id="newsletterClose" aria-label="Close">&times;</button>
+      <p class="newsletter-title">Sign up for our newsletter and get 10% off your first order.</p>
+      <form class="newsletter-form">
+        <input type="text" name="name" placeholder="Name" required aria-label="Name">
+        <input type="email" name="email" placeholder="Email" required aria-label="Email address">
+        <div class="newsletter-phone-row">
+          <select name="phoneCountry" class="newsletter-phone-code" aria-label="Country code">
+            <option value="+46">SE +46</option>
+            <option value="+1">US +1</option>
+            <option value="+44">UK +44</option>
+            <option value="+49">DE +49</option>
+            <option value="+33">FR +33</option>
+            <option value="+34">ES +34</option>
+            <option value="+39">IT +39</option>
+            <option value="+30">GR +30</option>
+            <option value="+45">DK +45</option>
+            <option value="+47">NO +47</option>
+            <option value="+358">FI +358</option>
+          </select>
+          <input type="tel" name="phone" placeholder="Phone number" required aria-label="Phone number">
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/newsletter.js"></script>
+<script src="assets/js/scar-story-form.js"></script>
+</body>
+</html>
