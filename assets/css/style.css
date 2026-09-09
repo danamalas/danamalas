@@ -326,8 +326,8 @@ a {
 /* ===== Contact ===== */
 .contact-section {
   max-width: var(--max-width);
-  margin: 100px auto 0;
-  padding: 80px 32px 100px;
+  margin: 64px auto 0;
+  padding: 48px 32px 56px;
   border-top: 1px solid var(--color-line);
   text-align: center;
   opacity: 0;
@@ -343,32 +343,32 @@ a {
   font-family: var(--font-display);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(2rem, 3.6vw, 2.8rem);
-  margin: 0 0 40px;
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  margin: 0 0 28px;
 }
 .contact-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  max-width: 760px;
+  gap: 40px;
+  max-width: 680px;
   margin: 0 auto;
   text-align: left;
 }
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 .contact-block {
   max-width: 420px;
   color: var(--color-ink-soft);
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 .contact-info .contact-block {
   margin: 0;
 }
 .contact-block p {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
 }
 .contact-block a {
   color: var(--color-ink);
@@ -380,7 +380,7 @@ a {
 .contact-social {
   display: flex;
   justify-content: flex-start;
-  gap: 24px;
+  gap: 18px;
 }
 .contact-social .social-link {
   display: inline-flex;
@@ -388,8 +388,8 @@ a {
   border-bottom: none;
 }
 .contact-social svg {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   fill: currentColor;
 }
 .contact-social .social-link:hover {
@@ -409,20 +409,20 @@ a {
 }
 .newsletter-form input {
   min-width: 0;
-  padding: 10px 12px;
+  padding: 8px 10px;
   border: 1px solid var(--color-line);
   background: #ffffff;
   color: var(--color-ink);
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 .newsletter-form button {
-  padding: 10px 16px;
+  padding: 8px 16px;
   border: 1px solid var(--color-ink);
   background: var(--color-ink);
   color: var(--color-bg);
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
@@ -439,12 +439,12 @@ a {
 }
 .newsletter-phone-code {
   flex: 0 0 auto;
-  padding: 10px 8px;
+  padding: 8px;
   border: 1px solid var(--color-line);
   background: #ffffff;
   color: var(--color-ink);
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 .newsletter-phone-row input {
   flex: 1;
@@ -640,7 +640,7 @@ a {
   .hero-tile-text { max-width: 100%; }
 
   .story { padding-top: 88px; }
-  .contact-section { margin-top: 88px; padding: 72px 24px 100px; }
+  .contact-section { margin-top: 48px; padding: 40px 24px 48px; }
   .contact-columns { grid-template-columns: 1fr; gap: 40px; text-align: center; }
   .contact-info { align-items: center; }
   .contact-social { justify-content: center; }
