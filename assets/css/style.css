@@ -418,7 +418,7 @@ body:not(.i18n-ready) { visibility: hidden; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  max-width: 680px;
+  max-width: 780px;
   margin: 0 auto;
   text-align: start;
 }
