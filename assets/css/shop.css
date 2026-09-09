@@ -73,7 +73,7 @@
 .product-card-blank {
   position: relative;
   display: block;
-  background: var(--color-bg-alt);
+  background: var(--color-bg-alt) url("../img/grain-texture.png") repeat;
   overflow: hidden;
 }
 .product-card-scar {
