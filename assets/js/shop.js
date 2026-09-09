@@ -18,11 +18,11 @@ function cardHtml(product) {
     <div class="product-card" data-product="${product.id}" data-variant="${variantId || ""}">
       <span class="product-card-img product-card-blank" aria-hidden="true">
         <img src="assets/img/scar-mark.png" alt="" class="product-card-scar">
+        <span class="product-card-coming-soon">Coming Soon</span>
       </span>
       <span class="product-card-name">${product.name}</span>
       <span class="product-card-price">${formatPrice(view.price, view.currency)}</span>
       ${swatches}
-      <span class="product-card-coming-soon">Coming Soon</span>
     </div>
   `;
 }
