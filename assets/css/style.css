@@ -324,6 +324,7 @@ body:not(.i18n-ready) { visibility: hidden; }
   background: #BEBEBE url("../img/grain-texture.png") repeat;
   padding: 64px clamp(28px, 6vw, 64px);
   border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .story-copy {
