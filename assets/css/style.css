@@ -512,6 +512,95 @@ body:not(.i18n-ready) { visibility: hidden; }
   flex: 1;
   min-width: 0;
 }
+
+.phone-country-picker {
+  position: relative;
+  flex: 0 0 auto;
+}
+.phone-country-picker .phone-country-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid var(--color-line);
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: none;
+  letter-spacing: normal;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.phone-country-picker .phone-country-btn:hover {
+  background: #ffffff;
+  color: var(--color-ink);
+}
+.phone-country-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  inset-inline-start: 0;
+  width: 220px;
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+  z-index: 160;
+}
+.phone-country-panel[hidden] { display: none; }
+.phone-country-panel.opens-upward {
+  top: auto;
+  bottom: calc(100% + 4px);
+}
+.phone-country-search {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-bottom: 1px solid var(--color-line);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--color-ink);
+}
+.phone-country-search:focus { outline: none; }
+.phone-country-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.phone-country-list .phone-country-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--color-ink);
+  text-align: start;
+}
+.phone-country-option-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.phone-country-option-code { color: var(--color-ink-soft); }
+.phone-country-list .phone-country-option:hover,
+.phone-country-list .phone-country-option.is-highlighted {
+  background: var(--color-bg-alt);
+  color: var(--color-ink);
+}
+.phone-country-empty {
+  padding: 12px;
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+}
 .contact-newsletter .newsletter-form {
   max-width: 320px;
 }

@@ -38,6 +38,7 @@ var ABO_I18N = (function () {
       "newsletter.countryCodeAria": "Country code",
       "newsletter.phone": "Phone number",
       "newsletter.submit": "Sign Up",
+      "phone.searchPlaceholder": "Search country…",
 
       "hero.story.text": "A scar turned into strength — how ABÔ Atelier came to be",
       "hero.story.link": "Read the story",
@@ -166,6 +167,7 @@ var ABO_I18N = (function () {
       "newsletter.countryCodeAria": "Código de país",
       "newsletter.phone": "Número de teléfono",
       "newsletter.submit": "Suscribirme",
+      "phone.searchPlaceholder": "Buscar país…",
 
       "hero.story.text": "Una cicatriz convertida en fuerza — cómo nació ABÔ Atelier",
       "hero.story.link": "Leer la historia",
@@ -294,6 +296,7 @@ var ABO_I18N = (function () {
       "newsletter.countryCodeAria": "Indicatif du pays",
       "newsletter.phone": "Numéro de téléphone",
       "newsletter.submit": "S'inscrire",
+      "phone.searchPlaceholder": "Rechercher un pays…",
 
       "hero.story.text": "Une cicatrice devenue force — comment ABÔ Atelier est né",
       "hero.story.link": "Lire l'histoire",
@@ -422,6 +425,7 @@ var ABO_I18N = (function () {
       "newsletter.countryCodeAria": "رمز الدولة",
       "newsletter.phone": "رقم الهاتف",
       "newsletter.submit": "اشترك",
+      "phone.searchPlaceholder": "ابحث عن الدولة…",
 
       "hero.story.text": "ندبة تحولت إلى قوة — كيف وُلدت ABÔ Atelier",
       "hero.story.link": "اقرأ القصة",
