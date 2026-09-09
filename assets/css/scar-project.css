@@ -121,6 +121,17 @@
   max-width: 52ch;
 }
 
+.wizard-required-note {
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+  margin: 0 0 20px;
+}
+.required-mark {
+  color: #a33b3b;
+  font-style: normal;
+  margin-left: 2px;
+}
+
 .wizard-field { margin-bottom: 24px; }
 .wizard-field label {
   display: block;
@@ -129,6 +140,11 @@
   text-transform: uppercase;
   color: var(--color-ink-soft);
   margin-bottom: 8px;
+}
+.wizard-field-note {
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+  margin: 6px 0 0;
 }
 .wizard-field input[type="text"],
 .wizard-field input[type="email"],
