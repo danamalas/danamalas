@@ -86,22 +86,23 @@
   opacity: 0.5;
 }
 .product-card-coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  margin-top: 10px;
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.95rem;
   letter-spacing: 0.02em;
-  color: var(--color-ink-soft);
-  white-space: nowrap;
+  color: var(--color-ink);
 }
 .product-card-name {
   font-family: var(--font-display);
   font-size: 1.05rem;
   margin-bottom: 6px;
+}
+.product-card-price {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
 }
 .product-card-swatches {
   display: flex;

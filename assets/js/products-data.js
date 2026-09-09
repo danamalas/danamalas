@@ -32,6 +32,17 @@ const PRODUCTS = [
           "The silver version of the fracture bar stud, shown here with their post and butterfly back.",
         shopifyProductId: null,
       },
+      {
+        id: "rose",
+        label: "Rose Gold",
+        swatch: "#d9b6a3",
+        price: 440,
+        material: "14k recycled rose gold",
+        image: "assets/img/products/fracture-bar-rose.jpg",
+        description:
+          "The rose gold version of the fracture bar stud, shown here with their post and butterfly back.",
+        shopifyProductId: null,
+      },
     ],
   },
   {
@@ -59,6 +70,17 @@ const PRODUCTS = [
         image: "assets/img/products/fracture-necklace-silver.jpg",
         description:
           "The same fractured bar pendant in sterling silver, carried on a fine chain and finished by hand.",
+        shopifyProductId: null,
+      },
+      {
+        id: "rose",
+        label: "Rose Gold",
+        swatch: "#d9b6a3",
+        price: 640,
+        material: "14k recycled rose gold",
+        image: "assets/img/products/fracture-necklace-rose.jpg",
+        description:
+          "The same fractured bar pendant in rose gold, carried on a fine chain and finished by hand.",
         shopifyProductId: null,
       },
     ],
@@ -90,6 +112,17 @@ const PRODUCTS = [
           "The same open cuff in sterling silver, its surface split by one hand-finished fracture line running across the face.",
         shopifyProductId: null,
       },
+      {
+        id: "rose",
+        label: "Rose Gold",
+        swatch: "#d9b6a3",
+        price: 780,
+        material: "14k recycled rose gold",
+        image: "assets/img/products/fracture-cuff-rose.jpg",
+        description:
+          "The same open cuff in rose gold, its surface split by one hand-finished fracture line running across the face.",
+        shopifyProductId: null,
+      },
     ],
   },
   {
@@ -119,6 +152,17 @@ const PRODUCTS = [
           "The same bar stud in sterling silver, its surface split by one hand-finished fracture line running the length of the piece.",
         shopifyProductId: null,
       },
+      {
+        id: "rose",
+        label: "Rose Gold",
+        swatch: "#d9b6a3",
+        price: 420,
+        material: "14k recycled rose gold",
+        image: "assets/img/products/fracture-stud-rose.jpg",
+        description:
+          "The same bar stud in rose gold, its surface split by one hand-finished fracture line running the length of the piece.",
+        shopifyProductId: null,
+      },
     ],
   },
   {
@@ -146,6 +190,17 @@ const PRODUCTS = [
         image: "assets/img/products/fracture-ring-silver.jpg",
         description:
           "The same band in sterling silver, its surface split by one hand-finished fracture line running across the face.",
+        shopifyProductId: null,
+      },
+      {
+        id: "rose",
+        label: "Rose Gold",
+        swatch: "#d9b6a3",
+        price: 620,
+        material: "14k recycled rose gold",
+        image: "assets/img/products/fracture-ring-rose.jpg",
+        description:
+          "The same band in rose gold, its surface split by one hand-finished fracture line running across the face.",
         shopifyProductId: null,
       },
     ],
