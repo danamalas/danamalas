@@ -463,13 +463,16 @@ body:not(.i18n-ready) { visibility: hidden; }
 }
 
 /* ===== Newsletter form (shared by contact section + floating widget) ===== */
-.newsletter-form {
+.newsletter-form,
+.contact-form {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-top: 4px;
 }
-.newsletter-form input {
+.newsletter-form input,
+.contact-form input,
+.contact-form textarea {
   min-width: 0;
   padding: 8px 10px;
   border: 1px solid var(--color-line);
@@ -478,7 +481,12 @@ body:not(.i18n-ready) { visibility: hidden; }
   font-family: var(--font-body);
   font-size: 0.8rem;
 }
-.newsletter-form button {
+.contact-form textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+.newsletter-form button,
+.contact-form button {
   padding: 8px 16px;
   border: 1px solid var(--color-ink);
   background: var(--color-ink);
@@ -491,11 +499,13 @@ body:not(.i18n-ready) { visibility: hidden; }
   white-space: nowrap;
   transition: background 0.2s ease, color 0.2s ease;
 }
-.newsletter-form button:hover {
+.newsletter-form button:hover,
+.contact-form button:hover {
   background: transparent;
   color: var(--color-ink);
 }
-.newsletter-form button:disabled {
+.newsletter-form button:disabled,
+.contact-form button:disabled {
   opacity: 0.6;
   cursor: default;
 }

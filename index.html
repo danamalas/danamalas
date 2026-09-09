@@ -99,7 +99,17 @@
     <div class="contact-columns">
       <div class="contact-info">
         <div class="contact-block">
-          <p><span data-i18n="contact.emailLabel">Email:</span> <a href="mailto:support@aboatelier.com">support@aboatelier.com</a></p>
+          <p><span data-i18n="contact.emailLabel">Email:</span> support@aboatelier.com</p>
+        </div>
+
+        <div class="contact-block contact-form-block">
+          <form class="contact-form" id="contactForm">
+            <input type="text" name="name" data-i18n-placeholder="newsletter.name" placeholder="Name" data-i18n-aria="newsletter.name" aria-label="Name">
+            <input type="email" name="email" data-i18n-placeholder="newsletter.email" placeholder="Email" required data-i18n-aria="newsletter.emailAria" aria-label="Email address">
+            <textarea name="message" rows="4" data-i18n-placeholder="contact.form.message" placeholder="Message" required data-i18n-aria="contact.form.message" aria-label="Message"></textarea>
+            <button type="submit" data-i18n="contact.form.submit">Send Message</button>
+            <p class="newsletter-status" hidden></p>
+          </form>
         </div>
 
         <div class="contact-block contact-social">
@@ -122,7 +132,7 @@
         </div>
 
         <div class="contact-block contact-returns">
-          <p><span data-i18n="contact.returnsLabel">For questions regarding returns, email us at</span> <a href="mailto:support@aboatelier.com">support@aboatelier.com</a>.</p>
+          <p><span data-i18n="contact.returnsLabel">For questions regarding returns, email us at</span> support@aboatelier.com.</p>
           <p><a href="return-policy.html" data-i18n="contact.returnsPolicyLink">See our return policy.</a></p>
         </div>
       </div>
@@ -582,5 +592,6 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/web3forms.js"></script>
 <script src="assets/js/newsletter.js"></script>
+<script src="assets/js/contact-form.js"></script>
 </body>
 </html>

@@ -188,14 +188,63 @@
   display: inline-block;
   padding: 15px 34px;
   border: 1px solid var(--color-ink);
+  background: transparent;
+  font-family: var(--font-body);
   font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease;
 }
 .product-buy .btn-enquire:hover {
   background: var(--color-ink);
   color: var(--color-bg);
+}
+.product-buy .btn-enquire[hidden] {
+  display: none;
+}
+.product-buy .enquire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 360px;
+}
+.product-buy .enquire-form[hidden] {
+  display: none;
+}
+.product-buy .enquire-form input,
+.product-buy .enquire-form textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--color-line);
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+.product-buy .enquire-form textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+.product-buy .enquire-form button[type="submit"] {
+  align-self: flex-start;
+  padding: 12px 28px;
+  border: 1px solid var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.product-buy .enquire-form button[type="submit"]:hover {
+  background: transparent;
+  color: var(--color-ink);
+}
+.product-buy .enquire-form button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 .product-not-found {

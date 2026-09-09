@@ -65,6 +65,9 @@ var ABO_I18N = (function () {
       "contact.country": "Sweden",
       "contact.returnsLabel": "For questions regarding returns, email us at",
       "contact.returnsPolicyLink": "See our return policy.",
+      "contact.form.message": "Message",
+      "contact.form.submit": "Send Message",
+      "contact.form.success": "Thank you! We'll be in touch soon.",
 
       "scar.eyebrow": "The Scar Project",
       "scar.heading": "Every scar carries a story, what's yours?",
@@ -130,6 +133,8 @@ var ABO_I18N = (function () {
       "product.notFound": "We couldn't find that piece.",
       "product.returnToShop": "Return to the Shop.",
       "product.backToShop": "← Back to Shop",
+      "product.enquire": "Enquire about this piece",
+      "product.enquireSubmit": "Send Enquiry",
 
       "policy.title": "Return Policy",
       "policy.placeholder": "Placeholder policy — replace this page with ABÔ Atelier's actual return and exchange terms.",
@@ -138,7 +143,8 @@ var ABO_I18N = (function () {
       "policy.exchangesHeading": "Exchanges",
       "policy.exchangesBody": "[Add your exchange terms here — e.g. resizing, engraving corrections, store credit.]",
       "policy.contactHeading": "Contact",
-      "policy.contactBody": "For questions regarding returns, email us at",
+      "policy.contactBody": "For questions regarding returns, reach out via our",
+      "policy.contactBodyEnd": "page.",
 
       "title.home": "ABÔ Atelier — Fine Jewellery",
       "title.shop": "Shop — ABÔ Atelier",
@@ -199,6 +205,9 @@ var ABO_I18N = (function () {
       "contact.country": "Suecia",
       "contact.returnsLabel": "Para preguntas sobre devoluciones, escríbenos a",
       "contact.returnsPolicyLink": "Consulta nuestra política de devoluciones.",
+      "contact.form.message": "Mensaje",
+      "contact.form.submit": "Enviar Mensaje",
+      "contact.form.success": "¡Gracias! Nos pondremos en contacto pronto.",
 
       "scar.eyebrow": "The Scar Project",
       "scar.heading": "Toda cicatriz cuenta una historia, ¿cuál es la tuya?",
@@ -264,6 +273,8 @@ var ABO_I18N = (function () {
       "product.notFound": "No pudimos encontrar esa pieza.",
       "product.returnToShop": "Volver a la Tienda.",
       "product.backToShop": "← Volver a la Tienda",
+      "product.enquire": "Consultar sobre esta pieza",
+      "product.enquireSubmit": "Enviar Consulta",
 
       "policy.title": "Política de Devoluciones",
       "policy.placeholder": "Política provisional — sustituye esta página con las condiciones reales de devolución y cambio de ABÔ Atelier.",
@@ -272,7 +283,8 @@ var ABO_I18N = (function () {
       "policy.exchangesHeading": "Cambios",
       "policy.exchangesBody": "[Añade aquí tus condiciones de cambio — por ejemplo, ajuste de talla, correcciones de grabado, crédito en tienda.]",
       "policy.contactHeading": "Contacto",
-      "policy.contactBody": "Para preguntas sobre devoluciones, escríbenos a",
+      "policy.contactBody": "Para preguntas sobre devoluciones, contáctanos a través de nuestra página de",
+      "policy.contactBodyEnd": ".",
 
       "title.home": "ABÔ Atelier — Joyería Fina",
       "title.shop": "Tienda — ABÔ Atelier",
@@ -333,6 +345,9 @@ var ABO_I18N = (function () {
       "contact.country": "Suède",
       "contact.returnsLabel": "Pour toute question relative aux retours, écrivez-nous à",
       "contact.returnsPolicyLink": "Consultez notre politique de retour.",
+      "contact.form.message": "Message",
+      "contact.form.submit": "Envoyer le Message",
+      "contact.form.success": "Merci ! Nous vous contacterons bientôt.",
 
       "scar.eyebrow": "The Scar Project",
       "scar.heading": "Chaque cicatrice raconte une histoire, quelle est la vôtre ?",
@@ -398,6 +413,8 @@ var ABO_I18N = (function () {
       "product.notFound": "Nous n'avons pas trouvé cette pièce.",
       "product.returnToShop": "Retourner à la Boutique.",
       "product.backToShop": "← Retour à la Boutique",
+      "product.enquire": "Se renseigner sur cette pièce",
+      "product.enquireSubmit": "Envoyer la Demande",
 
       "policy.title": "Politique de Retour",
       "policy.placeholder": "Politique provisoire — remplacez cette page par les conditions réelles de retour et d'échange d'ABÔ Atelier.",
@@ -406,7 +423,8 @@ var ABO_I18N = (function () {
       "policy.exchangesHeading": "Échanges",
       "policy.exchangesBody": "[Ajoutez ici vos conditions d'échange — par exemple redimensionnement, corrections de gravure, avoir.]",
       "policy.contactHeading": "Contact",
-      "policy.contactBody": "Pour toute question relative aux retours, écrivez-nous à",
+      "policy.contactBody": "Pour toute question relative aux retours, contactez-nous via notre page",
+      "policy.contactBodyEnd": ".",
 
       "title.home": "ABÔ Atelier — Joaillerie Fine",
       "title.shop": "Boutique — ABÔ Atelier",
@@ -467,6 +485,9 @@ var ABO_I18N = (function () {
       "contact.country": "السويد",
       "contact.returnsLabel": "لأي استفسارات بخصوص الإرجاع، راسلونا على",
       "contact.returnsPolicyLink": "اطّلع على سياسة الإرجاع الخاصة بنا.",
+      "contact.form.message": "الرسالة",
+      "contact.form.submit": "إرسال الرسالة",
+      "contact.form.success": "شكرًا لك! سنتواصل معك قريبًا.",
 
       "scar.eyebrow": "مشروع الندبة",
       "scar.heading": "كل ندبة تحمل قصة، فما هي قصتك؟",
@@ -532,6 +553,8 @@ var ABO_I18N = (function () {
       "product.notFound": "لم نتمكن من العثور على هذه القطعة.",
       "product.returnToShop": "العودة إلى المتجر.",
       "product.backToShop": "→ العودة إلى المتجر",
+      "product.enquire": "الاستفسار عن هذه القطعة",
+      "product.enquireSubmit": "إرسال الاستفسار",
 
       "policy.title": "سياسة الإرجاع",
       "policy.placeholder": "سياسة مؤقتة — استبدل هذه الصفحة بشروط الإرجاع والاستبدال الفعلية الخاصة بـ ABÔ Atelier.",
@@ -540,7 +563,8 @@ var ABO_I18N = (function () {
       "policy.exchangesHeading": "الاستبدال",
       "policy.exchangesBody": "[أضف هنا شروط الاستبدال — مثل تعديل المقاس، تصحيحات النقش، رصيد المتجر.]",
       "policy.contactHeading": "التواصل",
-      "policy.contactBody": "لأي استفسارات بخصوص الإرجاع، راسلونا على",
+      "policy.contactBody": "لأي استفسارات بخصوص الإرجاع، يرجى التواصل معنا عبر صفحة",
+      "policy.contactBodyEnd": ".",
 
       "title.home": "ABÔ Atelier — مجوهرات فاخرة",
       "title.shop": "المتجر — ABÔ Atelier",
