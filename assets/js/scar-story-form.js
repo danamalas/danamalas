@@ -140,13 +140,7 @@
       { label: "Your story", value: fieldValue("story"), goto: "story" },
       { label: "What it represents today", value: fieldValue("today"), goto: "today" },
       { label: "How you'd like to share", value: checkedRadioLabel("participation"), goto: "participation" },
-      {
-        label: "Consent",
-        value:
-          "Reviewing submission: Yes" +
-          (wizard.querySelector('[name="consentContact"]').checked ? "\nOpen to being contacted if selected: Yes" : "\nOpen to being contacted if selected: No"),
-        goto: "consent",
-      },
+      { label: "Consent", value: "Reviewing submission: Yes", goto: "consent" },
     ];
 
     list.innerHTML = "";
@@ -184,7 +178,6 @@
         fieldValue("today"),
         "",
         "How they'd like to share: " + checkedRadioLabel("participation"),
-        "Open to being contacted if selected: " + (wizard.querySelector('[name="consentContact"]').checked ? "Yes" : "No"),
       ];
       var body = encodeURIComponent(bodyLines.join("\n"));
       window.location.href = "mailto:hello@aboatelier.com?subject=" + subject + "&body=" + body;
