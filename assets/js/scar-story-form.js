@@ -7,7 +7,7 @@
   var current = 0;
 
   // Steps that count toward the progress bar (excludes intro and the final screen).
-  var progressSteps = ["about", "story", "today", "participation", "consent", "review"];
+  var progressSteps = ["story", "today", "participation", "consent", "about", "review"];
 
   function stepName(el) {
     return el.getAttribute("data-step");
@@ -135,13 +135,13 @@
 
     var dash = t("wizard.review.dash");
     var rows = [
-      { label: t("wizard.review.firstName"), value: fieldValue("firstName") || dash, goto: "about" },
-      { label: t("wizard.review.cityCountry"), value: fieldValue("location") || dash, goto: "about" },
-      { label: t("wizard.review.email"), value: fieldValue("email"), goto: "about" },
       { label: t("wizard.review.story"), value: fieldValue("story"), goto: "story" },
       { label: t("wizard.review.today"), value: fieldValue("today"), goto: "today" },
       { label: t("wizard.review.participation"), value: checkedRadioLabel("participation"), goto: "participation" },
       { label: t("wizard.review.consent"), value: t("wizard.review.consentValue"), goto: "consent" },
+      { label: t("wizard.review.firstName"), value: fieldValue("firstName") || dash, goto: "about" },
+      { label: t("wizard.review.cityCountry"), value: fieldValue("location") || dash, goto: "about" },
+      { label: t("wizard.review.email"), value: fieldValue("email"), goto: "about" },
     ];
 
     list.innerHTML = "";
