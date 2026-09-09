@@ -246,7 +246,7 @@ a {
 
 /* ===== Story (fixed dark card — a deliberate contrast, not theme-driven) ===== */
 .story {
-  padding: 120px 32px;
+  padding: 120px 32px 48px;
   scroll-margin-top: var(--header-h);
 }
 
@@ -326,8 +326,8 @@ a {
 /* ===== Contact ===== */
 .contact-section {
   max-width: var(--max-width);
-  margin: 64px auto 0;
-  padding: 48px 32px 56px;
+  margin: 0 auto 0;
+  padding: 32px 32px 40px;
   border-top: 1px solid var(--color-line);
   text-align: center;
   opacity: 0;
@@ -549,7 +549,7 @@ a {
 
 /* ===== Footer ===== */
 .site-footer {
-  margin-top: 140px;
+  margin-top: 40px;
   background: var(--color-ink);
   color: var(--color-cream);
   padding: 64px 32px 40px;
@@ -640,13 +640,13 @@ a {
   .hero-tile-text { max-width: 100%; }
 
   .story { padding-top: 88px; }
-  .contact-section { margin-top: 48px; padding: 40px 24px 48px; }
+  .contact-section { margin-top: 0; padding: 24px 24px 32px; }
   .contact-columns { grid-template-columns: 1fr; gap: 40px; text-align: center; }
   .contact-info { align-items: center; }
   .contact-social { justify-content: center; }
   .contact-block { margin: 0 auto; }
   .contact-newsletter { margin: 0 auto; }
-  .site-footer { margin-top: 96px; }
+  .site-footer { margin-top: 32px; }
 }
 
 @media (max-width: 480px) {
