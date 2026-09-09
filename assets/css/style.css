@@ -233,15 +233,11 @@ a {
 }
 .hero-tile:hover .hero-tile-link { border-color: #ffffff; }
 
-.hero-tile-title-text {
+.hero-tile-title-crack {
   display: block;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
-  line-height: 1.15;
+  height: clamp(2.44rem, 4.58vw, 3.51rem);
+  width: auto;
   margin-bottom: 14px;
-  color: #ffffff;
 }
 
 /* ===== Story (fixed dark card — a deliberate contrast, not theme-driven) ===== */
