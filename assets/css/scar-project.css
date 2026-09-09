@@ -19,7 +19,7 @@
 }
 .scar-intro p {
   font-size: 1.05rem;
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   margin: 0 0 16px;
   max-width: 60ch;
 }
