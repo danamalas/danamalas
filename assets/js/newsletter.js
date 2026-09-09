@@ -10,7 +10,7 @@
       if (!email) return;
       var subject = encodeURIComponent("Newsletter signup");
       var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + fullPhone);
-      window.location.href = "mailto:hello@aboatelier.com?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:support@aboatelier.com?subject=" + subject + "&body=" + body;
       var popup = form.closest(".newsletter-popup");
       if (popup) popup.hidden = true;
     });

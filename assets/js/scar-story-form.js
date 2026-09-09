@@ -182,7 +182,7 @@
         "How they'd like to share: " + checkedRadioLabel("participation"),
       ];
       var body = encodeURIComponent(bodyLines.join("\n"));
-      window.location.href = "mailto:hello@aboatelier.com?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:support@aboatelier.com?subject=" + subject + "&body=" + body;
 
       goToStepName("done");
     });
