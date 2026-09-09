@@ -70,7 +70,7 @@
     if (name === "about") {
       var email = wizard.querySelector('[name="email"]');
       if (!email.value.trim() || !email.checkValidity()) {
-        showError(step, "Please share a valid email so we can reach you if your story is chosen.");
+        showError(step, t("wizard.error.email"));
         email.focus();
         return false;
       }
@@ -78,21 +78,21 @@
 
     if (name === "story") {
       if (!fieldValue("story")) {
-        showError(step, "Please share at least a few words about your scar.");
+        showError(step, t("wizard.error.story"));
         return false;
       }
     }
 
     if (name === "today") {
       if (!fieldValue("today")) {
-        showError(step, "Please share what strength you've found through your scar.");
+        showError(step, t("wizard.error.today"));
         return false;
       }
     }
 
     if (name === "participation") {
       if (!wizard.querySelector('[name="participation"]:checked')) {
-        showError(step, "Please choose one option.");
+        showError(step, t("wizard.error.participation"));
         return false;
       }
     }
@@ -100,7 +100,7 @@
     if (name === "consent") {
       var reviewConsent = wizard.querySelector('[name="consentReview"]');
       if (!reviewConsent.checked) {
-        showError(step, "Please confirm you're comfortable with ABÔ Atelier reviewing your submission.");
+        showError(step, t("wizard.error.consent"));
         return false;
       }
     }
@@ -133,14 +133,15 @@
     var list = document.getElementById("wizardReviewList");
     if (!list) return;
 
+    var dash = t("wizard.review.dash");
     var rows = [
-      { label: "First name", value: fieldValue("firstName") || "—", goto: "about" },
-      { label: "City / Country", value: fieldValue("location") || "—", goto: "about" },
-      { label: "Email", value: fieldValue("email"), goto: "about" },
-      { label: "Your story", value: fieldValue("story"), goto: "story" },
-      { label: "Strength found through your scar", value: fieldValue("today"), goto: "today" },
-      { label: "How you'd like to share", value: checkedRadioLabel("participation"), goto: "participation" },
-      { label: "Consent", value: "Reviewing submission: Yes", goto: "consent" },
+      { label: t("wizard.review.firstName"), value: fieldValue("firstName") || dash, goto: "about" },
+      { label: t("wizard.review.cityCountry"), value: fieldValue("location") || dash, goto: "about" },
+      { label: t("wizard.review.email"), value: fieldValue("email"), goto: "about" },
+      { label: t("wizard.review.story"), value: fieldValue("story"), goto: "story" },
+      { label: t("wizard.review.today"), value: fieldValue("today"), goto: "today" },
+      { label: t("wizard.review.participation"), value: checkedRadioLabel("participation"), goto: "participation" },
+      { label: t("wizard.review.consent"), value: t("wizard.review.consentValue"), goto: "consent" },
     ];
 
     list.innerHTML = "";
@@ -149,10 +150,11 @@
       li.className = "wizard-review-item";
       li.innerHTML =
         '<div class="wizard-review-body">' +
-        '<span class="wizard-review-label">' + row.label + "</span>" +
+        '<span class="wizard-review-label"></span>' +
         '<div class="wizard-review-value"></div>' +
         "</div>" +
-        '<button type="button" class="wizard-review-edit" data-goto="' + row.goto + '">Edit</button>';
+        '<button type="button" class="wizard-review-edit" data-goto="' + row.goto + '">' + t("wizard.review.edit") + "</button>";
+      li.querySelector(".wizard-review-label").textContent = row.label;
       li.querySelector(".wizard-review-value").textContent = row.value;
       list.appendChild(li);
 
@@ -185,6 +187,10 @@
       goToStepName("done");
     });
   }
+
+  document.addEventListener("abo:langchange", function () {
+    if (stepName(steps[current]) === "review") renderReview();
+  });
 
   showStep(0);
 })();

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop — ABÔ Atelier</title>
+<title data-i18n="title.shop">Shop — ABÔ Atelier</title>
 <meta name="description" content="Rings, chains, and earrings cast to order in solid gold and silver by ABÔ Atelier.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,28 +15,29 @@
 <link rel="stylesheet" href="assets/css/shop.css">
 </head>
 <body>
+<script>setTimeout(function(){document.body.classList.add("i18n-ready");}, 1500);</script>
 
-<a class="skip-link" href="#shop-grid">Skip to content</a>
+<a class="skip-link" href="#shop-grid" data-i18n="skip.content">Skip to content</a>
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" data-i18n-aria="nav.toggleAria" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
 
-    <a href="index.html#top" class="brand" aria-label="ABÔ Atelier — Home">
+    <a href="index.html#top" class="brand" data-i18n-aria="brand.aria" aria-label="ABÔ Atelier — Home">
       <img src="assets/img/abo-logo-scarred-full.png" alt="ABÔ Atelier" class="brand-logo">
     </a>
 
     <nav class="site-nav" id="siteNav">
-      <a href="index.html">Home</a>
-      <a href="shop.html" aria-current="page">Shop</a>
-      <a href="index.html#story">Our Story</a>
-      <a href="the-scar-project.html">The Scar Project</a>
-      <a href="index.html#contact">Contact Us</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="shop.html" aria-current="page" data-i18n="nav.shop">Shop</a>
+      <a href="index.html#story" data-i18n="nav.story">Our Story</a>
+      <a href="the-scar-project.html" data-i18n="nav.scarProject">The Scar Project</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact Us</a>
     </nav>
 
-    <a href="shop.html" class="cart-link" aria-label="View cart">
+    <a href="shop.html" class="cart-link" data-i18n-aria="cart.aria" aria-label="View cart">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
     </a>
   </div>
@@ -48,8 +49,8 @@
   <section class="shop-intro">
     <div class="shop-intro-bg" id="shopIntroBg"></div>
     <div class="shop-intro-inner">
-      <h1>The Collection</h1>
-      <p class="shop-intro-text">Handcrafted with precision and purpose, each piece is made from fine materials and finished to the highest standard.</p>
+      <h1 data-i18n="shop.title">The Collection</h1>
+      <p class="shop-intro-text" data-i18n="shop.introText">Handcrafted with precision and purpose, each piece is made from fine materials and finished to the highest standard.</p>
     </div>
   </section>
 
@@ -61,27 +62,27 @@
     <a href="index.html#top" class="brand brand--footer">
       <img src="assets/img/abo-logo-scarred-white-full.png" alt="ABÔ Atelier" class="brand-logo brand-logo--footer">
     </a>
-    <p class="footer-copy">&copy; <span id="year"></span> ABÔ Atelier. All rights reserved.</p>
+    <p class="footer-copy">&copy; <span id="year"></span> <span data-i18n="footer.rights">ABÔ Atelier. All rights reserved.</span></p>
   </div>
 </footer>
 
 <div class="newsletter-widget" id="newsletterWidget">
   <div class="newsletter-tooltip" id="newsletterTooltip">
-    <button type="button" class="newsletter-tooltip-close" id="newsletterTooltipClose" aria-label="Dismiss">&times;</button>
-    <span>Sign up for our newsletter and get 10% off your first order</span>
+    <button type="button" class="newsletter-tooltip-close" id="newsletterTooltipClose" data-i18n-aria="newsletter.dismissAria" aria-label="Dismiss">&times;</button>
+    <span data-i18n="newsletter.tooltip">Sign up for our newsletter and get 10% off your first order</span>
   </div>
   <div class="newsletter-anchor">
-    <button type="button" class="newsletter-badge" id="newsletterBadge" aria-label="Sign up for our newsletter">
+    <button type="button" class="newsletter-badge" id="newsletterBadge" data-i18n-aria="newsletter.badgeAria" aria-label="Sign up for our newsletter">
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 6l9 7 9-7"></path></svg>
     </button>
     <div class="newsletter-popup" id="newsletterPopup" hidden>
-      <button type="button" class="newsletter-close" id="newsletterClose" aria-label="Close">&times;</button>
-      <p class="newsletter-title">Sign up for our newsletter and get 10% off your first order.</p>
+      <button type="button" class="newsletter-close" id="newsletterClose" data-i18n-aria="newsletter.closeAria" aria-label="Close">&times;</button>
+      <p class="newsletter-title" data-i18n="newsletter.heading">Sign up for our newsletter and get 10% off your first order.</p>
       <form class="newsletter-form">
-        <input type="text" name="name" placeholder="Name" required aria-label="Name">
-        <input type="email" name="email" placeholder="Email" required aria-label="Email address">
+        <input type="text" name="name" data-i18n-placeholder="newsletter.name" placeholder="Name" required data-i18n-aria="newsletter.name" aria-label="Name">
+        <input type="email" name="email" data-i18n-placeholder="newsletter.email" placeholder="Email" required data-i18n-aria="newsletter.emailAria" aria-label="Email address">
         <div class="newsletter-phone-row">
-          <select name="phoneCountry" class="newsletter-phone-code" aria-label="Country code">
+          <select name="phoneCountry" class="newsletter-phone-code" data-i18n-aria="newsletter.countryCodeAria" aria-label="Country code">
             <option value="+46">SE +46</option>
             <option value="+1">US +1</option>
             <option value="+44">UK +44</option>
@@ -94,15 +95,16 @@
             <option value="+47">NO +47</option>
             <option value="+358">FI +358</option>
           </select>
-          <input type="tel" name="phone" placeholder="Phone number" required aria-label="Phone number">
+          <input type="tel" name="phone" data-i18n-placeholder="newsletter.phone" placeholder="Phone number" required data-i18n-aria="newsletter.phone" aria-label="Phone number">
         </div>
-        <button type="submit">Sign Up</button>
+        <button type="submit" data-i18n="newsletter.submit">Sign Up</button>
       </form>
     </div>
   </div>
 </div>
 
 <script src="assets/js/products-data.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/shop.js"></script>
 <script src="assets/js/newsletter.js"></script>

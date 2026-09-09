@@ -18,7 +18,7 @@ function cardHtml(product) {
     <div class="product-card" data-product="${product.id}" data-variant="${variantId || ""}">
       <span class="product-card-img product-card-blank" aria-hidden="true">
         <img src="assets/img/scar-mark.png" alt="" class="product-card-scar">
-        <span class="product-card-coming-soon">Coming Soon</span>
+        <span class="product-card-coming-soon">${t("shop.comingSoon")}</span>
       </span>
       <span class="product-card-name">${product.name}</span>
       <span class="product-card-price">${formatPrice(view.price, view.currency)}</span>
@@ -27,17 +27,23 @@ function cardHtml(product) {
   `;
 }
 
-grid.innerHTML = PRODUCTS.map(cardHtml).join("");
+function render() {
+  grid.innerHTML = PRODUCTS.map(cardHtml).join("");
+}
 
-grid.querySelectorAll(".swatch").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const card = btn.closest(".product-card");
-    const product = getProduct(card.dataset.product);
-    const variantId = btn.dataset.variant;
-    const view = resolveVariant(product, variantId);
+render();
+document.addEventListener("abo:langchange", render);
 
-    card.dataset.variant = variantId;
-    card.querySelector(".product-card-price").textContent = formatPrice(view.price, view.currency);
-    card.querySelectorAll(".swatch").forEach((s) => s.classList.toggle("is-selected", s.dataset.variant === variantId));
-  });
+grid.addEventListener("click", (e) => {
+  const btn = e.target.closest(".swatch");
+  if (!btn) return;
+
+  const card = btn.closest(".product-card");
+  const product = getProduct(card.dataset.product);
+  const variantId = btn.dataset.variant;
+  const view = resolveVariant(product, variantId);
+
+  card.dataset.variant = variantId;
+  card.querySelector(".product-card-price").textContent = formatPrice(view.price, view.currency);
+  card.querySelectorAll(".swatch").forEach((s) => s.classList.toggle("is-selected", s.dataset.variant === variantId));
 });

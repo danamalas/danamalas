@@ -3,11 +3,15 @@ const product = getProduct(params.get("id"));
 const container = document.getElementById("productDetail");
 
 if (!product) {
-  container.innerHTML = `
-    <p class="product-not-found">
-      We couldn't find that piece. <a href="shop.html">Return to the Shop.</a>
-    </p>
-  `;
+  function renderNotFound() {
+    container.innerHTML = `
+      <p class="product-not-found">
+        ${t("product.notFound")} <a href="shop.html">${t("product.returnToShop")}</a>
+      </p>
+    `;
+  }
+  renderNotFound();
+  document.addEventListener("abo:langchange", renderNotFound);
 } else {
   const requestedColor = params.get("color");
   let variantId = product.variants
@@ -58,4 +62,5 @@ if (!product) {
   }
 
   render();
+  document.addEventListener("abo:langchange", render);
 }
