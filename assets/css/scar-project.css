@@ -352,7 +352,7 @@
 .wizard-heart-icon {
   position: absolute;
   top: -8px;
-  right: 4px;
+  right: -60px;
   width: 56px;
   height: 51px;
 }
@@ -363,7 +363,6 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.wizard-heart-icon .wizard-heart-sketch { opacity: 0.5; }
 .wizard-done-title {
   font-family: var(--font-display);
   font-weight: 400;
@@ -392,4 +391,5 @@
   .wizard-actions { flex-direction: column-reverse; align-items: stretch; gap: 14px; }
   .wizard-btn { text-align: center; }
   .wizard-review-item { flex-direction: column; gap: 10px; }
+  .wizard-heart-icon { right: -14px; width: 44px; height: 40px; }
 }
