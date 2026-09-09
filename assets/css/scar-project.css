@@ -70,11 +70,11 @@
   font-family: var(--font-body);
   font-size: 0.8rem;
   letter-spacing: 0.04em;
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   border-bottom: 1px solid transparent;
   margin-bottom: 28px;
 }
-.wizard-back:hover { border-bottom-color: var(--color-ink-soft); }
+.wizard-back:hover { border-bottom-color: var(--color-ink); }
 
 .wizard-number {
   display: block;
@@ -116,7 +116,7 @@
 }
 
 .wizard-hint {
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   font-size: 0.95rem;
   margin: 0 0 32px;
   max-width: 52ch;
@@ -124,7 +124,7 @@
 
 .wizard-required-note {
   font-size: 0.75rem;
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   margin: 0 0 20px;
 }
 .required-mark {
@@ -139,12 +139,12 @@
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   margin-bottom: 8px;
 }
 .wizard-field-note {
   font-size: 0.78rem;
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   margin: 6px 0 0;
 }
 .wizard-field input[type="text"],
@@ -267,7 +267,7 @@
 .wizard-checkbox-text { font-size: 0.95rem; }
 
 .wizard-fine-print {
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   font-size: 0.82rem;
   line-height: 1.6;
   margin: 8px 0 32px;
@@ -323,7 +323,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   margin-bottom: 6px;
 }
 .wizard-review-value {
@@ -335,8 +335,8 @@
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--color-ink-soft);
-  border-bottom: 1px solid var(--color-ink-soft);
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-ink);
   background: none;
   border-top: none;
   border-left: none;
@@ -357,7 +357,7 @@
   margin: 0 0 20px;
 }
 .wizard-done p {
-  color: var(--color-ink-soft);
+  color: var(--color-ink);
   max-width: 46ch;
   margin: 0 auto 16px;
 }
