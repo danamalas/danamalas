@@ -731,7 +731,7 @@ body:not(.i18n-ready) { visibility: hidden; }
   margin-top: 40px;
   background: var(--color-ink);
   color: var(--color-cream);
-  padding: 64px 32px 40px;
+  padding: 28px 32px 20px;
 }
 .footer-inner {
   max-width: var(--max-width);
@@ -740,10 +740,10 @@ body:not(.i18n-ready) { visibility: hidden; }
 }
 .brand--footer {
   justify-content: center;
-  margin-bottom: 28px;
+  margin-bottom: 14px;
 }
 .brand-logo--footer {
-  height: 150px;
+  height: 70px;
 }
 
 .footer-copy {
