@@ -865,6 +865,7 @@ body:not(.i18n-ready) { visibility: hidden; }
   .contact-social { justify-content: center; }
   .contact-block { margin: 0 auto; }
   .contact-newsletter { margin: 0 auto; }
+  .contact-form textarea { min-height: 140px; }
   .site-footer { margin-top: 32px; }
   .footer-inner { grid-template-columns: 1fr; justify-items: center; gap: 16px; text-align: center; }
   .footer-brand { grid-column: 1; }
