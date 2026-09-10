@@ -848,10 +848,10 @@ body:not(.i18n-ready) { visibility: hidden; }
 
   .story { padding-top: 88px; }
   .contact-section { margin-top: 0; padding: 24px 24px 32px; }
-  .site-footer { margin-top: 32px; }
-  .footer-inner { grid-template-columns: 1fr; justify-items: center; gap: 16px; text-align: center; }
-  .footer-brand { grid-column: 1; }
-  .footer-address { grid-column: 1; justify-self: center; text-align: center; }
+  .site-footer { margin-top: 32px; padding-left: 16px; padding-right: 16px; }
+  .footer-inner { gap: 10px; }
+  .brand-logo--footer { height: 54px; }
+  .footer-address p { font-size: 0.7rem; }
 }
 
 @media (max-width: 480px) {
