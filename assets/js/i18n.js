@@ -54,8 +54,8 @@ var ABO_I18N = (function () {
       "story.heading": "A scar turned into strength —<br>a mark of the journey you crossed",
       "story.lede": "ABÔ Atelier was never supposed to be just a jewellery brand.",
       "story.p1": "It rose from one of the hardest chapters of my life. For a while, I thought pain only took things away. But slowly, I began to understand that <em>pain can also create</em>.",
-      "story.p2": "Every piece we create carries a reminder that something beautiful can come from something painful. ABÔ Atelier is my journey to recovery, but I don't want it to belong to only me. I want it to belong to anyone who has lost something, fought silently, started again, or is still finding their way back. This is where your story can become part of ours. Join our community <a href=\"the-scar-project.html\">here</a>.",
-      "story.p3": "Every ABÔ Atelier piece is crafted from verified precious metals, carefully tested to ensure purity, quality, and authenticity.",
+      "story.p2": "Every piece we create carries a reminder that something beautiful can come from something painful. ABÔ Atelier is my journey to recovery, but I don't want it to belong to only me. I want it to belong to anyone who has lost something, fought silently, started again, or is still finding their way back.",
+      "story.p3": "Every ABÔ Atelier piece is crafted from verified precious metals, carefully tested to ensure purity, quality, and authenticity. This is where your story can become part of ours. Join our community <a href=\"the-scar-project.html\">here</a>.",
       "story.quote": "A piece of jewellery cannot erase what happened, but it can remind you of the strength you carry.",
       "story.quoteCite": "— Founder, ABÔ Atelier",
 
@@ -194,8 +194,8 @@ var ABO_I18N = (function () {
       "story.heading": "Una cicatriz convertida en fuerza —<br>una marca del camino recorrido",
       "story.lede": "ABÔ Atelier nunca debía ser solo una marca de joyería.",
       "story.p1": "Nació de uno de los capítulos más difíciles de mi vida. Durante un tiempo pensé que el dolor solo quitaba cosas. Pero poco a poco entendí que <em>el dolor también puede crear</em>.",
-      "story.p2": "Cada pieza que creamos lleva el recordatorio de que algo hermoso puede nacer de algo doloroso. ABÔ Atelier es mi camino de recuperación, pero no quiero que me pertenezca solo a mí. Quiero que pertenezca a cualquiera que haya perdido algo, luchado en silencio, vuelto a empezar, o que aún esté encontrando el camino de regreso. Este es el lugar donde tu historia puede formar parte de la nuestra. Únete a nuestra comunidad <a href=\"the-scar-project.html\">aquí</a>.",
-      "story.p3": "Cada pieza de ABÔ Atelier está elaborada con metales preciosos verificados, cuidadosamente probados para garantizar pureza, calidad y autenticidad.",
+      "story.p2": "Cada pieza que creamos lleva el recordatorio de que algo hermoso puede nacer de algo doloroso. ABÔ Atelier es mi camino de recuperación, pero no quiero que me pertenezca solo a mí. Quiero que pertenezca a cualquiera que haya perdido algo, luchado en silencio, vuelto a empezar, o que aún esté encontrando el camino de regreso.",
+      "story.p3": "Cada pieza de ABÔ Atelier está elaborada con metales preciosos verificados, cuidadosamente probados para garantizar pureza, calidad y autenticidad. Este es el lugar donde tu historia puede formar parte de la nuestra. Únete a nuestra comunidad <a href=\"the-scar-project.html\">aquí</a>.",
       "story.quote": "Una joya no puede borrar lo que pasó, pero puede recordarte la fuerza que llevas dentro.",
       "story.quoteCite": "— Fundadora, ABÔ Atelier",
 
@@ -334,8 +334,8 @@ var ABO_I18N = (function () {
       "story.heading": "Une cicatrice devenue force —<br>la marque du chemin parcouru",
       "story.lede": "ABÔ Atelier ne devait jamais être qu'une simple marque de bijoux.",
       "story.p1": "Elle est née de l'un des chapitres les plus difficiles de ma vie. Pendant un temps, j'ai cru que la douleur ne faisait que prendre. Mais peu à peu, j'ai compris que <em>la douleur peut aussi créer</em>.",
-      "story.p2": "Chaque pièce que nous créons porte le rappel que quelque chose de beau peut naître de quelque chose de douloureux. ABÔ Atelier est mon chemin vers la guérison, mais je ne veux pas qu'il n'appartienne qu'à moi. Je veux qu'il appartienne à quiconque a perdu quelque chose, s'est battu en silence, a recommencé, ou cherche encore son chemin. Voici l'endroit où votre histoire peut devenir une part de la nôtre. Rejoignez notre communauté <a href=\"the-scar-project.html\">ici</a>.",
-      "story.p3": "Chaque pièce ABÔ Atelier est façonnée à partir de métaux précieux certifiés, soigneusement testés pour garantir pureté, qualité et authenticité.",
+      "story.p2": "Chaque pièce que nous créons porte le rappel que quelque chose de beau peut naître de quelque chose de douloureux. ABÔ Atelier est mon chemin vers la guérison, mais je ne veux pas qu'il n'appartienne qu'à moi. Je veux qu'il appartienne à quiconque a perdu quelque chose, s'est battu en silence, a recommencé, ou cherche encore son chemin.",
+      "story.p3": "Chaque pièce ABÔ Atelier est façonnée à partir de métaux précieux certifiés, soigneusement testés pour garantir pureté, qualité et authenticité. Voici l'endroit où votre histoire peut devenir une part de la nôtre. Rejoignez notre communauté <a href=\"the-scar-project.html\">ici</a>.",
       "story.quote": "Un bijou ne peut effacer ce qui s'est passé, mais il peut vous rappeler la force que vous portez.",
       "story.quoteCite": "— Fondatrice, ABÔ Atelier",
 
@@ -474,8 +474,8 @@ var ABO_I18N = (function () {
       "story.heading": "ندبة تحولت إلى قوة —<br>علامة على الرحلة التي عبرتها",
       "story.lede": "لم يكن من المفترض أن تكون ABÔ Atelier مجرد علامة مجوهرات.",
       "story.p1": "وُلدت من أحد أصعب فصول حياتي. لفترة، ظننت أن الألم لا يفعل شيئًا سوى أن يأخذ. لكن ببطء، بدأت أدرك أن <em>الألم يمكن أن يخلق أيضًا</em>.",
-      "story.p2": "كل قطعة نصنعها تحمل تذكيرًا بأن شيئًا جميلًا يمكن أن ينبثق من شيء مؤلم. ABÔ Atelier هي رحلتي نحو التعافي، لكنني لا أريدها أن تخصني وحدي. أريدها أن تخص كل من فقد شيئًا، أو قاوم بصمت، أو بدأ من جديد، أو ما زال يبحث عن طريق العودة. قصتك يمكن أن تصبح جزءًا من قصتنا. انضم إلى مجتمعنا <a href=\"the-scar-project.html\">من هنا</a>.",
-      "story.p3": "كل قطعة من ABÔ Atelier مصنوعة من معادن ثمينة موثقة، تم اختبارها بعناية لضمان النقاء والجودة والأصالة.",
+      "story.p2": "كل قطعة نصنعها تحمل تذكيرًا بأن شيئًا جميلًا يمكن أن ينبثق من شيء مؤلم. ABÔ Atelier هي رحلتي نحو التعافي، لكنني لا أريدها أن تخصني وحدي. أريدها أن تخص كل من فقد شيئًا، أو قاوم بصمت، أو بدأ من جديد، أو ما زال يبحث عن طريق العودة.",
+      "story.p3": "كل قطعة من ABÔ Atelier مصنوعة من معادن ثمينة موثقة، تم اختبارها بعناية لضمان النقاء والجودة والأصالة. قصتك يمكن أن تصبح جزءًا من قصتنا. انضم إلى مجتمعنا <a href=\"the-scar-project.html\">من هنا</a>.",
       "story.quote": "لا يمكن لقطعة مجوهرات أن تمحو ما حدث، لكنها يمكن أن تذكرك بالقوة التي تحملها.",
       "story.quoteCite": "— المؤسِّسة، ABÔ Atelier",
 
