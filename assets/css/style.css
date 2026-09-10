@@ -368,6 +368,11 @@ body:not(.i18n-ready) { visibility: hidden; }
   margin: 0 0 18px;
 }
 
+.story p a {
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-ink);
+}
+
 .story p em {
   font-style: normal;
 }
