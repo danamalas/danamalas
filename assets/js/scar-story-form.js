@@ -7,7 +7,7 @@
   var current = 0;
 
   // Steps that count toward the progress bar (excludes intro and the final screen).
-  var progressSteps = ["story", "today", "participation", "consent", "about", "review"];
+  var progressSteps = ["story", "today", "participation", "about", "review"];
 
   function stepName(el) {
     return el.getAttribute("data-step");
@@ -74,6 +74,12 @@
         email.focus();
         return false;
       }
+
+      var reviewConsent = wizard.querySelector('[name="consentReview"]');
+      if (!reviewConsent.checked) {
+        showError(step, t("wizard.error.consent"));
+        return false;
+      }
     }
 
     if (name === "story") {
@@ -93,14 +99,6 @@
     if (name === "participation") {
       if (!wizard.querySelector('[name="participation"]:checked')) {
         showError(step, t("wizard.error.participation"));
-        return false;
-      }
-    }
-
-    if (name === "consent") {
-      var reviewConsent = wizard.querySelector('[name="consentReview"]');
-      if (!reviewConsent.checked) {
-        showError(step, t("wizard.error.consent"));
         return false;
       }
     }
@@ -138,10 +136,10 @@
       { label: t("wizard.review.story"), value: fieldValue("story"), goto: "story" },
       { label: t("wizard.review.today"), value: fieldValue("today"), goto: "today" },
       { label: t("wizard.review.participation"), value: checkedRadioLabel("participation"), goto: "participation" },
-      { label: t("wizard.review.consent"), value: t("wizard.review.consentValue"), goto: "consent" },
       { label: t("wizard.review.firstName"), value: fieldValue("firstName") || dash, goto: "about" },
       { label: t("wizard.review.cityCountry"), value: fieldValue("location") || dash, goto: "about" },
       { label: t("wizard.review.email"), value: fieldValue("email"), goto: "about" },
+      { label: t("wizard.review.consent"), value: t("wizard.review.consentValue"), goto: "about" },
     ];
 
     list.innerHTML = "";

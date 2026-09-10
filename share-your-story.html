@@ -128,25 +128,6 @@
       </div>
     </section>
 
-    <!-- Consent -->
-    <section class="wizard-step" data-step="consent" hidden>
-      <button type="button" class="wizard-back" data-back data-i18n="wizard.back">← Back</button>
-      <p class="wizard-question" data-i18n="wizard.consentQuestion">Before you submit</p>
-
-      <label class="wizard-checkbox">
-        <input type="checkbox" name="consentReview">
-        <span class="wizard-checkbox-mark"></span>
-        <span class="wizard-checkbox-text" data-i18n="wizard.consentCheckbox">I agree to ABÔ Atelier reviewing my submission.</span>
-      </label>
-
-      <p class="wizard-fine-print" data-i18n="wizard.finePrint">Submitting your story does not automatically give ABÔ Atelier permission to publish it. If your story is selected, we will contact you by email before publication.</p>
-
-      <p class="wizard-error" hidden></p>
-      <div class="wizard-actions">
-        <button type="button" class="wizard-btn" data-next data-i18n="wizard.continue">Continue →</button>
-      </div>
-    </section>
-
     <!-- 03 — About you -->
     <section class="wizard-step" data-step="about" hidden>
       <button type="button" class="wizard-back" data-back data-i18n="wizard.back">← Back</button>
@@ -166,6 +147,16 @@
         <input type="email" id="fieldEmail" name="email" required autocomplete="email">
         <p class="wizard-field-note" data-i18n="wizard.emailNote">Kept private</p>
       </div>
+
+      <p class="wizard-question" data-i18n="wizard.consentQuestion">Before you submit</p>
+
+      <label class="wizard-checkbox">
+        <input type="checkbox" name="consentReview">
+        <span class="wizard-checkbox-mark"></span>
+        <span class="wizard-checkbox-text" data-i18n="wizard.consentCheckbox">I agree to ABÔ Atelier reviewing my submission.</span>
+      </label>
+
+      <p class="wizard-fine-print" data-i18n="wizard.finePrint">Submitting your story does not automatically give ABÔ Atelier permission to publish it. If your story is selected, we will contact you by email before publication.</p>
 
       <p class="wizard-error" hidden></p>
       <div class="wizard-actions">
