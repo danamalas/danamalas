@@ -416,20 +416,23 @@ body:not(.i18n-ready) { visibility: hidden; }
   margin: 0 0 28px;
 }
 .contact-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 420px;
   margin: 0 auto;
-  text-align: start;
+  text-align: center;
 }
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
 }
 .contact-block {
   max-width: 420px;
+  width: 100%;
   color: var(--color-ink-soft);
   font-size: 0.85rem;
 }
@@ -448,7 +451,13 @@ body:not(.i18n-ready) { visibility: hidden; }
 }
 .contact-social {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.contact-social-icons {
+  display: flex;
+  justify-content: center;
   gap: 18px;
 }
 .contact-social .social-link {
@@ -463,10 +472,6 @@ body:not(.i18n-ready) { visibility: hidden; }
 }
 .contact-social .social-link:hover {
   color: var(--color-ink-soft);
-}
-.contact-newsletter {
-  max-width: 320px;
-  margin: 0;
 }
 
 /* ===== Newsletter form (shared by contact section + floating widget) ===== */
@@ -629,24 +634,6 @@ body:not(.i18n-ready) { visibility: hidden; }
   font-size: 0.8rem;
   color: var(--color-ink-soft);
 }
-.newsletter-open-btn {
-  margin-top: 4px;
-  padding: 8px 16px;
-  border: 1px solid var(--color-ink);
-  background: var(--color-ink);
-  color: var(--color-bg);
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-.newsletter-open-btn:hover {
-  background: transparent;
-  color: var(--color-ink);
-}
-
 /* ===== Newsletter floating widget ===== */
 .newsletter-widget {
   position: fixed;
@@ -861,13 +848,6 @@ body:not(.i18n-ready) { visibility: hidden; }
 
   .story { padding-top: 88px; }
   .contact-section { margin-top: 0; padding: 24px 24px 32px; }
-  .contact-columns { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-  .contact-info { align-items: center; }
-  .contact-social { justify-content: center; }
-  .contact-block { margin: 0 auto; }
-  .contact-newsletter { margin: 0 auto; }
-  .contact-form-block { align-self: stretch; width: 100%; }
-  .contact-form { width: 100%; }
   .site-footer { margin-top: 32px; }
   .footer-inner { grid-template-columns: 1fr; justify-items: center; gap: 16px; text-align: center; }
   .footer-brand { grid-column: 1; }
