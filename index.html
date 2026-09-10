@@ -98,16 +98,6 @@
 
     <div class="contact-columns">
       <div class="contact-info">
-        <div class="contact-block contact-form-block">
-          <form class="contact-form" id="contactForm">
-            <input type="text" name="name" data-i18n-placeholder="newsletter.name" placeholder="Name" data-i18n-aria="newsletter.name" aria-label="Name">
-            <input type="email" name="email" data-i18n-placeholder="newsletter.email" placeholder="Email" required data-i18n-aria="newsletter.emailAria" aria-label="Email address">
-            <textarea name="message" rows="4" data-i18n-placeholder="contact.form.message" placeholder="Message" required data-i18n-aria="contact.form.message" aria-label="Message"></textarea>
-            <button type="submit" data-i18n="contact.form.submit">Send Message</button>
-            <p class="newsletter-status" hidden></p>
-          </form>
-        </div>
-
         <div class="contact-block contact-social">
           <div class="contact-social-icons">
             <a href="#" class="social-link" aria-label="Instagram">
@@ -121,6 +111,16 @@
             </a>
           </div>
           <p><span data-i18n="contact.emailLabel">Email:</span> support@aboatelier.com</p>
+        </div>
+
+        <div class="contact-block contact-form-block">
+          <form class="contact-form" id="contactForm">
+            <input type="text" name="name" data-i18n-placeholder="newsletter.name" placeholder="Name" data-i18n-aria="newsletter.name" aria-label="Name">
+            <input type="email" name="email" data-i18n-placeholder="newsletter.email" placeholder="Email" required data-i18n-aria="newsletter.emailAria" aria-label="Email address">
+            <textarea name="message" rows="4" data-i18n-placeholder="contact.form.message" placeholder="Message" required data-i18n-aria="contact.form.message" aria-label="Message"></textarea>
+            <button type="submit" data-i18n="contact.form.submit">Send Message</button>
+            <p class="newsletter-status" hidden></p>
+          </form>
         </div>
 
         <div class="contact-block contact-returns">
