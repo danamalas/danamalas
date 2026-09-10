@@ -831,7 +831,7 @@ body:not(.i18n-ready) { visibility: hidden; }
   }
 
   .hero { grid-template-columns: 1fr; height: auto; }
-  .hero-tile { aspect-ratio: 9 / 10; }
+  .hero-tile { aspect-ratio: 5 / 6; }
   .hero-tile-copy { padding: 24px 22px 28px; }
   .hero-tile-text { max-width: 100%; }
 
