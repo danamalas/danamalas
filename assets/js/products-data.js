@@ -55,6 +55,7 @@ const PRODUCTS = [
         label: "Gold",
         swatch: "#c9a227",
         price: 630,
+        prices: { USD: 630, EUR: 545, AED: 2300 },
         material: "14k recycled gold",
         image: "assets/img/products/fracture-necklace-gold.jpg",
         description:
@@ -229,6 +230,16 @@ function formatPrice(amount, currency) {
 
 function getProduct(id) {
   return PRODUCTS.find((p) => p.id === id);
+}
+
+// Returns { amount, currency } for a resolved product view, using its
+// per-currency `prices` map when the requested currency is available there,
+// falling back to the view's default price/currency otherwise.
+function getDisplayPrice(view, currency) {
+  if (view.prices && view.prices[currency]) {
+    return { amount: view.prices[currency], currency };
+  }
+  return { amount: view.price, currency: view.currency };
 }
 
 // Merges a product's shared fields with one of its variants (or returns the

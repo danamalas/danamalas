@@ -19,9 +19,11 @@ if (!product) {
       ? requestedColor
       : product.variants[0].id
     : null;
+  let displayCurrency = "USD";
 
   function render() {
     const view = resolveVariant(product, variantId);
+    const priceInfo = getDisplayPrice(view, displayCurrency);
     document.getElementById("pageTitle").textContent = `${product.name} — ABÔ Atelier`;
 
     const swatches = product.variants
@@ -40,7 +42,7 @@ if (!product) {
       </div>
       <div class="product-info">
         <h1>${product.name}</h1>
-        <p class="product-price">${formatPrice(view.price, view.currency)}</p>
+        <p class="product-price">${formatPrice(priceInfo.amount, priceInfo.currency)}</p>
         <p class="product-material">${view.material}</p>
         ${swatches}
         <p class="product-description">${view.description}</p>
@@ -48,7 +50,7 @@ if (!product) {
       </div>
     `;
 
-    renderBuyButton(document.getElementById("productBuy"), view);
+    renderBuyButton(document.getElementById("productBuy"), { ...view, price: priceInfo.amount, currency: priceInfo.currency });
 
     container.querySelectorAll(".swatch").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -63,4 +65,11 @@ if (!product) {
 
   render();
   document.addEventListener("abo:langchange", render);
+
+  if (window.aboDetectCurrency) {
+    window.aboDetectCurrency().then((currency) => {
+      displayCurrency = currency;
+      render();
+    });
+  }
 }
