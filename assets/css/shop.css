@@ -90,13 +90,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 82%;
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
   font-size: 1.2rem;
   letter-spacing: 0.02em;
   color: var(--color-ink);
-  white-space: nowrap;
+  text-align: center;
+  white-space: normal;
 }
 .product-card-name {
   font-family: var(--font-display);
