@@ -446,10 +446,15 @@ body:not(.i18n-ready) { visibility: hidden; }
 .story-showcase-more {
   display: flex;
   justify-content: flex-end;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-right: 32px;
   margin-top: 24px;
 }
 .story-showcase-more-link {
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-ink);
