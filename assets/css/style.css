@@ -881,6 +881,13 @@ body:not(.i18n-ready) { visibility: hidden; }
   .hero-tile-text { max-width: 100%; }
 
   .story { padding-top: 88px; }
+  .story-showcase-placeholder {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border-radius: 0;
+    box-shadow: none;
+  }
   .contact-section { margin-top: 0; padding: 24px 24px 32px; }
   .site-footer { margin-top: 32px; }
 }
