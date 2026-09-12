@@ -29,8 +29,23 @@ function cardHtml(product) {
   `;
 }
 
+function teaserCardHtml(product) {
+  return `
+    <a href="product.html?id=${product.id}" class="product-card product-card-teaser">
+      <span class="product-card-teaser-media">
+        <img src="${product.image}" alt="${product.name}" class="product-card-teaser-img">
+        <span class="product-card-coming-soon">${t("shop.comingSoon")}</span>
+      </span>
+      <span class="product-card-name product-card-name--teaser">${product.name}</span>
+      <span class="product-card-quote">${product.quote}</span>
+    </a>
+  `;
+}
+
 function render() {
-  grid.innerHTML = PRODUCTS.map(cardHtml).join("");
+  grid.innerHTML =
+    PRODUCTS.map(cardHtml).join("") +
+    Object.values(TEASER_PRODUCTS).map(teaserCardHtml).join("");
 }
 
 render();
