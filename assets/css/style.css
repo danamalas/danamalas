@@ -431,6 +431,7 @@ body:not(.i18n-ready) { visibility: hidden; }
   object-fit: cover;
   border-radius: 12px;
   background: #f4f4f2;
+  filter: blur(4px);
   transition: transform 0.4s ease;
 }
 .story-showcase-product:hover img {
