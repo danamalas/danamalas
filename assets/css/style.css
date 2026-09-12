@@ -449,7 +449,7 @@ body:not(.i18n-ready) { visibility: hidden; }
   width: 82%;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   letter-spacing: 0.02em;
   color: var(--color-ink);
   text-align: center;

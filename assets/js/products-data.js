@@ -228,13 +228,13 @@ const TEASER_PRODUCTS = {
     id: "sillage-earrings",
     name: "Sillage Earrings",
     image: "assets/img/products/fracture-earrings-gold.jpg",
-    quote: "The trace that is left behind",
+    quote: "[The trace that is left behind]",
   },
   "eden-bracelet": {
     id: "eden-bracelet",
     name: "Eden Bracelet",
     image: "assets/img/products/fracture-bracelet-gold.jpg",
-    quote: "Paradise, found within",
+    quote: "[Paradise, found within]",
   },
 };
 
