@@ -44,8 +44,8 @@ function teaserCardHtml(product) {
 
 function render() {
   grid.innerHTML =
-    PRODUCTS.map(cardHtml).join("") +
-    Object.values(TEASER_PRODUCTS).map(teaserCardHtml).join("");
+    Object.values(TEASER_PRODUCTS).map(teaserCardHtml).join("") +
+    PRODUCTS.map(cardHtml).join("");
 }
 
 render();

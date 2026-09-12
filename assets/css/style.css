@@ -429,8 +429,6 @@ body:not(.i18n-ready) { visibility: hidden; }
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 12px;
-  background: #f4f4f2;
   filter: blur(4px);
   transition: transform 0.4s ease;
 }
@@ -440,6 +438,9 @@ body:not(.i18n-ready) { visibility: hidden; }
 .story-showcase-product-media {
   position: relative;
   display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-bg);
 }
 .story-showcase-product-badge {
   position: absolute;
