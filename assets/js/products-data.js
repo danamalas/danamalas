@@ -220,6 +220,24 @@ const PRODUCTS = [
   },
 ];
 
+// Unreleased pieces shown only as a homepage teaser and their own product
+// page (photo, name, quote) — deliberately kept out of PRODUCTS so they
+// never appear in the shop grid or need a price/buy flow.
+const TEASER_PRODUCTS = {
+  "sillage-earrings": {
+    id: "sillage-earrings",
+    name: "Sillage Earrings",
+    image: "assets/img/products/fracture-earrings-gold.jpg",
+    quote: "The trace that is left behind",
+  },
+  "eden-bracelet": {
+    id: "eden-bracelet",
+    name: "Eden Bracelet",
+    image: "assets/img/products/fracture-bracelet-gold.jpg",
+    quote: "Paradise, found within",
+  },
+};
+
 function formatPrice(amount, currency) {
   try {
     return new Intl.NumberFormat("en-US", { style: "currency", currency, maximumFractionDigits: 0 }).format(amount);

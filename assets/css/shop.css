@@ -153,10 +153,29 @@
   align-items: start;
 }
 
+.product-media {
+  position: relative;
+}
 .product-media img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+.product-media-blur {
+  filter: blur(6px);
+}
+.product-media-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+  text-align: center;
 }
 
 .product-info h1 {
@@ -165,6 +184,17 @@
   font-style: italic;
   font-size: clamp(1.9rem, 3.2vw, 2.6rem);
   margin: 8px 0 12px;
+}
+.product-teaser-name {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.product-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-ink-soft);
+  margin: 0 0 20px;
 }
 .product-price {
   font-size: 1.15rem;
@@ -271,6 +301,8 @@
 /* ===== Arabic: display font has no italic style for this script ===== */
 html[lang="ar"] .shop-intro h1,
 html[lang="ar"] .product-card-coming-soon,
+html[lang="ar"] .product-media-badge,
+html[lang="ar"] .product-quote,
 html[lang="ar"] .product-info h1 {
   font-style: normal;
 }

@@ -437,12 +437,38 @@ body:not(.i18n-ready) { visibility: hidden; }
 .story-showcase-product:hover img {
   transform: scale(1.03);
 }
+.story-showcase-product-media {
+  position: relative;
+  display: block;
+}
+.story-showcase-product-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 82%;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+  text-align: center;
+}
 .story-showcase-product-name {
   display: block;
   margin-top: 10px;
   font-family: var(--font-display);
   font-size: 0.95rem;
+  letter-spacing: 0.04em;
   color: var(--color-ink);
+}
+.story-showcase-product-quote {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
 }
 .story-showcase-more {
   display: flex;
@@ -918,6 +944,8 @@ body:not(.i18n-ready) { visibility: hidden; }
 }
 
 /* ===== Arabic: display font has no italic style for this script ===== */
-html[lang="ar"] .contact-section h2 {
+html[lang="ar"] .contact-section h2,
+html[lang="ar"] .story-showcase-product-badge,
+html[lang="ar"] .story-showcase-product-quote {
   font-style: normal;
 }

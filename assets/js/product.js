@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
-const product = getProduct(params.get("id"));
+const teaser = TEASER_PRODUCTS[params.get("id")];
+const product = teaser || getProduct(params.get("id"));
 const container = document.getElementById("productDetail");
 
 if (!product) {
@@ -12,6 +13,22 @@ if (!product) {
   }
   renderNotFound();
   document.addEventListener("abo:langchange", renderNotFound);
+} else if (teaser) {
+  function renderTeaser() {
+    document.getElementById("pageTitle").textContent = `${product.name} — ABÔ Atelier`;
+    container.innerHTML = `
+      <div class="product-media">
+        <img src="${product.image}" alt="${product.name}" class="product-media-blur">
+        <span class="product-media-badge" data-i18n="shop.comingSoon">${t("shop.comingSoon")}</span>
+      </div>
+      <div class="product-info">
+        <h1 class="product-teaser-name">${product.name}</h1>
+        <p class="product-quote">${product.quote}</p>
+      </div>
+    `;
+  }
+  renderTeaser();
+  document.addEventListener("abo:langchange", renderTeaser);
 } else {
   const requestedColor = params.get("color");
   let variantId = product.variants
