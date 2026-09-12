@@ -54,12 +54,13 @@ const PRODUCTS = [
         id: "gold",
         label: "Gold",
         swatch: "#c9a227",
-        price: 640,
+        price: 630,
         material: "14k recycled gold",
         image: "assets/img/products/fracture-necklace-gold.jpg",
         description:
           "A fine chain carrying a single fractured gold bar, its surface split by one hand-finished line running the length of the piece.",
         shopifyProductId: null,
+        stripePriceId: "price_1UEqOQ3GX1etDYL8QLswWs5S",
       },
       {
         id: "silver",

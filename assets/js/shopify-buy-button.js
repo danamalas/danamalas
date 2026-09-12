@@ -1,6 +1,11 @@
 // Renders a Shopify Buy Button into `node` for `product`, or an "Enquire"
 // fallback link if Shopify isn't configured yet (see shopify-config.js).
 function renderBuyButton(node, product) {
+  if (product.stripePriceId) {
+    renderStripeAddToCart(node, product);
+    return;
+  }
+
   if (!isShopifyConfigured() || !product.shopifyProductId) {
     renderEnquireFallback(node, product);
     return;
@@ -35,6 +40,29 @@ function renderBuyButton(node, product) {
       });
     });
   });
+}
+
+function renderStripeAddToCart(node, product) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "btn-add-to-cart";
+  btn.textContent = t("product.addToCart");
+
+  btn.addEventListener("click", () => {
+    window.aboCart.addToCart({
+      productId: product.id,
+      variantId: product.variantId,
+      priceId: product.stripePriceId,
+      name: product.name,
+      variantLabel: product.label || null,
+      image: product.image,
+      price: product.price,
+      currency: product.currency,
+    });
+    window.aboCart.openCartDrawer();
+  });
+
+  node.appendChild(btn);
 }
 
 function renderEnquireFallback(node, product) {
