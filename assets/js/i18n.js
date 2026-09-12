@@ -137,6 +137,7 @@ var ABO_I18N = (function () {
       "shop.title": "The Collection",
       "shop.introText": "Every ABÔ Atelier piece is crafted from verified precious metals, carefully tested to ensure purity, quality, and authenticity.",
       "shop.comingSoon": "Coming Soon",
+      "storyShowcase.showAll": "Show All Products",
 
       "product.loading": "Loading…",
       "product.notFound": "We couldn't find that piece.",
@@ -286,6 +287,7 @@ var ABO_I18N = (function () {
       "shop.title": "La Colección",
       "shop.introText": "Cada pieza de ABÔ Atelier está elaborada con metales preciosos verificados, cuidadosamente probados para garantizar pureza, calidad y autenticidad.",
       "shop.comingSoon": "Próximamente",
+      "storyShowcase.showAll": "Ver Todos Los Productos",
 
       "product.loading": "Cargando…",
       "product.notFound": "No pudimos encontrar esa pieza.",
@@ -435,6 +437,7 @@ var ABO_I18N = (function () {
       "shop.title": "La Collection",
       "shop.introText": "Chaque pièce ABÔ Atelier est façonnée à partir de métaux précieux certifiés, soigneusement testés pour garantir pureté, qualité et authenticité.",
       "shop.comingSoon": "Bientôt Disponible",
+      "storyShowcase.showAll": "Voir Tous Les Produits",
 
       "product.loading": "Chargement…",
       "product.notFound": "Nous n'avons pas trouvé cette pièce.",
@@ -584,6 +587,7 @@ var ABO_I18N = (function () {
       "shop.title": "المجموعة",
       "shop.introText": "كل قطعة من ABÔ Atelier مصنوعة من معادن ثمينة موثقة، تم اختبارها بعناية لضمان النقاء والجودة والأصالة.",
       "shop.comingSoon": "قريبًا",
+      "storyShowcase.showAll": "عرض جميع المنتجات",
 
       "product.loading": "جارٍ التحميل…",
       "product.notFound": "لم نتمكن من العثور على هذه القطعة.",
