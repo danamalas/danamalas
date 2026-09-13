@@ -139,6 +139,10 @@ var ABO_I18N = (function () {
       "shop.comingSoon": "Still healing.<br>Available soon.",
       "storyShowcase.showAll": "Show All Products",
 
+      "cookieConsent.text": "We use cookies to understand site traffic via Google Analytics. Your data is anonymized and never sold.",
+      "cookieConsent.accept": "Accept",
+      "cookieConsent.decline": "Decline",
+
       "product.loading": "Loading…",
       "product.notFound": "We couldn't find that piece.",
       "product.returnToShop": "Return to the Shop.",
@@ -288,6 +292,10 @@ var ABO_I18N = (function () {
       "shop.introText": "Cada pieza de ABÔ Atelier está elaborada con metales preciosos verificados, cuidadosamente probados para garantizar pureza, calidad y autenticidad.",
       "shop.comingSoon": "Aún sanando.<br>Disponible pronto.",
       "storyShowcase.showAll": "Ver Todos Los Productos",
+
+      "cookieConsent.text": "Utilizamos cookies para entender el tráfico del sitio mediante Google Analytics. Sus datos son anónimos y nunca se venden.",
+      "cookieConsent.accept": "Aceptar",
+      "cookieConsent.decline": "Rechazar",
 
       "product.loading": "Cargando…",
       "product.notFound": "No pudimos encontrar esa pieza.",
@@ -439,6 +447,10 @@ var ABO_I18N = (function () {
       "shop.comingSoon": "Encore en cicatrisation.<br>Bientôt disponible.",
       "storyShowcase.showAll": "Voir Tous Les Produits",
 
+      "cookieConsent.text": "Nous utilisons des cookies pour comprendre le trafic du site via Google Analytics. Vos données sont anonymisées et jamais vendues.",
+      "cookieConsent.accept": "Accepter",
+      "cookieConsent.decline": "Refuser",
+
       "product.loading": "Chargement…",
       "product.notFound": "Nous n'avons pas trouvé cette pièce.",
       "product.returnToShop": "Retourner à la Boutique.",
@@ -588,6 +600,10 @@ var ABO_I18N = (function () {
       "shop.introText": "كل قطعة من ABÔ Atelier مصنوعة من معادن ثمينة موثقة، تم اختبارها بعناية لضمان النقاء والجودة والأصالة.",
       "shop.comingSoon": "لا يزال يلتئم.<br>متوفر قريبًا.",
       "storyShowcase.showAll": "عرض جميع المنتجات",
+
+      "cookieConsent.text": "نستخدم ملفات تعريف الارتباط لفهم حركة الموقع عبر Google Analytics. بياناتك مجهولة الهوية ولا تُباع أبدًا.",
+      "cookieConsent.accept": "قبول",
+      "cookieConsent.decline": "رفض",
 
       "product.loading": "جارٍ التحميل…",
       "product.notFound": "لم نتمكن من العثور على هذه القطعة.",
