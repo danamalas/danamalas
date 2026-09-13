@@ -884,42 +884,14 @@ body:not(.i18n-ready) { visibility: hidden; }
   cursor: pointer;
   border-radius: 0;
   text-align: center;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-.cookie-consent-btn--primary {
-  background: #ffffff;
-  border: 1px solid #ffffff;
-  color: var(--color-ink);
-}
-.cookie-consent-btn--primary:hover {
-  background: transparent;
-  color: #ffffff;
-}
-.cookie-consent-btn--secondary {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.6);
   color: #ffffff;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
-.cookie-consent-btn--secondary:hover {
+.cookie-consent-btn:hover {
   border-color: #ffffff;
-}
-.cookie-consent-manage-link {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 8px 0;
-  background: none;
-  border: none;
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  text-decoration: underline;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.7);
-  cursor: pointer;
-}
-.cookie-consent-manage-link:hover {
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .cookie-consent-settings[hidden] {
