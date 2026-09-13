@@ -89,7 +89,7 @@ const TEASER_PRODUCTS = {
   "espoir-earrings": {
     id: "espoir-earrings",
     name: "Espoir Earrings",
-    image: "assets/img/products/fracture-stud-gold.jpg",
+    image: "assets/img/products/espoir-earrings-gold.jpg",
     quote: "[Let hope lead you forward]",
   },
   "galene-necklace": {
