@@ -139,7 +139,7 @@ var ABO_I18N = (function () {
       "shop.comingSoon": "Still healing.<br>Available soon.",
       "storyShowcase.showAll": "Show All Products",
 
-      "cookieConsent.text": "Your privacy matters. We use cookies to run our site and analyze traffic. Learn more in our <a href=\"privacy-policy.html\">Privacy Policy</a>.",
+      "cookieConsent.text": "Your privacy matters to us. We use cookies to run our site and analyse traffic. Learn more in our <a href=\"privacy-policy.html\">Privacy Policy</a>.",
       "cookieConsent.acceptAll": "Accept",
       "cookieConsent.rejectAll": "Decline",
       "cookieConsent.manageSettings": "Manage Settings",
