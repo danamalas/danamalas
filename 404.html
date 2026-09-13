@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="title.notFound">Page Not Found — ABÔ Atelier</title>
+<meta name="description" content="The page you're looking for doesn't exist or may have moved.">
+<meta name="robots" content="noindex, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ABÔ Atelier">
+<meta property="og:title" content="Page Not Found — ABÔ Atelier">
+<meta property="og:description" content="The page you're looking for doesn't exist or may have moved.">
+<meta property="og:image" content="https://aboatelier.com/assets/img/abo-logo-scarred-full.png">
+<meta property="og:url" content="https://aboatelier.com/404.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Page Not Found — ABÔ Atelier">
+<meta name="twitter:description" content="The page you're looking for doesn't exist or may have moved.">
+<meta name="twitter:image" content="https://aboatelier.com/assets/img/abo-logo-scarred-full.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="assets/img/favicon-mark.png" type="image/png">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/cart.css">
+<link rel="stylesheet" href="assets/css/shop.css">
+<style>
+  .not-found-section {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 200px 32px 160px;
+    text-align: center;
+  }
+  .not-found-section h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin: 0 0 20px;
+  }
+  .not-found-section p {
+    color: var(--color-ink-soft);
+    margin: 0 0 32px;
+  }
+  .not-found-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .not-found-links a {
+    color: var(--color-ink);
+    border-bottom: 1px solid var(--color-ink);
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  html[lang="ar"] .not-found-section h1 {
+    font-style: normal;
+  }
+</style>
+</head>
+<body>
+<script>setTimeout(function(){document.body.classList.add("i18n-ready");}, 1500);</script>
+
+<a class="skip-link" href="#not-found-main" data-i18n="skip.content">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" data-i18n-aria="nav.toggleAria" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="index.html#top" class="brand" data-i18n-aria="brand.aria" aria-label="ABÔ Atelier — Home">
+      <img src="assets/img/abo-logo-scarred-full.png" alt="ABÔ Atelier" class="brand-logo">
+    </a>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="shop.html" data-i18n="nav.shop">Shop</a>
+      <a href="index.html#story" data-i18n="nav.story">Our Story</a>
+      <a href="the-scar-project.html" data-i18n="nav.scarProject">The Scar Project</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact Us</a>
+    </nav>
+
+    <a href="shop.html" class="cart-link" data-i18n-aria="cart.aria" aria-label="View cart">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-count" hidden>0</span>
+    </a>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main id="not-found-main">
+  <section class="not-found-section">
+    <h1 data-i18n="notFound.title">Page Not Found</h1>
+    <p data-i18n="notFound.body">The page you're looking for doesn't exist or may have moved.</p>
+    <div class="not-found-links">
+      <a href="index.html" data-i18n="notFound.homeLink">Return to Home</a>
+      <a href="shop.html" data-i18n="notFound.shopLink">Visit the Shop</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html#top" class="brand brand--footer">
+        <img src="assets/img/abo-logo-scarred-white-full.png" alt="ABÔ Atelier" class="brand-logo brand-logo--footer">
+      </a>
+      <p class="footer-copy">&copy; <span id="year"></span> <span data-i18n="footer.rights">ABÔ Atelier. All rights reserved.</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/analytics-consent.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -188,11 +188,17 @@ var ABO_I18N = (function () {
       "policy.contactBody": "For questions regarding returns, reach out via our",
       "policy.contactBodyEnd": "page.",
 
+      "notFound.title": "Page Not Found",
+      "notFound.body": "The page you're looking for doesn't exist or may have moved.",
+      "notFound.homeLink": "Return to Home",
+      "notFound.shopLink": "Visit the Shop",
+
       "title.home": "ABÔ Atelier — Fine Jewellery",
       "title.shop": "Shop — ABÔ Atelier",
       "title.scarProject": "The Scar Project — ABÔ Atelier",
       "title.shareStory": "Share Your Story — The Scar Project — ABÔ Atelier",
       "title.returnPolicy": "Return Policy — ABÔ Atelier",
+      "title.notFound": "Page Not Found — ABÔ Atelier",
     },
 
     es: {
@@ -370,11 +376,17 @@ var ABO_I18N = (function () {
       "policy.contactBody": "Para preguntas sobre devoluciones, contáctanos a través de nuestra página de",
       "policy.contactBodyEnd": ".",
 
+      "notFound.title": "Página No Encontrada",
+      "notFound.body": "La página que buscas no existe o puede haberse movido.",
+      "notFound.homeLink": "Volver al Inicio",
+      "notFound.shopLink": "Visitar la Tienda",
+
       "title.home": "ABÔ Atelier — Joyería Fina",
       "title.shop": "Tienda — ABÔ Atelier",
       "title.scarProject": "The Scar Project — ABÔ Atelier",
       "title.shareStory": "Comparte Tu Historia — The Scar Project — ABÔ Atelier",
       "title.returnPolicy": "Política de Devoluciones — ABÔ Atelier",
+      "title.notFound": "Página No Encontrada — ABÔ Atelier",
     },
 
     fr: {
@@ -552,11 +564,17 @@ var ABO_I18N = (function () {
       "policy.contactBody": "Pour toute question relative aux retours, contactez-nous via notre page",
       "policy.contactBodyEnd": ".",
 
+      "notFound.title": "Page Introuvable",
+      "notFound.body": "La page que vous recherchez n'existe pas ou a peut-être été déplacée.",
+      "notFound.homeLink": "Retour à l'Accueil",
+      "notFound.shopLink": "Visiter la Boutique",
+
       "title.home": "ABÔ Atelier — Joaillerie Fine",
       "title.shop": "Boutique — ABÔ Atelier",
       "title.scarProject": "The Scar Project — ABÔ Atelier",
       "title.shareStory": "Partagez Votre Histoire — The Scar Project — ABÔ Atelier",
       "title.returnPolicy": "Politique de Retour — ABÔ Atelier",
+      "title.notFound": "Page Introuvable — ABÔ Atelier",
     },
 
     ar: {
@@ -734,11 +752,17 @@ var ABO_I18N = (function () {
       "policy.contactBody": "لأي استفسارات بخصوص الإرجاع، يرجى التواصل معنا عبر صفحة",
       "policy.contactBodyEnd": ".",
 
+      "notFound.title": "الصفحة غير موجودة",
+      "notFound.body": "الصفحة التي تبحث عنها غير موجودة أو ربما تم نقلها.",
+      "notFound.homeLink": "العودة إلى الصفحة الرئيسية",
+      "notFound.shopLink": "زيارة المتجر",
+
       "title.home": "ABÔ Atelier — مجوهرات فاخرة",
       "title.shop": "المتجر — ABÔ Atelier",
       "title.scarProject": "مشروع الندبة — ABÔ Atelier",
       "title.shareStory": "شارك قصتك — مشروع الندبة — ABÔ Atelier",
       "title.returnPolicy": "سياسة الإرجاع — ABÔ Atelier",
+      "title.notFound": "الصفحة غير موجودة — ABÔ Atelier",
     },
   };
 
