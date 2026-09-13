@@ -1087,6 +1087,10 @@ body:not(.i18n-ready) { visibility: hidden; }
   .story { padding-top: 88px; }
   .contact-section { margin-top: 0; padding: 24px 24px 32px; }
   .site-footer { margin-top: 32px; }
+
+  .story-showcase-product-badge { font-size: 0.95rem; }
+  .story-showcase-product-name { font-size: 0.85rem; }
+  .story-showcase-product-quote { font-size: 0.74rem; }
 }
 
 @media (max-width: 480px) {
