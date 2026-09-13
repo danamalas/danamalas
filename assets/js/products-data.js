@@ -6,46 +6,6 @@
 // renders as a single card with a color picker — see resolveVariant().
 const PRODUCTS = [
   {
-    id: "fracture-bar-studs",
-    name: "Fracture Bar Studs",
-    currency: "USD",
-    variants: [
-      {
-        id: "gold",
-        label: "Gold",
-        swatch: "#c9a227",
-        price: 440,
-        material: "14k recycled gold",
-        image: "assets/img/products/fracture-bar-gold.jpg",
-        description:
-          "A pair of solid gold bar studs with a single fracture cut into the face, shown here with their post and butterfly back.",
-        shopifyProductId: null,
-      },
-      {
-        id: "silver",
-        label: "Silver",
-        swatch: "#c7c9cc",
-        price: 360,
-        material: "Recycled sterling silver",
-        image: "assets/img/products/fracture-bar-silver.jpg",
-        description:
-          "The silver version of the fracture bar stud, shown here with their post and butterfly back.",
-        shopifyProductId: null,
-      },
-      {
-        id: "rose",
-        label: "Rose Gold",
-        swatch: "#d9b6a3",
-        price: 440,
-        material: "14k recycled rose gold",
-        image: "assets/img/products/fracture-bar-rose.jpg",
-        description:
-          "The rose gold version of the fracture bar stud, shown here with their post and butterfly back.",
-        shopifyProductId: null,
-      },
-    ],
-  },
-  {
     id: "fracture-cuff",
     name: "Fracture Cuff",
     currency: "USD",
@@ -131,6 +91,12 @@ const TEASER_PRODUCTS = {
     name: "Espoir Earrings",
     image: "assets/img/products/fracture-stud-gold.jpg",
     quote: "[Let hope lead you forward]",
+  },
+  "galene-necklace": {
+    id: "galene-necklace",
+    name: "Galène Necklace",
+    image: "assets/img/products/fracture-bar-gold.jpg",
+    quote: "[I am the promise that after the storm, peace remains]",
   },
 };
 
