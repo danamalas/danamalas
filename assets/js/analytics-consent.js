@@ -1,10 +1,8 @@
 // Google Analytics only loads once the visitor has made a choice that
 // enables it (Accept All, or Save with the Analytics toggle on) — nothing
-// from Google is requested before that. Replace GA_MEASUREMENT_ID with the
-// real Measurement ID from Google Analytics (Admin > Data Streams > your
-// web stream, looks like "G-XXXXXXXXXX").
+// from Google is requested before that.
 (function () {
-  var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+  var GA_MEASUREMENT_ID = "G-STYPEB9N73";
   var STORAGE_KEY = "abo-cookie-consent"; // stores JSON: {"analytics": true|false}
 
   // Reuses the existing checkout Worker's /currency endpoint, which already
