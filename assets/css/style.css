@@ -1089,8 +1089,8 @@ body:not(.i18n-ready) { visibility: hidden; }
   .site-footer { margin-top: 32px; }
 
   .story-showcase-product-badge { font-size: 0.95rem; }
-  .story-showcase-product-name { font-size: 0.76rem; }
-  .story-showcase-product-quote { font-size: 0.66rem; }
+  .story-showcase-product-name { font-size: 0.85rem; }
+  .story-showcase-product-quote { font-size: 0.74rem; }
 }
 
 @media (max-width: 480px) {
