@@ -46,48 +46,6 @@ const PRODUCTS = [
     ],
   },
   {
-    id: "fracture-necklace",
-    name: "Fracture Necklace",
-    currency: "USD",
-    variants: [
-      {
-        id: "gold",
-        label: "Gold",
-        swatch: "#c9a227",
-        price: 630,
-        prices: { USD: 630, EUR: 545, AED: 2300 },
-        material: "14k recycled gold",
-        image: "assets/img/products/fracture-necklace-gold.jpg",
-        description:
-          "A fine chain carrying a single fractured gold bar, its surface split by one hand-finished line running the length of the piece.",
-        shopifyProductId: null,
-        stripePriceId: "price_1UEqOQ3GX1etDYL8QLswWs5S",
-      },
-      {
-        id: "silver",
-        label: "Silver",
-        swatch: "#c7c9cc",
-        price: 560,
-        material: "Recycled sterling silver",
-        image: "assets/img/products/fracture-necklace-silver.jpg",
-        description:
-          "The same fractured bar pendant in sterling silver, carried on a fine chain and finished by hand.",
-        shopifyProductId: null,
-      },
-      {
-        id: "rose",
-        label: "Rose Gold",
-        swatch: "#d9b6a3",
-        price: 640,
-        material: "14k recycled rose gold",
-        image: "assets/img/products/fracture-necklace-rose.jpg",
-        description:
-          "The same fractured bar pendant in rose gold, carried on a fine chain and finished by hand.",
-        shopifyProductId: null,
-      },
-    ],
-  },
-  {
     id: "fracture-cuff",
     name: "Fracture Cuff",
     currency: "USD",
@@ -128,46 +86,6 @@ const PRODUCTS = [
     ],
   },
   {
-    id: "fracture-stud-earrings",
-    name: "Fracture Stud Earrings",
-    currency: "USD",
-    variants: [
-      {
-        id: "gold",
-        label: "Gold",
-        swatch: "#c9a227",
-        price: 420,
-        material: "14k recycled gold",
-        image: "assets/img/products/fracture-stud-gold.jpg",
-        description:
-          "A pair of solid gold bar studs, each cut through with a single fine fracture — the house's scar motif carried in miniature.",
-        shopifyProductId: null,
-      },
-      {
-        id: "silver",
-        label: "Silver",
-        swatch: "#c7c9cc",
-        price: 340,
-        material: "Recycled sterling silver",
-        image: "assets/img/products/fracture-stud-silver.jpg",
-        description:
-          "The same bar stud in sterling silver, its surface split by one hand-finished fracture line running the length of the piece.",
-        shopifyProductId: null,
-      },
-      {
-        id: "rose",
-        label: "Rose Gold",
-        swatch: "#d9b6a3",
-        price: 420,
-        material: "14k recycled rose gold",
-        image: "assets/img/products/fracture-stud-rose.jpg",
-        description:
-          "The same bar stud in rose gold, its surface split by one hand-finished fracture line running the length of the piece.",
-        shopifyProductId: null,
-      },
-    ],
-  },
-  {
     id: "wound-gold-pendant",
     name: "Wound & Gold Pendant",
     price: 890,
@@ -201,6 +119,18 @@ const TEASER_PRODUCTS = {
     name: "Solèa Ring",
     image: "assets/img/products/fracture-ring-gold.jpg",
     quote: "[Wear the light you became]",
+  },
+  "kandai-necklace": {
+    id: "kandai-necklace",
+    name: "Kandai Necklace",
+    image: "assets/img/products/fracture-necklace-gold.jpg",
+    quote: "[The strength to begin again]",
+  },
+  "espoir-earrings": {
+    id: "espoir-earrings",
+    name: "Espoir Earrings",
+    image: "assets/img/products/fracture-stud-gold.jpg",
+    quote: "[Let hope lead you forward]",
   },
 };
 
