@@ -98,6 +98,12 @@ const TEASER_PRODUCTS = {
     image: "assets/img/products/fracture-bar-gold.jpg",
     quote: "[I am the promise that after the storm, peace remains]",
   },
+  "statera-anklet": {
+    id: "statera-anklet",
+    name: "Statera Anklet",
+    image: "assets/img/products/fracture-bracelet-gold.jpg",
+    quote: "[Balance in every step]",
+  },
 };
 
 function formatPrice(amount, currency) {
