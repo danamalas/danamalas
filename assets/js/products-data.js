@@ -95,7 +95,7 @@ const TEASER_PRODUCTS = {
   "galene-necklace": {
     id: "galene-necklace",
     name: "Galène Necklace",
-    image: "assets/img/products/fracture-bar-gold.jpg",
+    image: "assets/img/products/galene-necklace-gold.jpg",
     quote: "[I am the promise that after the storm, peace remains]",
   },
   "statera-anklet": {
