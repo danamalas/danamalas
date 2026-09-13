@@ -1,22 +1,24 @@
-// Google Analytics only loads after the visitor accepts the cookie banner —
-// nothing from Google is requested until then. Replace GA_MEASUREMENT_ID
-// with the real Measurement ID from Google Analytics (Admin > Data Streams
-// > your web stream, looks like "G-XXXXXXXXXX").
+// Google Analytics only loads once the visitor has made a choice that
+// enables it (Accept All, or Save with the Analytics toggle on) — nothing
+// from Google is requested before that. Replace GA_MEASUREMENT_ID with the
+// real Measurement ID from Google Analytics (Admin > Data Streams > your
+// web stream, looks like "G-XXXXXXXXXX").
 (function () {
   var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
-  var STORAGE_KEY = "abo-cookie-consent";
+  var STORAGE_KEY = "abo-cookie-consent"; // stores JSON: {"analytics": true|false}
 
   function getConsent() {
     try {
-      return localStorage.getItem(STORAGE_KEY);
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : null;
     } catch (e) {
       return null;
     }
   }
 
-  function setConsent(value) {
+  function setConsent(analyticsEnabled) {
     try {
-      localStorage.setItem(STORAGE_KEY, value);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ analytics: !!analyticsEnabled }));
     } catch (e) {}
   }
 
@@ -39,28 +41,62 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     var banner = document.getElementById("cookieConsent");
-    var acceptBtn = document.getElementById("cookieConsentAccept");
-    var declineBtn = document.getElementById("cookieConsentDecline");
     if (!banner) return;
 
+    var mainView = document.getElementById("cookieConsentMain");
+    var settingsView = document.getElementById("cookieConsentSettings");
+    var acceptBtn = document.getElementById("cookieConsentAccept");
+    var rejectBtn = document.getElementById("cookieConsentReject");
+    var manageBtn = document.getElementById("cookieConsentManage");
+    var saveBtn = document.getElementById("cookieConsentSave");
+    var analyticsToggle = document.getElementById("cookieToggleAnalytics");
+
     var consent = getConsent();
-    if (consent === "accepted") {
-      loadGoogleAnalytics();
-    } else if (consent !== "declined") {
+    if (consent) {
+      if (consent.analytics) loadGoogleAnalytics();
+    } else {
       banner.hidden = false;
+    }
+
+    function closeBanner() {
+      banner.hidden = true;
     }
 
     if (acceptBtn) {
       acceptBtn.addEventListener("click", function () {
-        setConsent("accepted");
-        banner.hidden = true;
+        setConsent(true);
         loadGoogleAnalytics();
+        closeBanner();
       });
     }
-    if (declineBtn) {
-      declineBtn.addEventListener("click", function () {
-        setConsent("declined");
-        banner.hidden = true;
+
+    if (rejectBtn) {
+      rejectBtn.addEventListener("click", function () {
+        setConsent(false);
+        closeBanner();
+      });
+    }
+
+    if (manageBtn && mainView && settingsView) {
+      manageBtn.addEventListener("click", function () {
+        mainView.hidden = true;
+        settingsView.hidden = false;
+      });
+    }
+
+    if (analyticsToggle) {
+      analyticsToggle.addEventListener("click", function () {
+        var isOn = analyticsToggle.getAttribute("aria-checked") === "true";
+        analyticsToggle.setAttribute("aria-checked", isOn ? "false" : "true");
+      });
+    }
+
+    if (saveBtn) {
+      saveBtn.addEventListener("click", function () {
+        var analyticsEnabled = !!analyticsToggle && analyticsToggle.getAttribute("aria-checked") === "true";
+        setConsent(analyticsEnabled);
+        if (analyticsEnabled) loadGoogleAnalytics();
+        closeBanner();
       });
     }
   });

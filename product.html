@@ -290,10 +290,33 @@
 <script src="assets/js/products-data.js"></script>
 <script src="assets/js/currency.js"></script>
 <div class="cookie-consent" id="cookieConsent" hidden>
-  <p class="cookie-consent-text" data-i18n="cookieConsent.text">We use cookies to understand site traffic via Google Analytics. Your data is anonymized and never sold.</p>
-  <div class="cookie-consent-actions">
-    <button type="button" class="cookie-consent-decline" id="cookieConsentDecline" data-i18n="cookieConsent.decline">Decline</button>
-    <button type="button" class="cookie-consent-accept" id="cookieConsentAccept" data-i18n="cookieConsent.accept">Accept</button>
+  <div class="cookie-consent-card">
+    <div class="cookie-consent-main" id="cookieConsentMain">
+      <p class="cookie-consent-text" data-i18n-html="cookieConsent.text">Your privacy matters. We use cookies to run our site and analyze traffic. By clicking "Accept All", you agree to our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+      <div class="cookie-consent-actions">
+        <button type="button" class="cookie-consent-btn cookie-consent-btn--secondary" id="cookieConsentReject" data-i18n="cookieConsent.rejectAll">Reject All</button>
+        <button type="button" class="cookie-consent-btn cookie-consent-btn--primary" id="cookieConsentAccept" data-i18n="cookieConsent.acceptAll">Accept All</button>
+      </div>
+      <button type="button" class="cookie-consent-manage-link" id="cookieConsentManage" data-i18n="cookieConsent.manageSettings">Manage Settings</button>
+    </div>
+    <div class="cookie-consent-settings" id="cookieConsentSettings" hidden>
+      <p class="cookie-consent-settings-title" data-i18n="cookieConsent.settingsTitle">Cookie Settings</p>
+      <div class="cookie-consent-row">
+        <div class="cookie-consent-row-text">
+          <span class="cookie-consent-row-label" data-i18n="cookieConsent.necessaryLabel">Necessary</span>
+          <span class="cookie-consent-row-desc" data-i18n="cookieConsent.necessaryDesc">Required for the site to function (cart, language). Always on.</span>
+        </div>
+        <span class="cookie-toggle cookie-toggle--locked" aria-disabled="true" aria-label="Necessary cookies (always on)"><span class="cookie-toggle-knob"></span></span>
+      </div>
+      <div class="cookie-consent-row">
+        <div class="cookie-consent-row-text">
+          <span class="cookie-consent-row-label" data-i18n="cookieConsent.analyticsLabel">Analytics</span>
+          <span class="cookie-consent-row-desc" data-i18n="cookieConsent.analyticsDesc">Helps us understand site traffic via Google Analytics.</span>
+        </div>
+        <button type="button" class="cookie-toggle" id="cookieToggleAnalytics" role="switch" aria-checked="false" aria-label="Analytics cookies"><span class="cookie-toggle-knob"></span></button>
+      </div>
+      <button type="button" class="cookie-consent-btn cookie-consent-btn--primary cookie-consent-save" id="cookieConsentSave" data-i18n="cookieConsent.savePreferences">Save Preferences</button>
+    </div>
   </div>
 </div>
 
