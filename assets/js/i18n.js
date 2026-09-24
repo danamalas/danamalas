@@ -436,11 +436,11 @@ var ABO_I18N = (function () {
       "hero.shop.link": "Voir la collection",
 
       "story.eyebrow": "Notre Histoire",
-      "story.heading": "Une cicatrice devenue force —<br>la marque du chemin parcouru",
-      "story.lede": "ABÔ Atelier ne devait jamais être qu'une simple marque de bijoux.",
-      "story.p1": "Elle est née de l'un des chapitres les plus difficiles de ma vie. Pendant un temps, j'ai cru que la douleur ne faisait que prendre. Mais peu à peu, j'ai compris que <em>la douleur peut aussi créer</em>.",
-      "story.p2": "Chaque pièce que nous créons porte le rappel que quelque chose de beau peut naître de quelque chose de douloureux. ABÔ Atelier est mon chemin vers la guérison, mais je ne veux pas qu'il n'appartienne qu'à moi. Je veux qu'il appartienne à quiconque a perdu quelque chose, s'est battu en silence, a recommencé, ou cherche encore son chemin.",
-      "story.p3": "Voici l'endroit où votre histoire peut devenir une part de la nôtre. Rejoignez notre communauté <a href=\"the-scar-project.html\">ici</a>.",
+      "story.heading": "Une cicatrice devenue force —<br>la trace du chemin parcouru",
+      "story.lede": "ABÔ Atelier n'a jamais eu vocation à être une simple marque de bijoux.",
+      "story.p1": "Elle est née de l'un des chapitres les plus difficiles de ma vie. J'ai longtemps cru que la douleur ne faisait que détruire. Mais peu à peu, j'ai compris que <em>la douleur peut aussi créer</em>.",
+      "story.p2": "Chaque pièce que nous créons est un rappel que quelque chose de beau peut naître de la douleur. ABÔ Atelier est mon chemin vers la guérison, mais je ne veux pas qu'il m'appartienne à moi seule. Je veux qu'il appartienne à tous ceux qui ont perdu quelque chose, se sont battus en silence, ont recommencé, ou cherchent encore leur chemin.",
+      "story.p3": "C'est ici que votre histoire peut devenir une part de la nôtre. Rejoignez notre communauté <a href=\"the-scar-project.html\">ici</a>.",
       "story.quote": "Un bijou ne peut effacer ce qui s'est passé, mais il peut vous rappeler la force que vous portez.",
       "story.quoteCite": "— Fondatrice, ABÔ Atelier",
 
