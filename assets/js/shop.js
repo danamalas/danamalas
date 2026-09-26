@@ -23,13 +23,16 @@ function cardHtml(product) {
         <span class="product-card-coming-soon">${t("shop.comingSoon")}</span>
       </span>`;
 
+  const tag = product.available ? "a" : "div";
+  const linkAttr = product.available ? ` href="product.html?id=${product.id}"` : "";
+
   return `
-    <div class="product-card" data-product="${product.id}" data-variant="${variantId || ""}">
+    <${tag} class="product-card" data-product="${product.id}" data-variant="${variantId || ""}"${linkAttr}>
       ${media}
       <span class="product-card-name">${product.name}</span>
       <span class="product-card-price">${formatPrice(priceInfo.amount, priceInfo.currency)}</span>
       ${swatches}
-    </div>
+    </${tag}>
   `;
 }
 

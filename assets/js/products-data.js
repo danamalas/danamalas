@@ -65,9 +65,9 @@ const PRODUCTS = [
     description:
       "An ABÔ Atelier gift card, delivered by email and redeemable toward any piece in the collection. Never expires.",
     variants: [
-      { id: "10", label: "$10", price: 10, shopifyProductId: null },
-      { id: "20", label: "$20", price: 20, shopifyProductId: null },
-      { id: "30", label: "$30", price: 30, shopifyProductId: null },
+      { id: "10", label: "$10", price: 10, stripePriceId: "price_1UJz533GX1etDYL8zKIc5wZX", shopifyProductId: null },
+      { id: "20", label: "$20", price: 20, stripePriceId: "price_1UJz533GX1etDYL85b8Uwxrx", shopifyProductId: null },
+      { id: "30", label: "$30", price: 30, stripePriceId: "price_1UJz533GX1etDYL8801Q5ETG", shopifyProductId: null },
       { id: "50", label: "$50", price: 50, shopifyProductId: null },
       { id: "70", label: "$70", price: 70, shopifyProductId: null },
       { id: "100", label: "$100", price: 100, shopifyProductId: null },
