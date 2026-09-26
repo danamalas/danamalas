@@ -45,8 +45,13 @@
     margin: 36px 0 12px;
   }
   .policy-section p {
-    color: var(--color-ink-soft);
+    color: var(--color-ink);
     margin: 0 0 16px;
+  }
+  .policy-section .policy-updated {
+    color: var(--color-ink-soft);
+    font-size: 0.85rem;
+    margin: -16px 0 32px;
   }
   .policy-section a {
     color: var(--color-ink);
@@ -92,11 +97,19 @@
 <main id="policy-main">
   <section class="policy-section">
     <h1 data-i18n="privacyPolicy.title">Privacy Policy</h1>
+    <p class="policy-updated" data-i18n="privacyPolicy.lastUpdated">Last updated: September 2026</p>
 
-    <p data-i18n="privacyPolicy.placeholder">Placeholder policy — replace this page with ABÔ Atelier's actual, lawyer-reviewed privacy policy before relying on it.</p>
+    <p data-i18n="privacyPolicy.intro">This Privacy Policy explains how ABÔ Atelier ("we," "us," or "our") collects, uses, shares, and protects personal information when you visit aboatelier.com, sign up for our newsletter, contact us, submit a story to The Scar Project, or place an order. By using this website, you agree to the practices described below.</p>
 
-    <h2 data-i18n="privacyPolicy.dataHeading">What Information We Collect</h2>
-    <p data-i18n="privacyPolicy.dataBody">We collect information you provide directly — such as your name, email, and phone number when you sign up for our newsletter, contact us, or place an order — and information collected automatically via cookies (see below).</p>
+    <h2 data-i18n="privacyPolicy.collectHeading">Information We Collect</h2>
+    <p data-i18n="privacyPolicy.collectProvidedBody">We collect information you provide directly to us, including: your name, email address, and phone number when you sign up for our newsletter; your email address and message when you contact us or enquire about a product; your name, location, email address, and the story you choose to share when you submit to The Scar Project; and your name, shipping address, and email address when you place an order, which is collected and processed on our behalf by Stripe, our payment processor.</p>
+    <p data-i18n="privacyPolicy.collectAutoBody">We also collect certain information automatically when you visit our site, including your approximate location (derived from your IP address, used to determine currency and applicable cookie consent requirements) and, if you consent to analytics cookies, information about the pages you view, the device and browser you use, and how you interact with the site.</p>
+
+    <h2 data-i18n="privacyPolicy.useHeading">How We Use Your Information</h2>
+    <p data-i18n="privacyPolicy.useBody">We use the information we collect to process and fulfil your orders; respond to your enquiries and provide customer support; send marketing communications if you have opted in to our newsletter, which you may unsubscribe from at any time; review submissions to The Scar Project and contact you before publishing any story; understand and improve how visitors use our site; detect and prevent fraud or misuse of our services; and comply with our legal and tax obligations.</p>
+
+    <h2 data-i18n="privacyPolicy.legalBasisHeading">Legal Basis for Processing</h2>
+    <p data-i18n="privacyPolicy.legalBasisBody">Where applicable law requires a legal basis for processing personal data, we rely on: performance of a contract, to process and deliver your order; your consent, for newsletter marketing, analytics cookies, and Scar Project submissions, which you may withdraw at any time; our legitimate interests, in securing our website and preventing fraud; and compliance with a legal obligation, such as retaining financial records for tax purposes.</p>
 
     <h2 data-i18n="privacyPolicy.whatAreHeading">What Are Cookies?</h2>
     <p data-i18n="privacyPolicy.whatAreBody">Cookies are small pieces of data stored on your device that help websites function and understand how they're used.</p>
@@ -107,14 +120,29 @@
     <h2 data-i18n="privacyPolicy.analyticsHeading">Analytics Cookies</h2>
     <p data-i18n="privacyPolicy.analyticsBody">With your consent, we use Google Analytics to understand how visitors use our site (pages viewed, general location, device type) so we can improve it. This data is anonymized and never sold. You can withdraw consent at any time by clearing your browser's site data and revisiting the site.</p>
 
+    <h2 data-i18n="privacyPolicy.shareHeading">How We Share Your Information</h2>
+    <p data-i18n="privacyPolicy.shareBody">We do not sell your personal information. We share it only with service providers who help us run our business: Stripe, to process payments; Web3Forms, to deliver messages submitted through our contact, enquiry, and Scar Project forms to our inbox; Google, to provide analytics when you consent to analytics cookies; and Cloudflare, our hosting and content delivery provider, which also determines your approximate country to apply the correct currency and consent requirements. These providers may process and store information outside your country of residence, including in the United States; where required, we rely on their own compliance with applicable data protection frameworks and standard contractual safeguards.</p>
+
+    <h2 data-i18n="privacyPolicy.retentionHeading">Data Retention</h2>
+    <p data-i18n="privacyPolicy.retentionBody">We retain personal information only as long as necessary for the purposes described in this policy: newsletter contact details until you unsubscribe; enquiry and contact messages for as long as needed to respond and keep reasonable records; Scar Project submissions until a publication decision is made, or longer if you consent to publication; and order and payment records for as long as required by applicable tax and accounting law.</p>
+
     <h2 data-i18n="privacyPolicy.ordersHeading">Orders & Payments</h2>
     <p data-i18n="privacyPolicy.ordersBody">When you make a purchase, your payment is processed securely by Stripe. We do not store your card details ourselves. Stripe's own privacy practices govern how your payment information is handled.</p>
 
     <h2 data-i18n="privacyPolicy.rightsHeading">Your Rights</h2>
-    <p data-i18n="privacyPolicy.rightsBody">Depending on your location, you may have the right to access, correct, delete, or export the personal data we hold about you, and to withdraw consent for analytics cookies at any time. [Add your data controller details and any additional regional rights here.]</p>
+    <p data-i18n="privacyPolicy.rightsBody">Depending on where you live, you may have the right to access the personal data we hold about you, correct inaccurate data, request deletion of your data, object to or restrict certain processing, request a copy of your data in a portable format, and withdraw consent at any time — including for newsletter marketing and analytics cookies — without affecting the lawfulness of processing carried out before you withdrew it. If you are in the European Economic Area or United Kingdom, you also have the right to lodge a complaint with your local data protection supervisory authority. To exercise any of these rights, contact us using the details below.</p>
+
+    <h2 data-i18n="privacyPolicy.childrenHeading">Children's Privacy</h2>
+    <p data-i18n="privacyPolicy.childrenBody">Our website and products are intended for adults. We do not knowingly collect personal information from children under 16. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
+
+    <h2 data-i18n="privacyPolicy.securityHeading">Data Security</h2>
+    <p data-i18n="privacyPolicy.securityBody">We use reasonable technical and organizational measures to protect the personal information we hold from loss, misuse, and unauthorized access. However, no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security.</p>
 
     <h2 data-i18n="privacyPolicy.manageHeading">Managing Your Cookie Preferences</h2>
     <p data-i18n="privacyPolicy.manageBody">You can accept or reject non-essential cookies at any time via the cookie banner shown on your first visit, or by clearing your browser's site data to see it again.</p>
+
+    <h2 data-i18n="privacyPolicy.changesHeading">Changes to This Policy</h2>
+    <p data-i18n="privacyPolicy.changesBody">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date above. Your continued use of our website after changes are posted constitutes your acceptance of the revised policy.</p>
 
     <h2 data-i18n="privacyPolicy.contactHeading">Contact</h2>
     <p><span data-i18n="privacyPolicy.contactBody">For questions regarding this policy, reach out via our</span> <a href="index.html#contact" data-i18n="nav.contact">Contact Us</a> <span data-i18n="privacyPolicy.contactBodyEnd">page.</span></p>
