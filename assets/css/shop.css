@@ -167,7 +167,7 @@
 .back-link {
   display: block;
   max-width: var(--max-width);
-  margin: 128px auto 0;
+  margin: 176px auto 0;
   padding: 0 32px;
   box-sizing: border-box;
   font-size: 0.85rem;
@@ -396,7 +396,6 @@
 @media (max-width: 560px) {
   .shop-grid { grid-template-columns: 1fr; gap: 48px; }
   .shop-intro { height: clamp(320px, 46vh, 420px); }
-  .back-link { margin-top: 108px; }
 }
 
 /* ===== Arabic: display font has no italic style for this script ===== */
