@@ -84,7 +84,7 @@ const TEASER_PRODUCTS = {
     id: "kandai-necklace",
     name: "Kandai Necklace",
     image: "assets/img/products/fracture-necklace-gold.jpg",
-    quote: "[The strength to begin again]",
+    quote: "[The peace of accepting imperfection]",
   },
   "espoir-earrings": {
     id: "espoir-earrings",
