@@ -60,7 +60,7 @@ const PRODUCTS = [
     id: "gift-card",
     name: "Gift Card",
     currency: "USD",
-    image: "assets/img/products/gift-card-placeholder.jpg",
+    image: "assets/img/products/gift-card.jpg",
     description:
       "An ABÔ Atelier gift card, delivered by email and redeemable toward any piece in the collection. Never expires.",
     variants: [
