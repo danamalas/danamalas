@@ -89,7 +89,10 @@ if (!product) {
     const priceInfo = getDisplayPrice(view, displayCurrency);
     document.getElementById("pageTitle").textContent = `${product.name} — ABÔ Atelier`;
 
-    const swatches = product.variants
+    const hasSwatches = product.variants && product.variants[0].swatch !== undefined;
+    const hasAmountPicker = product.variants && !hasSwatches;
+
+    const swatches = hasSwatches
       ? `<div class="product-swatches">${product.variants
           .map(
             (v) => `
@@ -99,6 +102,17 @@ if (!product) {
           .join("")}</div>`
       : "";
 
+    const amountPicker = hasAmountPicker
+      ? `<div class="product-amount-picker">
+          <label class="product-amount-label" for="amountSelect">${t("product.chooseAmount")}</label>
+          <select class="product-amount-select" id="amountSelect">
+            ${product.variants
+              .map((v) => `<option value="${v.id}"${v.id === variantId ? " selected" : ""}>${v.label}</option>`)
+              .join("")}
+          </select>
+        </div>`
+      : "";
+
     container.innerHTML = `
       <div class="product-media">
         <img src="${view.image}" alt="${product.name}">
@@ -106,8 +120,9 @@ if (!product) {
       <div class="product-info">
         <h1>${product.name}</h1>
         <p class="product-price">${formatPrice(priceInfo.amount, priceInfo.currency)}</p>
-        <p class="product-material">${view.material}</p>
+        ${view.material ? `<p class="product-material">${view.material}</p>` : ""}
         ${swatches}
+        ${amountPicker}
         <p class="product-description">${view.description}</p>
         <div class="product-buy" id="productBuy"></div>
       </div>
@@ -147,6 +162,14 @@ if (!product) {
         render();
       });
     });
+
+    const amountSelect = container.querySelector("#amountSelect");
+    if (amountSelect) {
+      amountSelect.addEventListener("change", () => {
+        variantId = amountSelect.value;
+        render();
+      });
+    }
   }
 
   render();

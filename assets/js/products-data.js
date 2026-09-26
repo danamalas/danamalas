@@ -56,6 +56,21 @@ const PRODUCTS = [
       "A small sapphire set into a hand-carved gold pendant along a single fractured line — the house's clearest piece on the subject of mending.",
     shopifyProductId: null,
   },
+  {
+    id: "gift-card",
+    name: "Gift Card",
+    currency: "USD",
+    image: "assets/img/products/gift-card-placeholder.jpg",
+    description:
+      "An ABÔ Atelier gift card, delivered by email and redeemable toward any piece in the collection. Never expires.",
+    variants: [
+      { id: "20", label: "$20", price: 20, shopifyProductId: null },
+      { id: "30", label: "$30", price: 30, shopifyProductId: null },
+      { id: "50", label: "$50", price: 50, shopifyProductId: null },
+      { id: "70", label: "$70", price: 70, shopifyProductId: null },
+      { id: "100", label: "$100", price: 100, shopifyProductId: null },
+    ],
+  },
 ];
 
 // Unreleased pieces shown only as a homepage teaser and their own product

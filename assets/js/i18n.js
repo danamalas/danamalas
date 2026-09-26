@@ -176,6 +176,7 @@ var ABO_I18N = (function () {
       "product.backToShop": "← Back to Shop",
       "product.enquire": "Enquire about this piece",
       "product.enquireSubmit": "Send Enquiry",
+      "product.chooseAmount": "Choose Amount",
 
       "policy.title": "Return Policy",
       "policy.intro": "Our return policy is set separately for each country we ship to, in line with local consumer protection law. The General Conditions below apply to every return; find your shipping destination further down for its specific terms.",
@@ -377,6 +378,7 @@ var ABO_I18N = (function () {
       "product.returnToShop": "Retourner à la Boutique.",
       "product.backToShop": "← Retour à la Boutique",
       "product.enquire": "Se renseigner sur cette pièce",
+      "product.chooseAmount": "Choisir le Montant",
       "product.enquireSubmit": "Envoyer la Demande",
 
       "policy.title": "Politique de Retour",
@@ -560,6 +562,7 @@ var ABO_I18N = (function () {
       "product.returnToShop": "العودة إلى المتجر.",
       "product.backToShop": "→ العودة إلى المتجر",
       "product.enquire": "الاستفسار عن هذه القطعة",
+      "product.chooseAmount": "اختر المبلغ",
       "product.enquireSubmit": "إرسال الاستفسار",
 
       "policy.title": "سياسة الإرجاع",

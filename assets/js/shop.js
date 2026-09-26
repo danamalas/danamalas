@@ -6,7 +6,7 @@ function cardHtml(product) {
   const view = resolveVariant(product, variantId);
   const priceInfo = getDisplayPrice(view, displayCurrency);
 
-  const swatches = product.variants
+  const swatches = product.variants && product.variants[0].swatch
     ? `<span class="product-card-swatches">${product.variants
         .map(
           (v) => `
