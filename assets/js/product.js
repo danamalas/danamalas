@@ -104,12 +104,23 @@ if (!product) {
 
     const amountPicker = hasAmountPicker
       ? `<div class="product-amount-picker">
-          <label class="product-amount-label" for="amountSelect">${t("product.chooseAmount")}</label>
-          <select class="product-amount-select" id="amountSelect">
-            ${product.variants
-              .map((v) => `<option value="${v.id}"${v.id === variantId ? " selected" : ""}>${v.label}</option>`)
-              .join("")}
-          </select>
+          <span class="product-amount-label">${t("product.chooseAmount")}</span>
+          <div class="amount-select" id="amountSelect">
+            <button type="button" class="amount-select-btn" aria-haspopup="listbox" aria-expanded="false">
+              <span>${view.label}</span>
+            </button>
+            <ul class="amount-select-list" role="listbox" hidden>
+              ${product.variants
+                .map(
+                  (v) => `
+                  <li role="option" aria-selected="${v.id === variantId}">
+                    <button type="button" class="amount-select-option${v.id === variantId ? " is-selected" : ""}" data-value="${v.id}">${v.label}</button>
+                  </li>
+                `
+                )
+                .join("")}
+            </ul>
+          </div>
         </div>`
       : "";
 
@@ -165,12 +176,33 @@ if (!product) {
 
     const amountSelect = container.querySelector("#amountSelect");
     if (amountSelect) {
-      amountSelect.addEventListener("change", () => {
-        variantId = amountSelect.value;
-        render();
+      const amountBtn = amountSelect.querySelector(".amount-select-btn");
+      const amountList = amountSelect.querySelector(".amount-select-list");
+
+      amountBtn.addEventListener("click", () => {
+        const isOpen = !amountList.hidden;
+        amountList.hidden = isOpen;
+        amountBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
+
+      amountSelect.querySelectorAll(".amount-select-option").forEach((opt) => {
+        opt.addEventListener("click", () => {
+          variantId = opt.dataset.value;
+          render();
+        });
       });
     }
   }
+
+  document.addEventListener("click", (e) => {
+    const openList = container.querySelector(".amount-select-list:not([hidden])");
+    if (!openList) return;
+    const wrap = openList.closest(".amount-select");
+    if (wrap && !wrap.contains(e.target)) {
+      openList.hidden = true;
+      wrap.querySelector(".amount-select-btn").setAttribute("aria-expanded", "false");
+    }
+  });
 
   render();
   document.addEventListener("abo:langchange", render);
