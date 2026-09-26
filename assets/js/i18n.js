@@ -134,7 +134,9 @@ var ABO_I18N = (function () {
       "wizard.review.dash": "—",
 
       "shop.title": "The Collection",
-      "shop.introText": "Every ABÔ Atelier piece is crafted from verified precious metals, carefully tested to ensure purity, quality, and authenticity.",
+      "shop.introHeadline": "Wear Your Strength",
+      "shop.introText": "Every ABÔ Atelier piece carries the same idea: that strength can rise from something difficult.",
+      "shop.introText2": "Each piece is handmade from verified precious metals, carefully tested to ensure purity, quality, and authenticity.",
       "shop.comingSoon": "Still healing.<br>Available soon.",
       "storyShowcase.showAll": "Show All Products",
 
@@ -322,7 +324,9 @@ var ABO_I18N = (function () {
       "wizard.review.dash": "—",
 
       "shop.title": "La Collection",
-      "shop.introText": "Chaque pièce ABÔ Atelier est façonnée à partir de métaux précieux certifiés, soigneusement testés pour garantir pureté, qualité et authenticité.",
+      "shop.introHeadline": "Portez Votre Force",
+      "shop.introText": "Chaque pièce ABÔ Atelier porte la même idée : que la force peut naître de quelque chose de difficile.",
+      "shop.introText2": "Chaque pièce est faite à la main à partir de métaux précieux certifiés, soigneusement testés pour garantir pureté, qualité et authenticité.",
       "shop.comingSoon": "Encore en cicatrisation.<br>Bientôt disponible.",
       "storyShowcase.showAll": "Voir Tous Les Produits",
 
@@ -510,7 +514,9 @@ var ABO_I18N = (function () {
       "wizard.review.dash": "—",
 
       "shop.title": "المجموعة",
-      "shop.introText": "كل قطعة من ABÔ Atelier مصنوعة من معادن ثمينة موثقة، تم اختبارها بعناية لضمان النقاء والجودة والأصالة.",
+      "shop.introHeadline": "ارتدِ قوتك",
+      "shop.introText": "كل قطعة من ABÔ Atelier تحمل الفكرة ذاتها: أن القوة يمكن أن تنبع من شيء صعب.",
+      "shop.introText2": "كل قطعة مصنوعة يدويًا من معادن ثمينة موثقة، تم اختبارها بعناية لضمان النقاء والجودة والأصالة.",
       "shop.comingSoon": "لا يزال يلتئم.<br>متوفر قريبًا.",
       "storyShowcase.showAll": "عرض جميع المنتجات",
 
