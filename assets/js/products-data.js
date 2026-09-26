@@ -63,7 +63,7 @@ const PRODUCTS = [
     image: "assets/img/products/gift-card.png",
     available: true,
     description:
-      "An ABÔ Atelier gift card, delivered by email and redeemable toward any piece in the collection. Never expires.",
+      "An ABÔ Atelier gift card, delivered by email and redeemable toward any piece in the collection.",
     variants: [
       { id: "10", label: "$10", price: 10, stripePriceId: "price_1UJz533GX1etDYL8zKIc5wZX", shopifyProductId: null },
       { id: "20", label: "$20", price: 20, stripePriceId: "price_1UJz533GX1etDYL85b8Uwxrx", shopifyProductId: null },
