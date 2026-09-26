@@ -133,7 +133,7 @@ var ABO_I18N = (function () {
       "wizard.review.edit": "Edit",
       "wizard.review.dash": "—",
 
-      "shop.title": "Wear Your Strength",
+      "shop.title": "The Collection",
       "shop.introText": "Every ABÔ Atelier piece carries the same idea: that strength can rise from something difficult. Each piece is handmade from verified precious metals, carefully tested to ensure purity, quality, and authenticity.",
       "shop.comingSoon": "Still healing.<br>Available soon.",
       "storyShowcase.showAll": "Show All Products",
@@ -321,7 +321,7 @@ var ABO_I18N = (function () {
       "wizard.review.edit": "Modifier",
       "wizard.review.dash": "—",
 
-      "shop.title": "Portez Votre Force",
+      "shop.title": "La Collection",
       "shop.introText": "Chaque pièce ABÔ Atelier porte la même idée : que la force peut naître de quelque chose de difficile. Elle est faite à la main à partir de métaux précieux certifiés, soigneusement testés pour garantir pureté, qualité et authenticité.",
       "shop.comingSoon": "Encore en cicatrisation.<br>Bientôt disponible.",
       "storyShowcase.showAll": "Voir Tous Les Produits",
@@ -509,7 +509,7 @@ var ABO_I18N = (function () {
       "wizard.review.edit": "تعديل",
       "wizard.review.dash": "—",
 
-      "shop.title": "ارتدِ قوتك",
+      "shop.title": "المجموعة",
       "shop.introText": "كل قطعة من ABÔ Atelier تحمل الفكرة ذاتها: أن القوة يمكن أن تنبع من شيء صعب. وهي مصنوعة يدويًا من معادن ثمينة موثقة، تم اختبارها بعناية لضمان النقاء والجودة والأصالة.",
       "shop.comingSoon": "لا يزال يلتئم.<br>متوفر قريبًا.",
       "storyShowcase.showAll": "عرض جميع المنتجات",
