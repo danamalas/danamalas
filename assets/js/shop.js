@@ -16,12 +16,16 @@ function cardHtml(product) {
         .join("")}</span>`
     : "";
 
-  return `
-    <div class="product-card" data-product="${product.id}" data-variant="${variantId || ""}">
-      <span class="product-card-img product-card-blank" aria-hidden="true">
+  const media = product.available
+    ? `<img src="${product.image}" alt="${product.name}" class="product-card-img">`
+    : `<span class="product-card-img product-card-blank" aria-hidden="true">
         <img src="assets/img/scar-mark.png" alt="" class="product-card-scar">
         <span class="product-card-coming-soon">${t("shop.comingSoon")}</span>
-      </span>
+      </span>`;
+
+  return `
+    <div class="product-card" data-product="${product.id}" data-variant="${variantId || ""}">
+      ${media}
       <span class="product-card-name">${product.name}</span>
       <span class="product-card-price">${formatPrice(priceInfo.amount, priceInfo.currency)}</span>
       ${swatches}
