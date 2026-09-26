@@ -40,16 +40,6 @@
   font-size: clamp(2.4rem, 4.4vw, 3.4rem);
   margin: 0 0 16px;
 }
-.shop-intro-headline {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
-  margin: 0 0 14px;
-  color: #ffffff;
-}
 .shop-intro-text {
   max-width: 520px;
   margin: 0 auto;
