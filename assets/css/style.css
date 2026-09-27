@@ -600,6 +600,12 @@ body:not(.i18n-ready) { visibility: hidden; }
   font-family: var(--font-body);
   font-size: 0.8rem;
 }
+.newsletter-form input::placeholder,
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #757575;
+  opacity: 1;
+}
 .contact-form select {
   cursor: pointer;
   appearance: none;
