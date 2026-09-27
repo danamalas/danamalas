@@ -20,14 +20,14 @@
 .scar-intro {
   max-width: 720px;
   margin: 0 auto;
-  padding: 64px 32px 140px;
+  padding: 32px 32px 140px;
 }
 .scar-intro h1 {
   font-family: var(--font-display);
   font-weight: 400;
   font-style: italic;
   font-size: clamp(2.2rem, 4vw, 3rem);
-  margin: 20px 0 28px;
+  margin: 0 0 28px;
 }
 .scar-intro-lede {
   font-size: 1.05rem;
@@ -405,7 +405,7 @@
 }
 
 @media (max-width: 560px) {
-  .scar-intro { padding: 48px 24px 100px; }
+  .scar-intro { padding: 24px 24px 100px; }
   .wizard { padding: 128px 24px 100px; }
   .wizard-actions { flex-direction: column-reverse; align-items: stretch; gap: 14px; }
   .wizard-btn { text-align: center; }
