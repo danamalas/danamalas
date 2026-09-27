@@ -64,7 +64,7 @@ const PRODUCTS = [
     image: "assets/img/products/gift-card.jpg",
     available: true,
     description:
-      "An ABÔ Atelier digital gift card, delivered by email and redeemable toward any piece in the collection.",
+      "An ABÔ Atelier digital gift card, delivered by email and redeemable toward any piece in the collection. Give it to someone whose strength you want to honor, a piece to mark how far they have come.<br><br>Delivered instantly by email, valid for 2 years from purchase.",
     variants: [
       { id: "10", label: "$10", price: 10, stripePriceId: "price_1UJz533GX1etDYL8zKIc5wZX", shopifyProductId: null },
       { id: "20", label: "$20", price: 20, stripePriceId: "price_1UJz533GX1etDYL85b8Uwxrx", shopifyProductId: null },
