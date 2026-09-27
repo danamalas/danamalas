@@ -1,9 +1,19 @@
 /* ===== Scar Project hero ===== */
 .scar-hero {
-  margin-top: 32px;
+  margin-top: var(--header-h);
 }
 .scar-hero-bg {
   background: #0a0908 url("../img/scar-project-tile.jpg") center / cover no-repeat;
+}
+.scar-hero .back-link.scar-hero-back {
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  inset-inline-start: 32px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
 }
 
 /* ===== Scar Project intro ===== */
