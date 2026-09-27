@@ -17,7 +17,7 @@ function cardHtml(product) {
     : "";
 
   const media = product.available
-    ? `<img src="${product.image}" alt="${product.name}" class="product-card-img">`
+    ? `<img src="${product.image}" alt="${productName(product)}" class="product-card-img">`
     : `<span class="product-card-img product-card-blank" aria-hidden="true">
         <img src="assets/img/scar-mark.png" alt="" class="product-card-scar">
         <span class="product-card-coming-soon">${t("shop.comingSoon")}</span>
@@ -29,7 +29,7 @@ function cardHtml(product) {
   return `
     <${tag} class="product-card" data-product="${product.id}" data-variant="${variantId || ""}"${linkAttr}>
       ${media}
-      <span class="product-card-name">${product.name}</span>
+      <span class="product-card-name">${productName(product)}</span>
       <span class="product-card-price">${formatPrice(priceInfo.amount, priceInfo.currency)}</span>
       ${swatches}
     </${tag}>
@@ -40,10 +40,10 @@ function teaserCardHtml(product) {
   return `
     <a href="product.html?id=${product.id}" class="product-card product-card-teaser">
       <span class="product-card-teaser-media">
-        <img src="${product.image}" alt="${product.name}" class="product-card-teaser-img">
+        <img src="${product.image}" alt="${productName(product)}" class="product-card-teaser-img">
         <span class="product-card-coming-soon">${t("shop.comingSoon")}</span>
       </span>
-      <span class="product-card-name product-card-name--teaser">${product.name}</span>
+      <span class="product-card-name product-card-name--teaser">${productName(product)}</span>
       <span class="product-card-quote">${product.quote}</span>
     </a>
   `;

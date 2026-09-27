@@ -45,14 +45,14 @@ if (!product) {
   document.addEventListener("abo:langchange", renderNotFound);
 } else if (teaser) {
   function renderTeaser() {
-    document.getElementById("pageTitle").textContent = `${product.name} — ABÔ Atelier`;
+    document.getElementById("pageTitle").textContent = `${productName(product)} — ABÔ Atelier`;
     container.innerHTML = `
       <div class="product-media">
-        <img src="${product.image}" alt="${product.name}" class="product-media-blur">
+        <img src="${product.image}" alt="${productName(product)}" class="product-media-blur">
         <span class="product-media-badge" data-i18n="shop.comingSoon">${t("shop.comingSoon")}</span>
       </div>
       <div class="product-info">
-        <h1 class="product-teaser-name">${product.name}</h1>
+        <h1 class="product-teaser-name">${productName(product)}</h1>
         <p class="product-quote">${product.quote}</p>
       </div>
     `;
@@ -87,7 +87,7 @@ if (!product) {
   function render() {
     const view = resolveVariant(product, variantId);
     const priceInfo = getDisplayPrice(view, displayCurrency);
-    document.getElementById("pageTitle").textContent = `${product.name} — ABÔ Atelier`;
+    document.getElementById("pageTitle").textContent = `${productName(product)} — ABÔ Atelier`;
 
     const hasSwatches = product.variants && product.variants[0].swatch !== undefined;
     const hasAmountPicker = product.variants && !hasSwatches;
@@ -126,10 +126,10 @@ if (!product) {
 
     container.innerHTML = `
       <div class="product-media">
-        <img src="${view.image}" alt="${product.name}">
+        <img src="${view.image}" alt="${productName(product)}">
       </div>
       <div class="product-info">
-        <h1>${product.name}</h1>
+        <h1>${productName(product)}</h1>
         <p class="product-price">${formatPrice(priceInfo.amount, priceInfo.currency)}</p>
         ${view.material ? `<p class="product-material">${view.material}</p>` : ""}
         ${swatches}

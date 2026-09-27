@@ -59,6 +59,7 @@ const PRODUCTS = [
   {
     id: "gift-card",
     name: "Gift Card",
+    nameAr: "Gift Card - بطاقة هدايا",
     currency: "USD",
     image: "assets/img/products/gift-card.jpg",
     available: true,
@@ -168,4 +169,13 @@ function resolveVariant(product, variantId) {
   const variant = product.variants.find((v) => v.id === variantId) || product.variants[0];
   const { id, ...variantFields } = variant;
   return { ...product, ...variantFields, variantId: id };
+}
+
+// Falls back to the plain `name` unless the site is in Arabic and the
+// product defines a `nameAr` override.
+function productName(product) {
+  if (document.documentElement.getAttribute("lang") === "ar" && product.nameAr) {
+    return product.nameAr;
+  }
+  return product.name;
 }
