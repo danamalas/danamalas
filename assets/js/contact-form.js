@@ -4,6 +4,15 @@
 
   var status = form.querySelector(".newsletter-status");
   var submitBtn = form.querySelector('button[type="submit"]');
+  var reasonSelect = form.querySelector('select[name="reason"]');
+
+  function syncReasonColor() {
+    reasonSelect.classList.toggle("is-placeholder", reasonSelect.value === "");
+  }
+  if (reasonSelect) {
+    syncReasonColor();
+    reasonSelect.addEventListener("change", syncReasonColor);
+  }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
