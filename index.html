@@ -166,6 +166,15 @@
           <form class="contact-form" id="contactForm">
             <input type="text" name="name" data-i18n-placeholder="newsletter.name" placeholder="Name" data-i18n-aria="newsletter.name" aria-label="Name">
             <input type="email" name="email" data-i18n-placeholder="newsletter.email" placeholder="Email" required data-i18n-aria="newsletter.emailAria" aria-label="Email address">
+            <select name="reason" data-i18n-aria="contact.form.reasonPlaceholder" aria-label="Reason for contacting">
+              <option value="" data-i18n="contact.form.reasonPlaceholder">Reason for contacting</option>
+              <option value="Order Support" data-i18n="contact.form.reasonOrder">Order Support</option>
+              <option value="Product Question" data-i18n="contact.form.reasonProduct">Product Question</option>
+              <option value="Returns & Exchanges" data-i18n="contact.form.reasonReturns">Returns & Exchanges</option>
+              <option value="Wholesale Inquiry" data-i18n="contact.form.reasonWholesale">Wholesale Inquiry</option>
+              <option value="The Scar Project" data-i18n="contact.form.reasonScarProject">The Scar Project</option>
+              <option value="Other" data-i18n="contact.form.reasonOther">Other</option>
+            </select>
             <textarea name="message" rows="4" data-i18n-placeholder="contact.form.message" placeholder="Message" required data-i18n-aria="contact.form.message" aria-label="Message"></textarea>
             <button type="submit" data-i18n="contact.form.submit">Send Message</button>
             <p class="newsletter-status" hidden></p>

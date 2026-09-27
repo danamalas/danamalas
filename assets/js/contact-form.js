@@ -9,6 +9,7 @@
     e.preventDefault();
     var name = form.querySelector('input[name="name"]').value.trim();
     var email = form.querySelector('input[name="email"]').value.trim();
+    var reason = form.querySelector('select[name="reason"]').value;
     var message = form.querySelector('textarea[name="message"]').value.trim();
     if (!email || !message) return;
 
@@ -20,10 +21,11 @@
     }
 
     submitToWeb3Forms({
-      subject: "Contact form — ABÔ Atelier",
+      subject: reason ? "Contact form (" + reason + ") — ABÔ Atelier" : "Contact form — ABÔ Atelier",
       from_name: "ABÔ Atelier Website",
       name: name,
       email: email,
+      reason: reason || "(not specified)",
       message: message,
     }).then(function (result) {
       if (submitBtn) submitBtn.disabled = false;
