@@ -101,6 +101,10 @@
         showError(step, t("wizard.error.participation"));
         return false;
       }
+      if (!wizard.querySelector('[name="privacy"]:checked')) {
+        showError(step, t("wizard.error.privacy"));
+        return false;
+      }
     }
 
     showError(step, null);
@@ -136,6 +140,7 @@
       { label: t("wizard.review.story"), value: fieldValue("story"), goto: "story" },
       { label: t("wizard.review.today"), value: fieldValue("today"), goto: "today" },
       { label: t("wizard.review.participation"), value: checkedRadioLabel("participation"), goto: "participation" },
+      { label: t("wizard.review.privacy"), value: checkedRadioLabel("privacy"), goto: "participation" },
       { label: t("wizard.review.firstName"), value: fieldValue("firstName") || dash, goto: "about" },
       { label: t("wizard.review.cityCountry"), value: fieldValue("location") || dash, goto: "about" },
       { label: t("wizard.review.email"), value: fieldValue("email"), goto: "about" },
@@ -177,6 +182,7 @@
         fieldValue("today"),
         "",
         "How they'd like to share: " + checkedRadioLabel("participation"),
+        "How they'd like it shared: " + checkedRadioLabel("privacy"),
       ].join("\n");
 
       submitBtn.disabled = true;
