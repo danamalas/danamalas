@@ -1,8 +1,16 @@
+/* ===== Scar Project hero ===== */
+.scar-hero {
+  margin-top: 32px;
+}
+.scar-hero-bg {
+  background: #0a0908 url("../img/scar-project-tile.jpg") center / cover no-repeat;
+}
+
 /* ===== Scar Project intro ===== */
 .scar-intro {
   max-width: 720px;
   margin: 0 auto;
-  padding: 168px 32px 140px;
+  padding: 64px 32px 140px;
 }
 .scar-intro h1 {
   font-family: var(--font-display);
@@ -387,7 +395,7 @@
 }
 
 @media (max-width: 560px) {
-  .scar-intro { padding: 128px 24px 100px; }
+  .scar-intro { padding: 48px 24px 100px; }
   .wizard { padding: 128px 24px 100px; }
   .wizard-actions { flex-direction: column-reverse; align-items: stretch; gap: 14px; }
   .wizard-btn { text-align: center; }
