@@ -270,7 +270,7 @@
 }
 .amount-select-btn::after {
   content: "";
-  float: right;
+  float: inline-end;
   margin-top: 5px;
   width: 7px;
   height: 7px;
