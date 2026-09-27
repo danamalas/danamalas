@@ -65,6 +65,8 @@ const PRODUCTS = [
     available: true,
     description:
       "An ABÔ Atelier digital gift card, delivered by email and redeemable toward any piece in the collection. Give it to someone whose strength you want to honor, a piece to mark how far they have come.<br><br>Delivered instantly by email, valid for 2 years from purchase.",
+    descriptionAr:
+      "بطاقة هدايا رقمية من ABÔ Atelier، تصل فورًا عبر البريد الإلكتروني ويمكن استبدالها بأي قطعة من المجموعة. أهدها لمن تريد تكريم قوته، قطعة تُذكّره بما تجاوزه.<br><br>صالحة لمدة عامين من تاريخ الشراء.",
     variants: [
       { id: "10", label: "$10", price: 10, stripePriceId: "price_1UJz533GX1etDYL8zKIc5wZX", shopifyProductId: null },
       { id: "20", label: "$20", price: 20, stripePriceId: "price_1UJz533GX1etDYL85b8Uwxrx", shopifyProductId: null },
@@ -178,4 +180,13 @@ function productName(product) {
     return product.nameAr;
   }
   return product.name;
+}
+
+// Falls back to the plain `description` unless the site is in Arabic and
+// the product defines a `descriptionAr` override.
+function productDescription(product) {
+  if (document.documentElement.getAttribute("lang") === "ar" && product.descriptionAr) {
+    return product.descriptionAr;
+  }
+  return product.description;
 }

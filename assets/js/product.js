@@ -134,7 +134,7 @@ if (!product) {
         ${view.material ? `<p class="product-material">${view.material}</p>` : ""}
         ${swatches}
         ${amountPicker}
-        <p class="product-description">${view.description}</p>
+        <p class="product-description">${productDescription(view)}</p>
         <div class="product-buy" id="productBuy"></div>
       </div>
     `;
