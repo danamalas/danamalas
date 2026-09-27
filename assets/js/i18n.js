@@ -202,7 +202,7 @@ var ABO_I18N = (function () {
       "product.chooseAmount": "Choose Amount",
 
       "policy.title": "Return Policy",
-      "policy.intro": "Our return policy is set separately for each country we ship to, in line with local consumer protection law. The General Conditions below apply to every return; find your shipping destination further down for its specific terms.",
+      "policy.intro": "Our return policy is set separately for each country we ship to, in line with local consumer protection law. The General Conditions below apply to every return; find your shipping destination further down for its specific terms, or see \"Rest of the World\" if it isn't listed individually.",
       "policy.generalHeading": "General Conditions",
       "policy.generalBody": "To qualify for any return, exchange, or refund described on this page, an item must be unused, unworn, and undamaged, with all original tags and its certificate of authenticity attached, and returned in its original packaging. Pierced earrings cannot be returned or exchanged once their hygiene seal has been broken. Resized, engraved, or otherwise customized pieces are final sale. Proof of purchase is required for every return. Approved refunds are issued to the original payment method only, once we have received and inspected the returned item. Gift cards are not eligible for return, exchange, or refund, and expire two years from the date of purchase.",
       "policy.usHeading": "United States",
@@ -219,6 +219,8 @@ var ABO_I18N = (function () {
       "policy.kwBody": "Jewelry and precious metals are an exception to Kuwait's standard 14-day return period under Ministry of Commerce and Industry regulations: they may only be returned or exchanged within 24 hours of receipt, provided the item meets the General Conditions above. Eligible returns are exchanged or refunded to your original payment method at no additional cost. Pierced earrings and customized or resized pieces are excluded, as permitted under the law.",
       "policy.trHeading": "Türkiye",
       "policy.trBody": "Under Turkish Law No. 6502 and the Distance Contracts Regulation, you may withdraw from your purchase within 14 days of delivery, without giving any reason. Return shipping is paid by the customer. We refund the price paid within 14 days of receiving the returned item. Pierced earrings and customized or resized pieces are excluded from the right of withdrawal, as permitted by law.",
+      "policy.rowHeading": "Rest of the World",
+      "policy.rowBody": "For orders shipped anywhere not listed above, you may return an item within 14 days of delivery, subject to the General Conditions above. Return shipping is paid by the customer, and approved refunds are issued to your original payment method once we have received and inspected the item. Pierced earrings and customized or resized pieces are excluded, as permitted by law. This does not limit any mandatory consumer protection rights you may have under the law of your country.",
       "policy.howHeading": "How to Request a Return",
       "policy.howBody": "To start a return or report a defective item, contact us with your order number and the reason for your request. We will confirm whether your item is eligible and send instructions for returning it.",
       "policy.contactHeading": "Contact",
