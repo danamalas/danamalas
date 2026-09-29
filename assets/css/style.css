@@ -1030,6 +1030,20 @@ body:not(.i18n-ready) { visibility: hidden; }
   color: rgba(255,255,255,0.45);
   margin: 0;
 }
+.footer-links {
+  margin: 10px 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+.footer-links a {
+  color: rgba(255,255,255,0.45);
+  border-bottom: none;
+  margin: 0 8px;
+  transition: color 0.2s ease;
+}
+.footer-links a:hover {
+  color: rgba(255,255,255,0.8);
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 1280px) {
