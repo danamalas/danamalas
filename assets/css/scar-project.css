@@ -3,6 +3,8 @@
   margin-top: var(--header-h);
 }
 .scar-hero-bg {
+  top: 0;
+  height: 100%;
   background: #45423f url("../img/scar-project-tile.jpg") center / contain no-repeat;
 }
 .scar-hero .back-link.scar-hero-back {
