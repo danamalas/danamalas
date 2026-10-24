@@ -1,10 +1,15 @@
 const grid = document.getElementById("shop-grid");
+const tabs = document.getElementById("shopTabs");
 let displayCurrency = "USD";
+let activeCategory = "jewelry";
 
 function cardHtml(product) {
   const variantId = product.variants ? product.variants[0].id : null;
   const view = resolveVariant(product, variantId);
   const priceInfo = getDisplayPrice(view, displayCurrency);
+  const priceHtml = view.price != null
+    ? `<span class="product-card-price">${formatPrice(priceInfo.amount, priceInfo.currency)}</span>`
+    : "";
 
   const swatches = product.variants && product.variants[0].swatch
     ? `<span class="product-card-swatches">${product.variants
@@ -30,7 +35,7 @@ function cardHtml(product) {
     <${tag} class="product-card" data-product="${product.id}" data-variant="${variantId || ""}"${linkAttr}>
       ${media}
       <span class="product-card-name">${productName(product)}</span>
-      <span class="product-card-price">${formatPrice(priceInfo.amount, priceInfo.currency)}</span>
+      ${priceHtml}
       ${swatches}
     </${tag}>
   `;
@@ -49,10 +54,14 @@ function teaserCardHtml(product) {
   `;
 }
 
+function inActiveCategory(product) {
+  return !product.category || product.category === activeCategory;
+}
+
 function render() {
   grid.innerHTML =
-    Object.values(TEASER_PRODUCTS).map(teaserCardHtml).join("") +
-    PRODUCTS.map(cardHtml).join("");
+    Object.values(TEASER_PRODUCTS).filter(inActiveCategory).map(teaserCardHtml).join("") +
+    PRODUCTS.filter(inActiveCategory).map(cardHtml).join("");
 }
 
 render();
@@ -61,6 +70,16 @@ document.addEventListener("abo:langchange", render);
 if (window.aboDetectCurrency) {
   window.aboDetectCurrency().then((currency) => {
     displayCurrency = currency;
+    render();
+  });
+}
+
+if (tabs) {
+  tabs.addEventListener("click", (e) => {
+    const btn = e.target.closest(".shop-tab[data-category]");
+    if (!btn) return;
+    activeCategory = btn.dataset.category;
+    tabs.querySelectorAll(".shop-tab[data-category]").forEach((t) => t.classList.toggle("is-active", t === btn));
     render();
   });
 }

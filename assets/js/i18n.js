@@ -150,6 +150,8 @@ var ABO_I18N = (function () {
       "shop.title": "The Collection",
       "shop.introText": "Every ABÔ Atelier piece carries the same idea: that strength can rise from something difficult. Each piece is handmade from verified precious metals, carefully tested to ensure purity, quality, and authenticity.",
       "shop.comingSoon": "Still healing.<br>Available soon.",
+      "shop.tabJewelry": "Jewelry",
+      "shop.tabCoins": "Coins",
       "storyShowcase.showAll": "Show All Products",
 
       "cookieConsent.text": "Your privacy matters to us. We use cookies to run our site and analyse traffic. Learn more in our <a href=\"privacy-policy.html\">Privacy Policy</a>.",
@@ -407,6 +409,8 @@ var ABO_I18N = (function () {
       "shop.title": "La Collection",
       "shop.introText": "Chaque pièce ABÔ Atelier porte la même idée : que la force peut naître de quelque chose de difficile. Elle est faite à la main à partir de métaux précieux certifiés, soigneusement testés pour garantir pureté, qualité et authenticité.",
       "shop.comingSoon": "Encore en cicatrisation.<br>Bientôt disponible.",
+      "shop.tabJewelry": "Bijoux",
+      "shop.tabCoins": "Pièces",
       "storyShowcase.showAll": "Voir Tous Les Produits",
 
       "cookieConsent.text": "Votre vie privée compte. Nous utilisons des cookies pour faire fonctionner notre site et analyser le trafic. En savoir plus dans notre <a href=\"privacy-policy.html\">Politique de Confidentialité</a>.",
@@ -603,6 +607,8 @@ var ABO_I18N = (function () {
       "shop.title": "المجموعة",
       "shop.introText": "كل قطعة من ABÔ Atelier تحمل الفكرة ذاتها: أن القوة يمكن أن تنبع من شيء صعب. وكل قطعة مصنوعة يدويًا من معادن ثمينة موثقة، تم اختبارها بعناية لضمان النقاء والجودة والأصالة.",
       "shop.comingSoon": "لا يزال يلتئم.<br>متوفر قريبًا.",
+      "shop.tabJewelry": "المجوهرات",
+      "shop.tabCoins": "العملات",
       "storyShowcase.showAll": "عرض جميع المنتجات",
 
       "cookieConsent.text": "خصوصيتك مهمة. نستخدم ملفات تعريف الارتباط لتشغيل موقعنا وتحليل حركة المرور. تعرّف على المزيد في <a href=\"privacy-policy.html\">سياسة الخصوصية</a> الخاصة بنا.",

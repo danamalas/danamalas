@@ -46,11 +46,43 @@
   color: rgba(255, 255, 255, 0.82);
 }
 
+/* ===== Shop tabs ===== */
+.shop-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 36px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 32px 0;
+}
+.shop-tab {
+  background: none;
+  border: none;
+  padding: 0 0 8px;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.shop-tab:hover {
+  color: var(--color-ink);
+}
+.shop-tab.is-active {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-ink);
+}
+
 /* ===== Shop grid ===== */
 .shop-grid {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 40px 32px 140px;
+  padding: 24px 32px 140px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 32px;

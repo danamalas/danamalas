@@ -8,6 +8,7 @@ const PRODUCTS = [
   {
     id: "fracture-cuff",
     name: "Fracture Cuff",
+    category: "jewelry",
     currency: "USD",
     variants: [
       {
@@ -48,6 +49,7 @@ const PRODUCTS = [
   {
     id: "wound-gold-pendant",
     name: "Wound & Gold Pendant",
+    category: "jewelry",
     price: 890,
     currency: "USD",
     material: "14k recycled gold, sapphire",
@@ -55,6 +57,32 @@ const PRODUCTS = [
     description:
       "A small sapphire set into a hand-carved gold pendant along a single fractured line — the house's clearest piece on the subject of mending.",
     shopifyProductId: null,
+  },
+  {
+    id: "coin",
+    name: "Coin",
+    category: "coins",
+    currency: "USD",
+    variants: [
+      {
+        id: "silver-925",
+        label: "Silver 925",
+        swatch: "#c7c9cc",
+        material: "Silver 925",
+        image: "assets/img/products/coin-silver.jpg",
+        description: "An ABÔ Atelier coin cast in solid 925 silver.",
+        shopifyProductId: null,
+      },
+      {
+        id: "copper",
+        label: "Copper",
+        swatch: "#b87333",
+        material: "Copper",
+        image: "assets/img/products/coin-copper.jpg",
+        description: "An ABÔ Atelier coin cast in solid copper.",
+        shopifyProductId: null,
+      },
+    ],
   },
   {
     id: "gift-card",
@@ -91,49 +119,55 @@ const PRODUCTS = [
   },
 ];
 
-// Unreleased pieces shown only as a homepage teaser and their own product
-// page (photo, name, quote) — deliberately kept out of PRODUCTS so they
-// never appear in the shop grid or need a price/buy flow.
+// Unreleased pieces shown as "coming soon" cards in the shop grid and on
+// their own product page (photo, name, quote), with no price/buy flow yet.
 const TEASER_PRODUCTS = {
   "sillage-earrings": {
     id: "sillage-earrings",
     name: "Sillage Earrings",
+    category: "jewelry",
     image: "assets/img/products/fracture-earrings-gold.jpg",
     quote: "[The trace that is left behind]",
   },
   "eden-bracelet": {
     id: "eden-bracelet",
     name: "Eden Bracelet",
+    category: "jewelry",
     image: "assets/img/products/fracture-bracelet-gold.jpg",
     quote: "[Paradise, found within]",
   },
   "solea-ring": {
     id: "solea-ring",
     name: "Solèa Ring",
+    category: "jewelry",
     image: "assets/img/products/fracture-ring-gold.jpg",
     quote: "[Wear the light you became]",
   },
   "kandai-necklace": {
     id: "kandai-necklace",
     name: "Kandai Necklace",
+    category: "jewelry",
     image: "assets/img/products/fracture-necklace-gold.jpg",
     quote: "[The peace of accepting imperfection]",
   },
   "espoir-earrings": {
     id: "espoir-earrings",
     name: "Espoir Earrings",
+    category: "jewelry",
     image: "assets/img/products/espoir-earrings-gold.jpg",
     quote: "[Let hope lead you forward]",
   },
   "galene-necklace": {
     id: "galene-necklace",
     name: "Galène Necklace",
+    category: "jewelry",
     image: "assets/img/products/galene-necklace-gold.jpg",
     quote: "[I am the promise that after the storm, peace remains]",
   },
   "statera-anklet": {
     id: "statera-anklet",
     name: "Statera Anklet",
+    category: "jewelry",
     image: "assets/img/products/fracture-bracelet-gold.jpg",
     quote: "[Balance in every step]",
   },
