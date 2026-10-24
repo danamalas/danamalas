@@ -91,6 +91,7 @@ const PRODUCTS = [
     currency: "USD",
     image: "assets/img/products/gift-card.jpg",
     available: true,
+    digital: true,
     description:
       "An ABÔ Atelier digital gift card, delivered by email and redeemable toward any piece in the collection. Give it to someone whose strength you want to honor, a piece to mark how far they have come.<br><br>Delivered instantly by email, valid for 2 years from purchase.",
     descriptionAr:

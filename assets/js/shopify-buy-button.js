@@ -58,6 +58,7 @@ function renderStripeAddToCart(node, product) {
       image: product.image,
       price: product.price,
       currency: product.currency,
+      digital: Boolean(product.digital),
     });
     window.aboCart.openCartDrawer();
   });

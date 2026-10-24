@@ -187,7 +187,7 @@ function startCheckout() {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      items: items.map((i) => ({ price: i.priceId, quantity: i.quantity })),
+      items: items.map((i) => ({ price: i.priceId, quantity: i.quantity, digital: Boolean(i.digital) })),
     }),
   })
     .then((res) => res.json())
