@@ -29,6 +29,55 @@ if (navBackdrop) {
   navBackdrop.addEventListener("click", closeNav);
 }
 
+(function buildShopDropdown() {
+  const shopLink = siteNav.querySelector('a[href="shop.html"]');
+  if (!shopLink) return;
+
+  const wrapper = document.createElement("span");
+  wrapper.className = "nav-item-shop";
+  shopLink.parentNode.insertBefore(wrapper, shopLink);
+  wrapper.appendChild(shopLink);
+
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "nav-shop-toggle";
+  toggle.setAttribute("aria-haspopup", "true");
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("data-i18n-aria", "nav.shopToggleAria");
+
+  const menu = document.createElement("ul");
+  menu.className = "nav-shop-menu";
+  menu.hidden = true;
+  [
+    ["jewelry", "shop.tabJewelry"],
+    ["coins", "shop.tabCoins"],
+    ["scar-project", "nav.scarProject"],
+  ].forEach(([category, key]) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = `shop.html?category=${category}`;
+    a.setAttribute("data-i18n", key);
+    li.appendChild(a);
+    menu.appendChild(li);
+  });
+
+  wrapper.appendChild(toggle);
+  wrapper.appendChild(menu);
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = menu.hidden;
+    menu.hidden = !isOpen;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+  document.addEventListener("click", () => {
+    menu.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+  });
+
+  if (window.ABO_I18N) window.ABO_I18N.applyDom();
+})();
+
 const shopIntroBg = document.getElementById("shopIntroBg");
 if (shopIntroBg) {
   const updateParallax = () => {

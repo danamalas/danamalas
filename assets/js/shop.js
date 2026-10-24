@@ -58,6 +58,15 @@ function inActiveCategory(product) {
   return !product.category || product.category === activeCategory;
 }
 
+if (tabs) {
+  const requested = new URLSearchParams(window.location.search).get("category");
+  const match = requested && tabs.querySelector(`.shop-tab[data-category="${requested}"]`);
+  if (match) {
+    activeCategory = requested;
+    tabs.querySelectorAll(".shop-tab[data-category]").forEach((t) => t.classList.toggle("is-active", t === match));
+  }
+}
+
 function render() {
   grid.innerHTML =
     Object.values(TEASER_PRODUCTS).filter(inActiveCategory).map(teaserCardHtml).join("") +

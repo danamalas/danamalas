@@ -31,6 +31,7 @@ var ABO_I18N = (function () {
       "nav.story": "Our Story",
       "nav.scarProject": "The Scar Project",
       "nav.contact": "Contact Us",
+      "nav.shopToggleAria": "Shop categories",
       "lang.aria": "Choose language",
 
       "footer.rights": "ABÔ Atelier. All rights reserved.",
@@ -290,6 +291,7 @@ var ABO_I18N = (function () {
       "nav.story": "Notre Histoire",
       "nav.scarProject": "The Scar Project",
       "nav.contact": "Contact",
+      "nav.shopToggleAria": "Catégories boutique",
       "lang.aria": "Choisir la langue",
 
       "footer.rights": "ABÔ Atelier. Tous droits réservés.",
@@ -488,6 +490,7 @@ var ABO_I18N = (function () {
       "nav.story": "قصتنا",
       "nav.scarProject": "مشروع الندبة",
       "nav.contact": "تواصل معنا",
+      "nav.shopToggleAria": "فئات المتجر",
       "lang.aria": "اختر اللغة",
 
       "footer.rights": "ABÔ Atelier. جميع الحقوق محفوظة.",

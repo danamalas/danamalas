@@ -117,6 +117,55 @@ a {
 }
 .site-nav a:hover::after { width: 100%; }
 
+.nav-item-shop {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-shop-toggle {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 2px 4px 6px;
+  color: var(--color-ink);
+}
+.nav-shop-toggle::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+}
+.nav-shop-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  inset-inline-start: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  min-width: 190px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+  z-index: 150;
+}
+.nav-shop-menu[hidden] { display: none; }
+.nav-shop-menu li { margin: 0; }
+.nav-shop-menu a {
+  display: block;
+  padding: 9px 18px;
+  font-size: 0.85rem;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.nav-shop-menu a::after { display: none; }
+.nav-shop-menu a:hover {
+  background: var(--color-bg-alt);
+}
+
 .header-actions {
   grid-column: 3;
   justify-self: end;
@@ -1094,6 +1143,35 @@ body:not(.i18n-ready) { visibility: hidden; }
   .site-nav.is-open a:nth-child(2) { transition-delay: 0.14s; }
   .site-nav.is-open a:nth-child(3) { transition-delay: 0.2s; }
   .site-nav.is-open a:nth-child(4) { transition-delay: 0.26s; }
+  .site-nav.is-open .nav-item-shop > a:nth-child(1) { transition-delay: 0.14s; }
+
+  .nav-item-shop {
+    border-top: 1px solid var(--color-line);
+    padding: 0 24px;
+    flex-wrap: wrap;
+  }
+  .nav-item-shop a {
+    border-top: none;
+    padding: 18px 0;
+    flex: 1;
+  }
+  .nav-shop-toggle {
+    padding: 18px 8px;
+  }
+  .nav-shop-menu {
+    position: static;
+    flex-basis: 100%;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background: var(--color-bg-alt);
+    padding: 0;
+    min-width: 0;
+  }
+  .nav-shop-menu a {
+    padding: 14px 24px 14px 40px;
+    border-top: 1px solid var(--color-line);
+  }
 
   .nav-backdrop {
     position: fixed;

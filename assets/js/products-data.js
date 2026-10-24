@@ -125,7 +125,7 @@ const TEASER_PRODUCTS = {
   "sillage-earrings": {
     id: "sillage-earrings",
     name: "Sillage Earrings",
-    category: "jewelry",
+    category: "scar-project",
     image: "assets/img/products/fracture-earrings-gold.jpg",
     quote: "[The trace that is left behind]",
   },
