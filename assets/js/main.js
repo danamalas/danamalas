@@ -15,6 +15,12 @@ function closeNav() {
   siteNav.classList.remove("is-open");
   navToggle.setAttribute("aria-expanded", "false");
   if (navBackdrop) navBackdrop.classList.remove("is-visible");
+  const shopItem = siteNav.querySelector(".nav-item-shop");
+  if (shopItem) {
+    shopItem.classList.remove("is-open");
+    const shopLink = shopItem.querySelector("a");
+    if (shopLink) shopLink.setAttribute("aria-expanded", "false");
+  }
 }
 
 navToggle.addEventListener("click", () => {
@@ -32,47 +38,46 @@ if (navBackdrop) {
 (function buildShopDropdown() {
   const shopLink = siteNav.querySelector('a[href="shop.html"]');
   if (!shopLink) return;
+  shopLink.removeEventListener("click", closeNav);
 
   const wrapper = document.createElement("span");
   wrapper.className = "nav-item-shop";
   shopLink.parentNode.insertBefore(wrapper, shopLink);
   wrapper.appendChild(shopLink);
 
-  const toggle = document.createElement("button");
-  toggle.type = "button";
-  toggle.className = "nav-shop-toggle";
-  toggle.setAttribute("aria-haspopup", "true");
-  toggle.setAttribute("aria-expanded", "false");
-  toggle.setAttribute("data-i18n-aria", "nav.shopToggleAria");
+  shopLink.setAttribute("aria-haspopup", "true");
+  shopLink.setAttribute("aria-expanded", "false");
+  shopLink.setAttribute("aria-controls", "navShopMenu");
 
-  const menu = document.createElement("ul");
+  const menu = document.createElement("div");
   menu.className = "nav-shop-menu";
-  menu.hidden = true;
+  menu.id = "navShopMenu";
+  const menuInner = document.createElement("div");
+  menuInner.className = "nav-shop-menu-inner";
   [
     ["jewelry", "shop.tabJewelry"],
     ["coins", "shop.tabCoins"],
     ["scar-project", "nav.scarProject"],
   ].forEach(([category, key]) => {
-    const li = document.createElement("li");
     const a = document.createElement("a");
     a.href = `shop.html?category=${category}`;
     a.setAttribute("data-i18n", key);
-    li.appendChild(a);
-    menu.appendChild(li);
+    a.addEventListener("click", closeNav);
+    menuInner.appendChild(a);
   });
-
-  wrapper.appendChild(toggle);
+  menu.appendChild(menuInner);
   wrapper.appendChild(menu);
 
-  toggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const isOpen = menu.hidden;
-    menu.hidden = !isOpen;
-    toggle.setAttribute("aria-expanded", String(isOpen));
-  });
-  document.addEventListener("click", () => {
-    menu.hidden = true;
-    toggle.setAttribute("aria-expanded", "false");
+  const isMobileNav = () => window.matchMedia("(max-width: 1280px)").matches;
+
+  shopLink.addEventListener("click", (e) => {
+    if (!isMobileNav()) {
+      closeNav();
+      return;
+    }
+    e.preventDefault();
+    const isOpen = wrapper.classList.toggle("is-open");
+    shopLink.setAttribute("aria-expanded", String(isOpen));
   });
 
   if (window.ABO_I18N) window.ABO_I18N.applyDom();
