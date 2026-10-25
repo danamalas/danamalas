@@ -1,7 +1,4 @@
-const grid = document.getElementById("shop-grid");
-const tabs = document.getElementById("shopTabs");
 let displayCurrency = "USD";
-let activeCategory = "jewelry";
 
 function cardHtml(product) {
   const variantId = product.variants ? product.variants[0].id : null;
@@ -54,56 +51,101 @@ function teaserCardHtml(product) {
   `;
 }
 
-function inActiveCategory(product) {
-  return !product.category || product.category === activeCategory;
-}
+// Mounts a filterable product grid into `grid`. `tabs`, when given, is a
+// `.shop-tabs` nav whose `.shop-tab[data-category]` buttons switch the
+// active category (and whose state can be preset via a `?category=`
+// query param). `defaultCategory` sets the category shown with no tabs
+// (or before any tab is clicked).
+function mountShopGrid(grid, tabs, defaultCategory) {
+  if (!grid) return;
+  let activeCategory = defaultCategory || "jewelry";
 
-if (tabs) {
-  const requested = new URLSearchParams(window.location.search).get("category");
-  const match = requested && tabs.querySelector(`.shop-tab[data-category="${requested}"]`);
-  if (match) {
-    activeCategory = requested;
-    tabs.querySelectorAll(".shop-tab[data-category]").forEach((t) => t.classList.toggle("is-active", t === match));
+  function inActiveCategory(product) {
+    return !product.category || product.category === activeCategory;
   }
-}
 
-function render() {
-  grid.innerHTML =
-    Object.values(TEASER_PRODUCTS).filter(inActiveCategory).map(teaserCardHtml).join("") +
-    PRODUCTS.filter(inActiveCategory).map(cardHtml).join("");
-}
+  function render() {
+    grid.innerHTML =
+      Object.values(TEASER_PRODUCTS).filter(inActiveCategory).map(teaserCardHtml).join("") +
+      PRODUCTS.filter(inActiveCategory).map(cardHtml).join("");
+  }
 
-render();
-document.addEventListener("abo:langchange", render);
+  if (tabs) {
+    const requested = new URLSearchParams(window.location.search).get("category");
+    const match = requested && tabs.querySelector(`.shop-tab[data-category="${requested}"]`);
+    if (match) {
+      activeCategory = requested;
+      tabs.querySelectorAll(".shop-tab[data-category]").forEach((t) => t.classList.toggle("is-active", t === match));
+    }
+  }
 
-if (window.aboDetectCurrency) {
-  window.aboDetectCurrency().then((currency) => {
-    displayCurrency = currency;
-    render();
-  });
-}
+  render();
+  document.addEventListener("abo:langchange", render);
 
-if (tabs) {
-  tabs.addEventListener("click", (e) => {
-    const btn = e.target.closest(".shop-tab[data-category]");
+  if (window.aboDetectCurrency) {
+    window.aboDetectCurrency().then((currency) => {
+      displayCurrency = currency;
+      render();
+    });
+  }
+
+  if (tabs) {
+    tabs.addEventListener("click", (e) => {
+      const btn = e.target.closest(".shop-tab[data-category]");
+      if (!btn) return;
+      activeCategory = btn.dataset.category;
+      tabs.querySelectorAll(".shop-tab[data-category]").forEach((t) => t.classList.toggle("is-active", t === btn));
+      render();
+    });
+  }
+
+  grid.addEventListener("click", (e) => {
+    const btn = e.target.closest(".swatch");
     if (!btn) return;
-    activeCategory = btn.dataset.category;
-    tabs.querySelectorAll(".shop-tab[data-category]").forEach((t) => t.classList.toggle("is-active", t === btn));
-    render();
+
+    const card = btn.closest(".product-card");
+    const product = getProduct(card.dataset.product);
+    const variantId = btn.dataset.variant;
+    const view = resolveVariant(product, variantId);
+    const priceInfo = getDisplayPrice(view, displayCurrency);
+
+    card.dataset.variant = variantId;
+    card.querySelector(".product-card-price").textContent = formatPrice(priceInfo.amount, priceInfo.currency);
+    card.querySelectorAll(".swatch").forEach((s) => s.classList.toggle("is-selected", s.dataset.variant === variantId));
   });
 }
 
-grid.addEventListener("click", (e) => {
-  const btn = e.target.closest(".swatch");
-  if (!btn) return;
+// After a successful Stripe Checkout redirect (shop.html?checkout=success),
+// show a thank-you view instead of the shop, and clear the cart.
+(function handleCheckoutSuccess() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("checkout") !== "success") return;
 
-  const card = btn.closest(".product-card");
-  const product = getProduct(card.dataset.product);
-  const variantId = btn.dataset.variant;
-  const view = resolveVariant(product, variantId);
-  const priceInfo = getDisplayPrice(view, displayCurrency);
+  const successEl = document.getElementById("checkoutSuccess");
+  if (!successEl) return;
 
-  card.dataset.variant = variantId;
-  card.querySelector(".product-card-price").textContent = formatPrice(priceInfo.amount, priceInfo.currency);
-  card.querySelectorAll(".swatch").forEach((s) => s.classList.toggle("is-selected", s.dataset.variant === variantId));
-});
+  successEl.hidden = false;
+  const introEl = document.getElementById("shopIntroSection");
+  const tabsEl = document.getElementById("shopTabs");
+  const gridEl = document.getElementById("shop-grid");
+  if (introEl) introEl.hidden = true;
+  if (tabsEl) tabsEl.hidden = true;
+  if (gridEl) gridEl.hidden = true;
+
+  const sessionId = params.get("session_id");
+  const refEl = document.getElementById("checkoutSuccessRef");
+  if (sessionId && refEl) {
+    refEl.textContent = `${t("checkout.success.refLabel")}: ${sessionId}`;
+    refEl.hidden = false;
+  }
+
+  if (typeof writeCart === "function") writeCart([]);
+
+  const cleanUrl = new URL(window.location.href);
+  cleanUrl.searchParams.delete("checkout");
+  cleanUrl.searchParams.delete("session_id");
+  window.history.replaceState({}, "", cleanUrl.toString());
+})();
+
+mountShopGrid(document.getElementById("shop-grid"), document.getElementById("shopTabs"));
+mountShopGrid(document.getElementById("scarShopGrid"), null, "scar-project");

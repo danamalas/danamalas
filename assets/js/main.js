@@ -55,12 +55,12 @@ if (navBackdrop) {
   const menuInner = document.createElement("div");
   menuInner.className = "nav-shop-menu-inner";
   [
-    ["jewelry", "shop.tabJewelry"],
-    ["coins", "shop.tabCoins"],
-    ["scar-project", "nav.scarProject"],
-  ].forEach(([category, key]) => {
+    ["shop.html?category=jewelry", "shop.tabJewelry"],
+    ["shop.html?category=coins", "shop.tabCoins"],
+    ["the-scar-project.html", "nav.scarProject"],
+  ].forEach(([href, key]) => {
     const a = document.createElement("a");
-    a.href = `shop.html?category=${category}`;
+    a.href = href;
     a.setAttribute("data-i18n", key);
     a.addEventListener("click", closeNav);
     menuInner.appendChild(a);
